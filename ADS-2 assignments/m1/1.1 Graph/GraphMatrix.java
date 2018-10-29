@@ -42,11 +42,11 @@ public class GraphMatrix {
         size++;
     }
     public void addEdge(int v, int w) {
-        if (v == w) {
-            System.out.println(v + " vertices, " + w + " edges");
-            System.out.println("No edges");
-            return;
-        }
+        // if (v == w) {
+        //     System.out.println(V + " vertices, " + E + " edges");
+        //     System.out.println("No edges");
+        //     return;
+        // }
         if (adj[v][w] == 0) {
             E++;
             adj[v][w] = 1;
