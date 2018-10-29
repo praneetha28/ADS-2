@@ -7,20 +7,20 @@ interface Graph {
      *
      * @return     { description_of_the_return_value }
      */
-    public int V();
+    int V();
     /**.
      * { function_description }
      *
      * @return     { description_of_the_return_value }
      */
-    public int E();
+    int E();
     /**.
      * Adds an edge.
      *
      * @param      v     { parameter_description }
      * @param      w     { parameter_description }
      */
-    public void addEdge(int v, int w);
+    void addEdge(int v, int w);
     /**.
      * { function_description }
      *
@@ -28,20 +28,20 @@ interface Graph {
      *
      * @return     { description_of_the_return_value }
      */
-    public Iterable<Integer> adj(int v);
+    Iterable<Integer> adj(int v);
     // public boolean hasEdge(int v, int w);
 }
 /**.
  * List of graphs.
  */
 class GraphList implements Graph {
-	/**.
-	 * { var_description }
-	 */
-	private int V;
-	/**.
-	 * { var_description }
-	 */
+    /**.
+     * { var_description }
+     */
+    private int V;
+    /**.
+     * { var_description }
+     */
     private int E;
     /**.
      * { var_description }
@@ -59,7 +59,7 @@ class GraphList implements Graph {
      * Initializes an empty graph with V vertices and 0 edges.
      * param V the number of vertices
      *
-     * @param  V number of vertices
+     * @param  vt number of vertices
      */
     GraphList(final int vt) {
         this.V = vt;
@@ -95,8 +95,8 @@ class GraphList implements Graph {
      * @param      v     { parameter_description }
      */
     public void addVertex(final String v) {
-    	vertexes[size] = v;
-    	size++;
+        vertexes[size] = v;
+        size++;
     }
     /**
      * Adds the undirected edge v-w to this graph.
