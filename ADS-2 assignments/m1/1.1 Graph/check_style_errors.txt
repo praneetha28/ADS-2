@@ -8,31 +8,8 @@ Audit done.
 Checkstyle ends with 1 errors.
 Starting audit...
 [ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\GraphMatrix.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\GraphMatrix.java:1:8: Unused import - java.util.Iterator. [UnusedImports]
-[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\GraphMatrix.java:6:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\GraphMatrix.java:6:5: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\GraphMatrix.java:6:16: Name 'V' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
-[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\GraphMatrix.java:7:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\GraphMatrix.java:7:5: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\GraphMatrix.java:7:16: Name 'E' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
-[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\GraphMatrix.java:8:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\GraphMatrix.java:8:5: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\GraphMatrix.java:9:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\GraphMatrix.java:9:5: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\GraphMatrix.java:19:23: Name 'V' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MemberName]
-[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\GraphMatrix.java:23:17: Name 'E' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MemberName]
-[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\GraphMatrix.java:41:24: Parameter V should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\GraphMatrix.java:41:28: 'V' hides a field. [HiddenField]
-[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\GraphMatrix.java:41:28: Name 'V' must match pattern '^[a-z][a-zA-Z0-9]*$'. [ParameterName]
-[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\GraphMatrix.java:53:16: Name 'V' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
-[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\GraphMatrix.java:61:16: Name 'E' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
-[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\GraphMatrix.java:69:27: Parameter v should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\GraphMatrix.java:79:25: Parameter v should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\GraphMatrix.java:79:32: Parameter w should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\GraphMatrix.java:99:25: Parameter v should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\GraphMatrix.java:99:32: Parameter w should be final. [FinalParameters]
 Audit done.
-Checkstyle ends with 24 errors.
+Checkstyle ends with 1 errors.
 Starting audit...
 [ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 Audit done.

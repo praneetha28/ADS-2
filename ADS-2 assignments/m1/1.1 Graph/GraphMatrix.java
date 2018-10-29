@@ -1,12 +1,34 @@
-import java.util.Iterator;
 /**.
  * Interface for graph.
  */
 interface GraphM {
-    public int V();
-    public int E();
-    public void addEdge(int v, int w);
-    public Iterable<Integer> adj(int v);
+    /**.
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    int vert();
+    /**.
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    int edge();
+    /**.
+     * Adds an edge.
+     *
+     * @param      v     { parameter_description }
+     * @param      w     { parameter_description }
+     */
+    void addEdge(int v, int w);
+    /**.
+     * { function_description }
+     *
+     * @param      v     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    Iterable<Integer> adj(int v);
     // public boolean hasEdge(int v, int w);
 }
 /**.
@@ -16,11 +38,11 @@ public class GraphMatrix {
     /**.
      * { var_description }
      */
-    private final int V;
+    private final int ver;
     /**.
      * { var_description }
      */
-    private int E;
+    private int edg;
     /**.
      * { var_description }
      */
@@ -36,13 +58,13 @@ public class GraphMatrix {
     /**.
      * Constructs the object.
      *
-     * @param      V     { parameter_description }
+     * @param      vt     { parameter_description }
      */
-    public GraphMatrix(int V) {
-        this.V = V;
-        this.E = 0;
-        this.adj = new int[V][V];
-        vertexes = new String[V];
+    public GraphMatrix(final int vt) {
+        this.ver = vt;
+        this.edg = 0;
+        this.adj = new int[ver][ver];
+        vertexes = new String[ver];
         size = 0;
     }
     /**.
@@ -50,23 +72,23 @@ public class GraphMatrix {
      *
      * @return     { description_of_the_return_value }
      */
-    public int V() {
-        return V;
+    public int vert() {
+        return ver;
     }
     /**.
      * { function_description }
      *
      * @return     { description_of_the_return_value }
      */
-    public int E() {
-        return E;
+    public int edge() {
+        return edg;
     }
     /**.
      * Adds a vertex.
      *
      * @param      v     { parameter_description }
      */
-    public void addVertex(String v) {
+    public void addVertex(final String v) {
         vertexes[size] = v;
         size++;
     }
@@ -76,14 +98,14 @@ public class GraphMatrix {
      * @param      v     { parameter_description }
      * @param      w     { parameter_description }
      */
-    public void addEdge(int v, int w) {
+    public void addEdge(final int v, final int w) {
         if (v == w) {
-            System.out.println(V + " vertices, " + E + " edges");
+            System.out.println(ver + " vertices, " + edg + " edges");
             System.out.println("No edges");
             return;
         }
         if (adj[v][w] == 0) {
-            E++;
+            edg++;
             adj[v][w] = 1;
             adj[w][v] = 1;
         }
@@ -96,7 +118,7 @@ public class GraphMatrix {
      *
      * @return     { description_of_the_return_value }
      */
-    public int contains(int v, int w) {
+    public int contains(final int v, final int w) {
         return adj[v][w];
     }
     /**.
@@ -106,8 +128,8 @@ public class GraphMatrix {
      */
     public String toString() {
         StringBuilder s = new StringBuilder();
-        s.append(V + " vertices, " + E + " edges" + '\n');
-        for (int v = 0; v < V; v++) {
+        s.append(ver + " vertices, " + edg + " edges" + '\n');
+        for (int v = 0; v < ver; v++) {
             // s.append(v + ": ");
             for (int w : adj[v]) {
                 if (w == 1) {
