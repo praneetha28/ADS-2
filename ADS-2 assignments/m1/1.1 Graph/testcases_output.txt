@@ -244,7 +244,7 @@ Expected Output:
 No edges
 
 Your Output: 
-1 vertices, 1 edges
+1 vertices, 0 edges
 No edges
 1 vertices, 0 edges
 0
