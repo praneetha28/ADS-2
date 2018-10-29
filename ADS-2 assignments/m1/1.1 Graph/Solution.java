@@ -28,13 +28,13 @@ public final class Solution {
         int n =  sc.nextInt();
         int m = sc.nextInt();
         sc.nextLine();
-        if (n == 0 || m == 0 ) {
-            System.out.println(n + " vertices, " + m + " edges");
-            System.out.println("No edges");
-            return;
-        }
         switch (word) {
 	        case"List":
+                if (n == 0 || m == 0 ) {
+                    System.out.println(n + " vertices, " + m + " edges");
+                    System.out.println("No edges");
+                    break;
+                }
     	        String vtexes = sc.nextLine();
     	        String[] tokens1 = vtexes.split(",");
     	        GraphList gl = new GraphList(n);
@@ -49,7 +49,11 @@ public final class Solution {
     	       	System.out.println(gl.toString());
     	        break;
             case"Matrix":
-                // sc.nextLine();
+                if (n == 0 || m == 0 ) {
+                    System.out.println(n + " vertices, " + m + " edges");
+                    System.out.println("No edges");
+                    break;
+                }
                 String vtxes = sc.nextLine();
                 String[] tkens = vtxes.split(",");
                 GraphMatrix gm = new GraphMatrix(n);
