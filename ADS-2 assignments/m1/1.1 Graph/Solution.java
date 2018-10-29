@@ -25,14 +25,15 @@ public final class Solution {
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         String word = sc.nextLine();
+        int n =  sc.nextInt();
+            int m = sc.nextInt();
+            if (n == 0 || m == 0 ) {
+                System.out.println(n + " vertices, " + m + " edges");
+                System.out.println("No edges");
+                return;
+            }
         switch (word) {
 	        case"List":
-	        int n =  sc.nextInt();
-	        int m = sc.nextInt();
-            if (n == 0 || m == 0 ) {
-                System.out.println("No edges");
-                break;
-            }
 	        sc.nextLine();
 	        String vtexes = sc.nextLine();
 	        String[] tokens1 = vtexes.split(",");
