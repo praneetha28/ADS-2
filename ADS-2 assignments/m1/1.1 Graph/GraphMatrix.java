@@ -60,7 +60,7 @@ public class GraphMatrix {
 
     public String toString() {
         StringBuilder s = new StringBuilder();
-        s.append(V + " " + E + '\n');
+        s.append(V + " vertices " + E + " edges" + '\n');
         for (int v = 0; v < V; v++) {
             // s.append(v + ": ");
             for (int w : adj[v]) {
