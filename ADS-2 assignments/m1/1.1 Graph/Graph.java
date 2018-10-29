@@ -2,11 +2,34 @@
  * Interface for graph.
  */
 interface Graph {
+    /**.
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int V();
+    /**.
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int E();
+    /**.
+     * Adds an edge.
+     *
+     * @param      v     { parameter_description }
+     * @param      w     { parameter_description }
+     */
     public void addEdge(int v, int w);
+    /**.
+     * { function_description }
+     *
+     * @param      v     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public Iterable<Integer> adj(int v);
-    public boolean hasEdge(int v, int w);
+    // public boolean hasEdge(int v, int w);
 }
 /**.
  * List of graphs.
@@ -15,7 +38,7 @@ class GraphList implements Graph {
 	/**.
 	 * { var_description }
 	 */
-	private final int V;
+	private int V;
 	/**.
 	 * { var_description }
 	 */
@@ -38,8 +61,8 @@ class GraphList implements Graph {
      *
      * @param  V number of vertices
      */
-    public GraphList(int V) {
-        this.V = V;
+    GraphList(final int vt) {
+        this.V = vt;
         this.E = 0;
         vertexes = new String[V];
         size = 0;
@@ -71,7 +94,7 @@ class GraphList implements Graph {
      *
      * @param      v     { parameter_description }
      */
-    public void addVertex(String v) {
+    public void addVertex(final String v) {
     	vertexes[size] = v;
     	size++;
     }
@@ -80,9 +103,10 @@ class GraphList implements Graph {
      *
      * @param  v one vertex in the edge
      * @param  w the other vertex in the edge
-     * @throws IllegalArgumentException unless both {@code 0 <= v < V} and {@code 0 <= w < V}
+     * @throws IllegalArgumentException unless both
+     *  {@code 0 <= v < V} and {@code 0 <= w < V}
      */
-    public void addEdge(int v, int w) {
+    public void addEdge(final int v, final int w) {
         if (v == w) {
             System.out.println(V + " vertices, " + E + " edges");
             System.out.println("No edges");
@@ -99,7 +123,7 @@ class GraphList implements Graph {
      * @return the vertices adjacent to vertex {@code v}, as an iterable
      * @throws IllegalArgumentException unless {@code 0 <= v < V}
      */
-    public Iterable<Integer> adj(int v) {
+    public Iterable<Integer> adj(final int v) {
         return adj[v];
     }
 
@@ -110,7 +134,7 @@ class GraphList implements Graph {
      * @return the degree of vertex {@code v}
      * @throws IllegalArgumentException unless {@code 0 <= v < V}
      */
-    public int degree(int v) {
+    public int degree(final int v) {
         return adj[v].size();
     }
 
@@ -118,7 +142,8 @@ class GraphList implements Graph {
     /**
      * Returns a string representation of this graph.
      *
-     * @return the number of vertices <em>V</em>, followed by the number of edges <em>E</em>,
+     * @return the number of vertices <em>V</em>, followed by
+     * the number of edges <em>E</em>,
      *         followed by the <em>V</em> adjacency lists
      */
     public String toString() {
