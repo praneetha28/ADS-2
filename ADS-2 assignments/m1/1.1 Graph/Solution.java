@@ -66,12 +66,18 @@ public final class Solution {
                 for (int i = 0; i < n; i++) {
                     gm.addVertex(tkens[i]);
                 }
+                String line;
+                String[] tokens = new String[100];
                 for (int i = 0; i < m; i++) {
-                    String line = sc.nextLine();
-                    String[] tokens = line.split(" ");
+                    line = sc.nextLine();
+                    tokens = line.split(" ");
                     gm.addEdge(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[1]));
                 }
-                System.out.println(gm.toString());
+                if (tokens[0] == tokens[1]) {
+                    break;
+                } else {
+                    System.out.println(gm.toString());
+                }
                 break;
 	        default:
 	        break;

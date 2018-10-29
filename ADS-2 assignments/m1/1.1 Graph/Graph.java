@@ -78,7 +78,11 @@ class GraphList implements Graph {
      * @throws IllegalArgumentException unless both {@code 0 <= v < V} and {@code 0 <= w < V}
      */
     public void addEdge(int v, int w) {
-
+        if (v == w) {
+            System.out.println(V + " vertices, " + E + " edges");
+            System.out.println("No edges");
+            return;
+        }
         E++;
         adj[v].add(w);
         adj[w].add(v);
