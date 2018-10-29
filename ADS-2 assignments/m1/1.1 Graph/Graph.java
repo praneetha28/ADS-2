@@ -7,13 +7,13 @@ interface Graph {
      *
      * @return     { description_of_the_return_value }
      */
-    int Vert();
+    int vert();
     /**.
      * { function_description }
      *
      * @return     { description_of_the_return_value }
      */
-    int Edge();
+    int edge();
     /**.
      * Adds an edge.
      *
@@ -29,7 +29,15 @@ interface Graph {
      * @return     { description_of_the_return_value }
      */
     Iterable<Integer> adj(int v);
-    // public boolean hasEdge(int v, int w);
+    /**.
+     * Determines if it has edge.
+     *
+     * @param      v     { parameter_description }
+     * @param      w     { parameter_description }
+     *
+     * @return     True if has edge, False otherwise.
+     */
+    public boolean hasEdge(int v, int w);
 }
 /**.
  * List of graphs.
@@ -38,11 +46,11 @@ class GraphList implements Graph {
     /**.
      * { var_description }
      */
-    private int Ver;
+    private int ver;
     /**.
      * { var_description }
      */
-    private int Edg;
+    private int edg;
     /**.
      * { var_description }
      */
@@ -62,12 +70,12 @@ class GraphList implements Graph {
      * @param  vt number of vertices
      */
     GraphList(final int vt) {
-        this.Ver = vt;
-        this.Edg = 0;
-        vertexes = new String[Ver];
+        this.ver = vt;
+        this.edg = 0;
+        vertexes = new String[ver];
         size = 0;
-        adj = (Bag<Integer>[]) new Bag[Ver];
-        for (int v = 0; v < Ver; v++) {
+        adj = (Bag<Integer>[]) new Bag[ver];
+        for (int v = 0; v < ver; v++) {
             adj[v] = new Bag<Integer>();
         }
     }
@@ -77,8 +85,8 @@ class GraphList implements Graph {
      *
      * @return the number of vertices in this graph
      */
-    public int Vert() {
-        return Ver;
+    public int vert() {
+        return ver;
     }
 
     /**
@@ -86,8 +94,8 @@ class GraphList implements Graph {
      *
      * @return the number of edges in this graph
      */
-    public int Edge() {
-        return Edg;
+    public int edge() {
+        return edg;
     }
     /**.
      * Adds a vertex.
@@ -98,21 +106,29 @@ class GraphList implements Graph {
         vertexes[size] = v;
         size++;
     }
+    public boolean hasEdge(final int v, final int w) {
+        for (int i : adj[w]) {
+            if (i == w) {
+                return true;
+            }
+        }
+        return false;
+    }
     /**
      * Adds the undirected edge v-w to this graph.
      *
      * @param  v one vertex in the edge
      * @param  w the other vertex in the edge
-     * @throws IllegalArgumentException unless both
-     *  {@code 0 <= v < V} and {@code 0 <= w < V}
      */
     public void addEdge(final int v, final int w) {
         if (v == w) {
-            System.out.println(Ver + " vertices, " + Edg + " edges");
+            System.out.println(ver + " vertices, " + edg + " edges");
             System.out.println("No edges");
             return;
         }
-        Edg++;
+        if (!hasEdge(v, w)) {
+            edg++;
+        }
         adj[v].add(w);
         adj[w].add(v);
     }
@@ -148,8 +164,8 @@ class GraphList implements Graph {
      */
     public String toString() {
         String s = "";
-        s += Ver + " vertices, " + Edg + " edges" + '\n';
-        for (int v = 0; v < Ver; v++) {
+        s += ver + " vertices, " + edg + " edges" + '\n';
+        for (int v = 0; v < ver; v++) {
             s += vertexes[v] + ": ";
             for (int w : adj[v]) {
                 s += vertexes[w] + " ";
