@@ -87,9 +87,13 @@ public class GraphMatrix {
         StringBuilder s = new StringBuilder();
         s.append(V + " " + E + '\n');
         for (int v = 0; v < V; v++) {
-            s.append(v + ": ");
+            // s.append(v + ": ");
             for (int w : adj(v)) {
-                s.append(w + " ");
+                if (w == 1) {
+                    s.append(1 + " ");
+                } else {
+                    s.append(0 + " ");
+                }
             }
             s.append('\n');
         }
