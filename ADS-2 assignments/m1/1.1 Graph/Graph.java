@@ -6,7 +6,7 @@ interface Graph {
     public int E();
     public void addEdge(int v, int w);
     public Iterable<Integer> adj(int v);
-    // public boolean hasEdge(int v, int w);
+    public boolean hasEdge(int v, int w);
 }
 /**.
  * List of graphs.
@@ -66,6 +66,11 @@ class GraphList implements Graph {
     public int E() {
         return E;
     }
+    /**.
+     * Adds a vertex.
+     *
+     * @param      v     { parameter_description }
+     */
     public void addVertex(String v) {
     	vertexes[size] = v;
     	size++;
