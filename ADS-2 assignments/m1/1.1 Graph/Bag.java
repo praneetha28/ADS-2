@@ -11,7 +11,7 @@ public class Bag<Item> implements Iterable<Item> {
     /**.
      * { var_description }
      */
-    public int n;
+    private int n;
     /**.
      * { var_description }
      */
