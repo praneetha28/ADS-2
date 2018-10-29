@@ -27,6 +27,7 @@ public final class Solution {
         String word = sc.nextLine();
         int n =  sc.nextInt();
         int m = sc.nextInt();
+        sc.nextLine();
         if (n == 0 || m == 0 ) {
             System.out.println(n + " vertices, " + m + " edges");
             System.out.println("No edges");
@@ -34,34 +35,34 @@ public final class Solution {
         }
         switch (word) {
 	        case"List":
-	        sc.nextLine();
-	        String vtexes = sc.nextLine();
-	        String[] tokens1 = vtexes.split(",");
-	        GraphList gl = new GraphList(n);
-	        for (int i = 0; i < n; i++) {
-	        	gl.addVertex(tokens1[i]);
-	        }
-	        for (int i = 0; i < m; i++) {
-	        	String line = sc.nextLine();
-	        	String[] tokens = line.split(" ");
-	        	gl.addEdge(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[1]));
-	        }
-	       	System.out.println(gl.toString());
-	        break;
-            case"Word":
-            sc.nextLine();
-            String vtxes = sc.nextLine();
-            String[] tkens = vtxes.split(",");
-            GraphMatrix gm = new GraphMatrix(n);
-            for (int i = 0; i < n; i++) {
-                gm.addVertex(tkens[i]);
-            }
-            for (int i = 0; i < m; i++) {
-                String line = sc.nextLine();
-                String[] tokens = line.split(" ");
-                gm.addEdge(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[1]));
-            }
-            System.out.println(gm.toString());
+    	        String vtexes = sc.nextLine();
+    	        String[] tokens1 = vtexes.split(",");
+    	        GraphList gl = new GraphList(n);
+    	        for (int i = 0; i < n; i++) {
+    	        	gl.addVertex(tokens1[i]);
+    	        }
+    	        for (int i = 0; i < m; i++) {
+    	        	String line = sc.nextLine();
+    	        	String[] tokens = line.split(" ");
+    	        	gl.addEdge(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[1]));
+    	        }
+    	       	System.out.println(gl.toString());
+    	        break;
+            case"Matrix":
+                // sc.nextLine();
+                String vtxes = sc.nextLine();
+                String[] tkens = vtxes.split(",");
+                GraphMatrix gm = new GraphMatrix(n);
+                for (int i = 0; i < n; i++) {
+                    gm.addVertex(tkens[i]);
+                }
+                for (int i = 0; i < m; i++) {
+                    String line = sc.nextLine();
+                    String[] tokens = line.split(" ");
+                    gm.addEdge(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[1]));
+                }
+                System.out.println(gm.toString());
+                break;
 	        default:
 	        break;
 	    }

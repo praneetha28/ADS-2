@@ -50,7 +50,20 @@ Expected Output:
 0 0 0 0 0 0 0 0 0 1 0 1 0
 
 Your Output: 
-
+13 0
+Andaman and Nicobar: Andhra Pradesh Arunachal Pradesh Chandigarh Chhattisgarh 
+Andhra Pradesh: Andaman and Nicobar 
+Arunachal Pradesh: Andaman and Nicobar 
+Assam: Bihar Chandigarh 
+Bihar: Assam Chandigarh Chhattisgarh 
+Chandigarh: Andaman and Nicobar Assam Bihar 
+Chhattisgarh: Andaman and Nicobar Bihar 
+Dadra and Nagar Haveli: Daman and Diu 
+Daman and Diu: Dadra and Nagar Haveli 
+Delhi: Goa Gujarat Haryana 
+Goa: Delhi 
+Gujarat: Delhi Haryana 
+Haryana: Delhi Gujarat
 ----------------------------------------
 
 ########## Testcase 2: Failed ##########
@@ -174,7 +187,43 @@ Expected Output:
 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0
 
 Your Output: 
-
+36 6
+Andaman and Nicobar: Andhra Pradesh Arunachal Pradesh Chandigarh Chhattisgarh Gujarat Haryana Jharkhand Karnataka Manipur Meghalaya Odisha Puducherry 
+Andhra Pradesh: Andaman and Nicobar Goa Maharashtra Tamil Nadu 
+Arunachal Pradesh: Andaman and Nicobar Goa Maharashtra Tamil Nadu 
+Assam: Bihar Chandigarh Jammu and Kashmir Jharkhand Nagaland Odisha Uttarakhand 
+Bihar: Assam Chandigarh Chhattisgarh Himachal Pradesh Jharkhand Karnataka Mizoram Odisha Puducherry West Bengal 
+Chandigarh: Andaman and Nicobar Assam Bihar Goa Himachal Pradesh Jammu and Kashmir Maharashtra Mizoram Nagaland Tamil Nadu 
+Chhattisgarh: Andaman and Nicobar Bihar Goa Jammu and Kashmir Maharashtra Nagaland Tamil Nadu 
+Dadra and Nagar Haveli: Daman and Diu Lakshadweep Rajasthan 
+Daman and Diu: Dadra and Nagar Haveli Kerala Punjab 
+Delhi: Goa Gujarat Haryana Maharashtra Manipur Meghalaya Tamil Nadu Telangana Tripura 
+Goa: Andhra Pradesh Arunachal Pradesh Chandigarh Chhattisgarh Delhi Madhya Pradesh Sikkim 
+Gujarat: Andaman and Nicobar Delhi Haryana Madhya Pradesh Meghalaya Sikkim Tripura 
+Haryana: Andaman and Nicobar Delhi Gujarat Madhya Pradesh Manipur Sikkim Telangana 
+Himachal Pradesh: Bihar Chandigarh 
+Jammu and Kashmir: Assam Chandigarh Chhattisgarh 
+Jharkhand: Andaman and Nicobar Assam Bihar 
+Karnataka: Andaman and Nicobar Bihar 
+Kerala: Daman and Diu 
+Lakshadweep: Dadra and Nagar Haveli 
+Madhya Pradesh: Goa Gujarat Haryana 
+Maharashtra: Andhra Pradesh Arunachal Pradesh Chandigarh Chhattisgarh Delhi 
+Manipur: Andaman and Nicobar Delhi Haryana 
+Meghalaya: Andaman and Nicobar Delhi Gujarat 
+Mizoram: Bihar Chandigarh 
+Nagaland: Assam Chandigarh Chhattisgarh 
+Odisha: Andaman and Nicobar Assam Bihar 
+Puducherry: Andaman and Nicobar Bihar 
+Punjab: Daman and Diu 
+Rajasthan: Dadra and Nagar Haveli 
+Sikkim: Goa Gujarat Haryana 
+Tamil Nadu: Andhra Pradesh Arunachal Pradesh Chandigarh Chhattisgarh Delhi 
+Telangana: Delhi Haryana 
+Tripura: Delhi Gujarat 
+Uttar Pradesh: West Bengal 
+Uttarakhand: Assam 
+West Bengal: Bihar Uttar Pradesh
 ----------------------------------------
 
 ########## Testcase 4: Failed ##########
@@ -193,7 +242,10 @@ Expected Output:
 No edges
 
 Your Output: 
-
+0 vertices, 0 edges
+No edges
+1 0
+Hyderabad:
 ----------------------------------------
 
 ########## Testcase 6: Passed ##########
