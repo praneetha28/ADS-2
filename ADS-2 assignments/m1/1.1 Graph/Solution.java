@@ -30,7 +30,7 @@ public final class Solution {
         sc.nextLine();
         switch (word) {
 	        case"List":
-                if (n == 0 || m == 0 ) {
+                if (n == 0 && m == 0 ) {
                     System.out.println(n + " vertices, " + m + " edges");
                     System.out.println("No edges");
                     break;
@@ -49,7 +49,7 @@ public final class Solution {
     	       	System.out.println(gl.toString());
     	        break;
             case"Matrix":
-                if (n == 0 || m == 0 ) {
+                if (n == 0 && m == 0 ) {
                     System.out.println(n + " vertices, " + m + " edges");
                     System.out.println("No edges");
                     break;
