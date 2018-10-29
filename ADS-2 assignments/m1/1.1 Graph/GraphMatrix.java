@@ -47,48 +47,23 @@ public class GraphMatrix {
             System.out.println("No edges");
             return;
         }
-        if (adj[v][w] == 1) E++;
-        adj[v][w] = 1;
-        adj[w][v] = 1;
+        if (adj[v][w] == 0) {
+            E++;
+            adj[v][w] = 1;
+            adj[w][v] = 1;
+        }
     }
 
     public int contains(int v, int w) {
         return adj[v][w];
     }
 
-    public Iterable<Integer> adj(int v) {
-        return new AdjIterator(v);
-    }
-    private class AdjIterator implements Iterator<Integer>, Iterable<Integer> {
-        private int v;
-        private int w = 0;
-
-        AdjIterator(int v) {
-            this.v = v;
-        }
-
-        public Iterator<Integer> iterator() {
-            return this;
-        }
-
-        public boolean hasNext() {
-            while (w < V) {
-                if (adj[v][w] == 1) return true;
-                w++;
-            }
-            return false;
-        }
-
-        public Integer next() {
-            return w++;
-        }
-    }
     public String toString() {
         StringBuilder s = new StringBuilder();
         s.append(V + " " + E + '\n');
         for (int v = 0; v < V; v++) {
             // s.append(v + ": ");
-            for (int w : adj(v)) {
+            for (int w : adj[v]) {
                 if (w == 1) {
                     s.append(1 + " ");
                 } else {
