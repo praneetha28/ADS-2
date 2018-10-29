@@ -57,10 +57,11 @@ public class Bag<Item> implements Iterable<Item> {
     public int size() {
         return N_1;
     }
-
-   /**
-     * Add the item to the bag.
-     */
+/**.
+ * { function_description }
+ *
+ * @param      item  The item
+ */
     public void add(final Item item) {
         Node oldfirst = first;
         first = new Node();
@@ -89,18 +90,21 @@ public class Bag<Item> implements Iterable<Item> {
          *
          * @return     True if has next, False otherwise.
          */
-        public boolean hasNext()  { return current != null;                     }
+        public boolean hasNext() {
+            return current != null;
+        }
         /**.
          * { function_description }
          */
-        public void remove()      { throw new UnsupportedOperationException();  }
+        public void remove() {
+            throw new UnsupportedOperationException();
+        }
         /**.
          * { function_description }
          *
          * @return     { description_of_the_return_value }
          */
         public Item next() {
-            if (!hasNext()) throw new NoSuchElementException();
             Item item = current.item;
             current = current.next;
             return item;
