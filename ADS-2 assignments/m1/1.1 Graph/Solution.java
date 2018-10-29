@@ -29,6 +29,10 @@ public final class Solution {
 	        case"List":
 	        int n =  sc.nextInt();
 	        int m = sc.nextInt();
+            if (n == 0 || m == 0 ) {
+                System.out.println("No edges");
+                break;
+            }
 	        sc.nextLine();
 	        String vtexes = sc.nextLine();
 	        String[] tokens1 = vtexes.split(",");
