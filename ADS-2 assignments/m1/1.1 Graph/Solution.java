@@ -44,7 +44,13 @@ public final class Solution {
     	        for (int i = 0; i < m; i++) {
     	        	String line = sc.nextLine();
     	        	String[] tokens = line.split(" ");
-    	        	gl.addEdge(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[1]));
+    	        	if (Integer.parseInt(tokens[0]) == Integer.parseInt(tokens[1])) {
+                        System.out.println(n + " vertices, " + m + " edges");
+                        System.out.println("No edges");
+                        break;
+                    } else {
+                        gl.addEdge(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[1]));
+                    }
     	        }
     	       	System.out.println(gl.toString());
     	        break;

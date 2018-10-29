@@ -233,7 +233,9 @@ No edges
 
 Your Output: 
 1 vertices, 1 edges
-Hyderabad: Hyderabad Hyderabad
+No edges
+1 vertices, 0 edges
+Hyderabad:
 ----------------------------------------
 
 ########## Testcase 5: Failed ##########
