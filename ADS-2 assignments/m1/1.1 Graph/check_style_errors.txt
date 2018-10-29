@@ -167,10 +167,12 @@ Starting audit...
 [ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\Solution.java:32:1: File contains tab characters (this is the first instance). [FileTabCharacter]
 [ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\Solution.java:33:37: ')' is preceded with whitespace. [ParenPad]
-[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\Solution.java:47: Line is longer than 80 characters (found 89). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\Solution.java:52: Line is longer than 80 characters (found 93). [LineLength]
+[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\Solution.java:45:47: '100' is a magic number. [MagicNumber]
+[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\Solution.java:49: Line is longer than 80 characters (found 95). [LineLength]
+[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\Solution.java:51: Line is longer than 80 characters (found 83). [LineLength]
 [ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\Solution.java:58:37: ')' is preceded with whitespace. [ParenPad]
 [ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\Solution.java:70:46: '100' is a magic number. [MagicNumber]
 [ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\Solution.java:74: Line is longer than 80 characters (found 89). [LineLength]
+[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\Solution.java:76: Line is longer than 80 characters (found 81). [LineLength]
 Audit done.
-Checkstyle ends with 8 errors.
+Checkstyle ends with 10 errors.

@@ -41,19 +41,19 @@ public final class Solution {
     	        for (int i = 0; i < n; i++) {
     	        	gl.addVertex(tokens1[i]);
     	        }
+                String line1;
+                String[] tokens2 = new String[100];
     	        for (int i = 0; i < m; i++) {
-    	        	String line = sc.nextLine();
-    	        	String[] tokens = line.split(" ");
-    	        	if (Integer.parseInt(tokens[0]) == Integer.parseInt(tokens[1])) {
-                        System.out.println(n + " vertices, " + m + " edges");
-                        System.out.println("No edges");
-                        break;
-                    } else {
-                        gl.addEdge(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[1]));
-                    }
+    	        	line1 = sc.nextLine();
+    	        	tokens2 = line1.split(" ");
+                        gl.addEdge(Integer.parseInt(tokens2[0]), Integer.parseInt(tokens2[1]));
     	        }
-    	       	System.out.println(gl.toString());
-    	        break;
+    	       	if (Integer.parseInt(tokens2[0]) == Integer.parseInt(tokens2[1])) {
+                    break;
+                } else {
+                    System.out.println(gl.toString());
+                }
+                break;
             case"Matrix":
                 if (n == 0 && m == 0 ) {
                     System.out.println(n + " vertices, " + m + " edges");
@@ -73,7 +73,7 @@ public final class Solution {
                     tokens = line.split(" ");
                     gm.addEdge(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[1]));
                 }
-                if (tokens[0] == tokens[1]) {
+                if (Integer.parseInt(tokens[0]) == Integer.parseInt(tokens[1])) {
                     break;
                 } else {
                     System.out.println(gm.toString());
