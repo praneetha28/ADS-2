@@ -114,7 +114,7 @@ class GraphList implements Graph {
      */
     public String toString() {
         String s = "";
-        s += V + " vertices, " + E + " edges " + '\n';
+        s += V + " vertices, " + E + " edges" + '\n';
         for (int v = 0; v < V; v++) {
             s += vertexes[v] + ": ";
             for (int w : adj[v]) {
