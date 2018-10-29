@@ -4,12 +4,12 @@ Audit done.
 Checkstyle ends with 1 errors.
 Starting audit...
 [ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\Graph.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\Graph.java:10:9: Name 'V' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
-[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\Graph.java:16:9: Name 'E' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
-[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\Graph.java:41:17: Name 'V' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MemberName]
-[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\Graph.java:45:17: Name 'E' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MemberName]
-[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\Graph.java:80:16: Name 'V' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
-[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\Graph.java:89:16: Name 'E' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
+[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\Graph.java:10:9: Name 'Vert' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
+[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\Graph.java:16:9: Name 'Edge' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
+[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\Graph.java:41:17: Name 'Ver' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MemberName]
+[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\Graph.java:45:17: Name 'Edg' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MemberName]
+[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\Graph.java:80:16: Name 'Vert' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
+[ERROR] F:\ADS-2\ADS-2 assignments\m1\1.1 Graph\Graph.java:89:16: Name 'Edge' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
 Audit done.
 Checkstyle ends with 7 errors.
 Starting audit...

@@ -7,13 +7,13 @@ interface Graph {
      *
      * @return     { description_of_the_return_value }
      */
-    int V();
+    int Vert();
     /**.
      * { function_description }
      *
      * @return     { description_of_the_return_value }
      */
-    int E();
+    int Edge();
     /**.
      * Adds an edge.
      *
@@ -38,11 +38,11 @@ class GraphList implements Graph {
     /**.
      * { var_description }
      */
-    private int V;
+    private int Ver;
     /**.
      * { var_description }
      */
-    private int E;
+    private int Edg;
     /**.
      * { var_description }
      */
@@ -62,12 +62,12 @@ class GraphList implements Graph {
      * @param  vt number of vertices
      */
     GraphList(final int vt) {
-        this.V = vt;
-        this.E = 0;
-        vertexes = new String[V];
+        this.Ver = vt;
+        this.Edg = 0;
+        vertexes = new String[Ver];
         size = 0;
-        adj = (Bag<Integer>[]) new Bag[V];
-        for (int v = 0; v < V; v++) {
+        adj = (Bag<Integer>[]) new Bag[Ver];
+        for (int v = 0; v < Ver; v++) {
             adj[v] = new Bag<Integer>();
         }
     }
@@ -77,8 +77,8 @@ class GraphList implements Graph {
      *
      * @return the number of vertices in this graph
      */
-    public int V() {
-        return V;
+    public int Vert() {
+        return Ver;
     }
 
     /**
@@ -86,8 +86,8 @@ class GraphList implements Graph {
      *
      * @return the number of edges in this graph
      */
-    public int E() {
-        return E;
+    public int Edge() {
+        return Edg;
     }
     /**.
      * Adds a vertex.
@@ -108,11 +108,11 @@ class GraphList implements Graph {
      */
     public void addEdge(final int v, final int w) {
         if (v == w) {
-            System.out.println(V + " vertices, " + E + " edges");
+            System.out.println(Ver + " vertices, " + Edg + " edges");
             System.out.println("No edges");
             return;
         }
-        E++;
+        Edg++;
         adj[v].add(w);
         adj[w].add(v);
     }
@@ -148,8 +148,8 @@ class GraphList implements Graph {
      */
     public String toString() {
         String s = "";
-        s += V + " vertices, " + E + " edges" + '\n';
-        for (int v = 0; v < V; v++) {
+        s += Ver + " vertices, " + Edg + " edges" + '\n';
+        for (int v = 0; v < Ver; v++) {
             s += vertexes[v] + ": ";
             for (int w : adj[v]) {
                 s += vertexes[w] + " ";
