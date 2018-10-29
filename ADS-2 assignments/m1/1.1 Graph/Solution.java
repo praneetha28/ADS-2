@@ -27,7 +27,6 @@ public final class Solution {
         String word = sc.nextLine();
         int n =  sc.nextInt();
         int m = sc.nextInt();
-        int magic = 100;
         sc.nextLine();
         switch (word) {
             case"List":
@@ -43,15 +42,15 @@ public final class Solution {
                     gl.addVertex(tokens1[i]);
                 }
                 String line1;
-                String[] tokens2 = new String[magic];
+                String[] tokens2 = new String[m];
                 for (int i = 0; i < m; i++) {
                     line1 = sc.nextLine();
                     tokens2 = line1.split(" ");
                         gl.addEdge(Integer.parseInt(tokens2[0]),
                          Integer.parseInt(tokens2[1]));
                 }
-                if (Integer.parseInt(tokens2[0]) ==
-                 Integer.parseInt(tokens2[1])) {
+                if (Integer.parseInt(tokens2[0])
+                 == Integer.parseInt(tokens2[1])) {
                     break;
                 } else {
                     System.out.println(gl.toString());
@@ -70,15 +69,15 @@ public final class Solution {
                     gm.addVertex(tkens[i]);
                 }
                 String line;
-                String[] tokens = new String[magic];
+                String[] tokens = new String[m];
                 for (int i = 0; i < m; i++) {
                     line = sc.nextLine();
                     tokens = line.split(" ");
                     gm.addEdge(Integer.parseInt(tokens[0]),
                      Integer.parseInt(tokens[1]));
                 }
-                if (Integer.parseInt(tokens[0]) ==
-                 Integer.parseInt(tokens[1])) {
+                if (Integer.parseInt(tokens[0])
+                 == Integer.parseInt(tokens[1])) {
                     break;
                 } else {
                     System.out.println(gm.toString());
