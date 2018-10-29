@@ -37,7 +37,7 @@ interface Graph {
      *
      * @return     True if has edge, False otherwise.
      */
-    public boolean hasEdge(int v, int w);
+    boolean hasEdge(int v, int w);
 }
 /**.
  * List of graphs.
@@ -106,6 +106,14 @@ class GraphList implements Graph {
         vertexes[size] = v;
         size++;
     }
+    /**.
+     * Determines if it has edge.
+     *
+     * @param      v     { parameter_description }
+     * @param      w     { parameter_description }
+     *
+     * @return     True if has edge, False otherwise.
+     */
     public boolean hasEdge(final int v, final int w) {
         for (int i : adj[w]) {
             if (i == w) {
