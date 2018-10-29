@@ -3,10 +3,6 @@
  */
 import java.util.Iterator;
 /**.
- * { item_description }
- */
-import java.util.NoSuchElementException;
-/**.
  * Class for bag.
  *
  * @param      <Item>  The item
@@ -15,7 +11,7 @@ public class Bag<Item> implements Iterable<Item> {
     /**.
      * { var_description }
      */
-    private int N_1;
+    public int n;
     /**.
      * { var_description }
      */
@@ -39,7 +35,7 @@ public class Bag<Item> implements Iterable<Item> {
      */
     public Bag() {
         first = null;
-        N = 0;
+        n = 0;
     }
 /**.
  * Determines if empty.
@@ -55,7 +51,7 @@ public class Bag<Item> implements Iterable<Item> {
  * @return     { description_of_the_return_value }
  */
     public int size() {
-        return N_1;
+        return n;
     }
 /**.
  * { function_description }
@@ -67,7 +63,7 @@ public class Bag<Item> implements Iterable<Item> {
         first = new Node();
         first.item = item;
         first.next = oldfirst;
-        N++;
+        n++;
     }
 /**.
  * { function_description }
