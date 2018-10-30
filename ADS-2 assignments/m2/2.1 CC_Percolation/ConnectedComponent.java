@@ -24,7 +24,7 @@ public class ConnectedComponent {
      *
      * @param g the undirected graph
      */
-    public ConnectedComponent(GraphList g) {
+    public ConnectedComponent(final GraphList g) {
         marked = new boolean[g.vert()];
         id = new int[g.vert()];
         size = new int[g.vert()];
@@ -53,10 +53,12 @@ public class ConnectedComponent {
     //         }
     //     }
     // }
-    /**.
-    method on depth first traversal
-    */
-    private void dfs(GraphList g, int v) {
+    /**
+     * method on depth first traversal
+     * @param  g the undirected graph
+     * @param  v the vertex
+     */
+    private void dfs(final GraphList g, final int v) {
         marked[v] = true;
         id[v] = count;
         size[count]++;
@@ -87,7 +89,7 @@ public class ConnectedComponent {
      * @return the component id of the connected
      * component containing vertex {@code v}
      */
-    public int id(int v) {
+    public int id(final int v) {
         return id[v];
     }
 
@@ -99,7 +101,7 @@ public class ConnectedComponent {
      * @return the number of vertices in the connected
      * component containing vertex {@code v}
      */
-    public int size(int v) {
+    public int size(final int v) {
         return size[id[v]];
     }
 
@@ -121,7 +123,7 @@ public class ConnectedComponent {
      * @param  v one vertex
      * @param  w the other vertex
      */
-    public boolean connected(int v, int w) {
+    public boolean connected(final int v, final int w) {
         return id(v) == id(w);
     }
 
@@ -132,7 +134,7 @@ public class ConnectedComponent {
      * @param  v one vertex
      * @param  w the other vertex
      */
-    public boolean areConnected(int v, int w) {
+    public boolean areConnected(final int v, final int w) {
         return id(v) == id(w);
     }
 }

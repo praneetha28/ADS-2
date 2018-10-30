@@ -1,8 +1,28 @@
+/**.
+ * Class for percolation.
+ */
 class Percolation {
+	/**.
+	 * { var_description }
+	 */
 	private boolean[][] grid;
-	int size;
-	int count = 0;
-	GraphList ghl;
+	/**.
+	 * { var_description }
+	 */
+	private int size;
+	/**.
+	 * { var_description }
+	 */
+	private int count = 0;
+	/**.
+	 * { var_description }
+	 */
+	private GraphList ghl;
+	/**.
+	 * Constructs the object.
+	 *
+	 * @param      sze   The sze
+	 */
 	Percolation(int sze) {
 		this.size = sze;
 		ghl = new GraphList((sze * sze) + 2);
