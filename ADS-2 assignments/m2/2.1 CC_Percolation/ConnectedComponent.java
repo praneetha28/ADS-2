@@ -1,13 +1,28 @@
+/**.
+ * Class for connected component.
+ */
 public class ConnectedComponent {
+	/**.
+	 * { var_description }
+	 */
     private boolean[] marked;
+    /**.
+     * { var_description }
+     */
     private int[] id;
+    /**.
+     * { var_description }
+     */
     private int[] size;
+    /**.
+     * { var_description }
+     */
     private int count;
-
     /**
-     * Computes the connected components of the undirected graph {@code G}.
+     * Computes the connected components of the
+     * undirected graph {@code G}.
      *
-     * @param G the undirected graph
+     * @param g the undirected graph
      */
     public ConnectedComponent(GraphList g) {
         marked = new boolean[g.vert()];
@@ -22,7 +37,8 @@ public class ConnectedComponent {
     }
 
     // /**
-    //  * Computes the connected components of the edge-weighted graph {@code G}.
+    //  * Computes the connected components of the
+    //   edge-weighted graph {@code G}.
     //  *
     //  * @param G the edge-weighted graph
     //  */
@@ -37,7 +53,9 @@ public class ConnectedComponent {
     //         }
     //     }
     // }
-
+    /**.
+    method on depth first traversal
+    */
     private void dfs(GraphList g, int v) {
         marked[v] = true;
         id[v] = count;
@@ -62,36 +80,42 @@ public class ConnectedComponent {
 
 
     /**
-     * Returns the component id of the connected component containing vertex {@code v}.
+     * Returns the component id of the connected
+     * component containing vertex {@code v}.
      *
      * @param  v the vertex
-     * @return the component id of the connected component containing vertex {@code v}
+     * @return the component id of the connected
+     * component containing vertex {@code v}
      */
     public int id(int v) {
         return id[v];
     }
 
     /**
-     * Returns the number of vertices in the connected component containing vertex {@code v}.
+     * Returns the number of vertices in the connected
+     * component containing vertex {@code v}.
      *
      * @param  v the vertex
-     * @return the number of vertices in the connected component containing vertex {@code v}
+     * @return the number of vertices in the connected
+     * component containing vertex {@code v}
      */
     public int size(int v) {
         return size[id[v]];
     }
 
     /**
-     * Returns the number of connected components in the graph {@code G}.
+     * Returns the number of connected components
+     * in the graph {@code G}.
      *
-     * @return the number of connected components in the graph {@code G}
+     * @return the number of connected components
+     * in the graph {@code G}
      */
     public int count() {
         return count;
     }
 
     /**
-     * Returns true if vertices {@code v} and {@code w} are in the same
+     * Returns true if vertices v and w are in the same
      * connected component.
      *
      * @param  v one vertex
@@ -102,7 +126,7 @@ public class ConnectedComponent {
     }
 
     /**
-     * Returns true if vertices {@code v} and {@code w} are in the same
+     * Returns true if vertices v and w are in the same
      * connected component.
      *
      * @param  v one vertex

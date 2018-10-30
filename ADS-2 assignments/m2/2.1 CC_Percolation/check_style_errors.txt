@@ -2,32 +2,22 @@ Starting audit...
 Audit done.
 Starting audit...
 [ERROR] F:\ADS-2\ADS-2 assignments\m2\2.1 CC_Percolation\ConnectedComponent.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] F:\ADS-2\ADS-2 assignments\m2\2.1 CC_Percolation\ConnectedComponent.java:1: Missing a Javadoc comment. [JavadocType]
-[ERROR] F:\ADS-2\ADS-2 assignments\m2\2.1 CC_Percolation\ConnectedComponent.java:2:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] F:\ADS-2\ADS-2 assignments\m2\2.1 CC_Percolation\ConnectedComponent.java:3:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] F:\ADS-2\ADS-2 assignments\m2\2.1 CC_Percolation\ConnectedComponent.java:4:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] F:\ADS-2\ADS-2 assignments\m2\2.1 CC_Percolation\ConnectedComponent.java:5:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] F:\ADS-2\ADS-2 assignments\m2\2.1 CC_Percolation\ConnectedComponent.java:10:8: Unused @param tag for 'G'. [JavadocMethod]
-[ERROR] F:\ADS-2\ADS-2 assignments\m2\2.1 CC_Percolation\ConnectedComponent.java:12:31: Parameter g should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m2\2.1 CC_Percolation\ConnectedComponent.java:12:41: Expected @param tag for 'g'. [JavadocMethod]
-[ERROR] F:\ADS-2\ADS-2 assignments\m2\2.1 CC_Percolation\ConnectedComponent.java:25: Line is longer than 80 characters (found 81). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m2\2.1 CC_Percolation\ConnectedComponent.java:41:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS-2\ADS-2 assignments\m2\2.1 CC_Percolation\ConnectedComponent.java:41:22: Parameter g should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m2\2.1 CC_Percolation\ConnectedComponent.java:41:35: Parameter v should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m2\2.1 CC_Percolation\ConnectedComponent.java:65: Line is longer than 80 characters (found 87). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m2\2.1 CC_Percolation\ConnectedComponent.java:68: Line is longer than 80 characters (found 86). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m2\2.1 CC_Percolation\ConnectedComponent.java:70:19: Parameter v should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m2\2.1 CC_Percolation\ConnectedComponent.java:75: Line is longer than 80 characters (found 93). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m2\2.1 CC_Percolation\ConnectedComponent.java:78: Line is longer than 80 characters (found 92). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m2\2.1 CC_Percolation\ConnectedComponent.java:80:21: Parameter v should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m2\2.1 CC_Percolation\ConnectedComponent.java:100: Expected @return tag. [JavadocMethod]
-[ERROR] F:\ADS-2\ADS-2 assignments\m2\2.1 CC_Percolation\ConnectedComponent.java:100:30: Parameter v should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m2\2.1 CC_Percolation\ConnectedComponent.java:100:37: Parameter w should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m2\2.1 CC_Percolation\ConnectedComponent.java:111: Expected @return tag. [JavadocMethod]
-[ERROR] F:\ADS-2\ADS-2 assignments\m2\2.1 CC_Percolation\ConnectedComponent.java:111:33: Parameter v should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m2\2.1 CC_Percolation\ConnectedComponent.java:111:40: Parameter w should be final. [FinalParameters]
+[ERROR] F:\ADS-2\ADS-2 assignments\m2\2.1 CC_Percolation\ConnectedComponent.java:5:1: File contains tab characters (this is the first instance). [FileTabCharacter]
+[ERROR] F:\ADS-2\ADS-2 assignments\m2\2.1 CC_Percolation\ConnectedComponent.java:27:31: Parameter g should be final. [FinalParameters]
+[ERROR] F:\ADS-2\ADS-2 assignments\m2\2.1 CC_Percolation\ConnectedComponent.java:59:22: Parameter g should be final. [FinalParameters]
+[ERROR] F:\ADS-2\ADS-2 assignments\m2\2.1 CC_Percolation\ConnectedComponent.java:59:32: Expected @param tag for 'g'. [JavadocMethod]
+[ERROR] F:\ADS-2\ADS-2 assignments\m2\2.1 CC_Percolation\ConnectedComponent.java:59:35: Parameter v should be final. [FinalParameters]
+[ERROR] F:\ADS-2\ADS-2 assignments\m2\2.1 CC_Percolation\ConnectedComponent.java:59:39: Expected @param tag for 'v'. [JavadocMethod]
+[ERROR] F:\ADS-2\ADS-2 assignments\m2\2.1 CC_Percolation\ConnectedComponent.java:90:19: Parameter v should be final. [FinalParameters]
+[ERROR] F:\ADS-2\ADS-2 assignments\m2\2.1 CC_Percolation\ConnectedComponent.java:102:21: Parameter v should be final. [FinalParameters]
+[ERROR] F:\ADS-2\ADS-2 assignments\m2\2.1 CC_Percolation\ConnectedComponent.java:124: Expected @return tag. [JavadocMethod]
+[ERROR] F:\ADS-2\ADS-2 assignments\m2\2.1 CC_Percolation\ConnectedComponent.java:124:30: Parameter v should be final. [FinalParameters]
+[ERROR] F:\ADS-2\ADS-2 assignments\m2\2.1 CC_Percolation\ConnectedComponent.java:124:37: Parameter w should be final. [FinalParameters]
+[ERROR] F:\ADS-2\ADS-2 assignments\m2\2.1 CC_Percolation\ConnectedComponent.java:135: Expected @return tag. [JavadocMethod]
+[ERROR] F:\ADS-2\ADS-2 assignments\m2\2.1 CC_Percolation\ConnectedComponent.java:135:33: Parameter v should be final. [FinalParameters]
+[ERROR] F:\ADS-2\ADS-2 assignments\m2\2.1 CC_Percolation\ConnectedComponent.java:135:40: Parameter w should be final. [FinalParameters]
 Audit done.
-Checkstyle ends with 25 errors.
+Checkstyle ends with 15 errors.
 Starting audit...
 Audit done.
 Starting audit...
