@@ -4,8 +4,7 @@ false
 
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 25
-	at Percolation.isOpen(Percolation.java:12)
-	at Percolation.open(Percolation.java:18)
+	at Percolation.open(Percolation.java:19)
 	at Solution.main(Solution.java:31)
 ----------------------------------------
 
@@ -15,8 +14,7 @@ false
 
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 13
-	at Percolation.isOpen(Percolation.java:12)
-	at Percolation.open(Percolation.java:18)
+	at Percolation.open(Percolation.java:19)
 	at Solution.main(Solution.java:31)
 ----------------------------------------
 
@@ -26,8 +24,7 @@ true
 
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 1
-	at Percolation.isOpen(Percolation.java:12)
-	at Percolation.open(Percolation.java:18)
+	at Percolation.open(Percolation.java:19)
 	at Solution.main(Solution.java:31)
 ----------------------------------------
 
@@ -45,8 +42,7 @@ true
 
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 2
-	at Percolation.isOpen(Percolation.java:12)
-	at Percolation.open(Percolation.java:18)
+	at Percolation.open(Percolation.java:19)
 	at Solution.main(Solution.java:31)
 ----------------------------------------
 
@@ -56,8 +52,7 @@ false
 
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 2
-	at Percolation.isOpen(Percolation.java:12)
-	at Percolation.open(Percolation.java:18)
+	at Percolation.open(Percolation.java:19)
 	at Solution.main(Solution.java:31)
 ----------------------------------------
 
@@ -67,8 +62,7 @@ true
 
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 3
-	at Percolation.isOpen(Percolation.java:12)
-	at Percolation.open(Percolation.java:18)
+	at Percolation.open(Percolation.java:19)
 	at Solution.main(Solution.java:31)
 ----------------------------------------
 
@@ -78,8 +72,7 @@ true
 
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 4
-	at Percolation.isOpen(Percolation.java:12)
-	at Percolation.open(Percolation.java:18)
+	at Percolation.open(Percolation.java:19)
 	at Solution.main(Solution.java:31)
 ----------------------------------------
 
@@ -89,8 +82,7 @@ true
 
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 5
-	at Percolation.isOpen(Percolation.java:12)
-	at Percolation.open(Percolation.java:18)
+	at Percolation.open(Percolation.java:19)
 	at Solution.main(Solution.java:31)
 ----------------------------------------
 
@@ -100,8 +92,7 @@ true
 
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 6
-	at Percolation.isOpen(Percolation.java:12)
-	at Percolation.open(Percolation.java:18)
+	at Percolation.open(Percolation.java:19)
 	at Solution.main(Solution.java:31)
 ----------------------------------------
 
@@ -111,8 +102,7 @@ true
 
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 7
-	at Percolation.isOpen(Percolation.java:12)
-	at Percolation.open(Percolation.java:18)
+	at Percolation.open(Percolation.java:19)
 	at Solution.main(Solution.java:31)
 ----------------------------------------
 
@@ -122,8 +112,7 @@ true
 
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 8
-	at Percolation.isOpen(Percolation.java:12)
-	at Percolation.open(Percolation.java:18)
+	at Percolation.open(Percolation.java:19)
 	at Solution.main(Solution.java:31)
 ----------------------------------------
 
@@ -133,8 +122,7 @@ true
 
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 8
-	at Percolation.isOpen(Percolation.java:12)
-	at Percolation.open(Percolation.java:18)
+	at Percolation.open(Percolation.java:19)
 	at Solution.main(Solution.java:31)
 ----------------------------------------
 
@@ -144,8 +132,7 @@ false
 
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 13
-	at Percolation.isOpen(Percolation.java:12)
-	at Percolation.open(Percolation.java:18)
+	at Percolation.open(Percolation.java:19)
 	at Solution.main(Solution.java:31)
 ----------------------------------------
 
@@ -155,8 +142,7 @@ true
 
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 10
-	at Percolation.isOpen(Percolation.java:12)
-	at Percolation.open(Percolation.java:18)
+	at Percolation.open(Percolation.java:19)
 	at Solution.main(Solution.java:31)
 ----------------------------------------
 
@@ -174,8 +160,7 @@ true
 
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 20
-	at Percolation.isOpen(Percolation.java:12)
-	at Percolation.open(Percolation.java:18)
+	at Percolation.open(Percolation.java:19)
 	at Solution.main(Solution.java:31)
 ----------------------------------------
 
@@ -185,8 +170,7 @@ true
 
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 50
-	at Percolation.isOpen(Percolation.java:12)
-	at Percolation.open(Percolation.java:18)
+	at Percolation.open(Percolation.java:19)
 	at Solution.main(Solution.java:31)
 ----------------------------------------
 
@@ -196,8 +180,7 @@ true
 
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 60
-	at Percolation.isOpen(Percolation.java:12)
-	at Percolation.open(Percolation.java:18)
+	at Percolation.open(Percolation.java:19)
 	at Solution.main(Solution.java:31)
 ----------------------------------------
 
@@ -207,8 +190,7 @@ true
 
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 47
-	at Percolation.isOpen(Percolation.java:12)
-	at Percolation.open(Percolation.java:18)
+	at Percolation.open(Percolation.java:19)
 	at Solution.main(Solution.java:31)
 ----------------------------------------
 
@@ -218,8 +200,7 @@ true
 
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 60
-	at Percolation.isOpen(Percolation.java:12)
-	at Percolation.open(Percolation.java:18)
+	at Percolation.open(Percolation.java:19)
 	at Solution.main(Solution.java:31)
 ----------------------------------------
 
@@ -229,8 +210,7 @@ true
 
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 13
-	at Percolation.isOpen(Percolation.java:12)
-	at Percolation.open(Percolation.java:18)
+	at Percolation.open(Percolation.java:19)
 	at Solution.main(Solution.java:31)
 ----------------------------------------
 
@@ -240,8 +220,7 @@ true
 
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 101
-	at Percolation.isOpen(Percolation.java:12)
-	at Percolation.open(Percolation.java:18)
+	at Percolation.open(Percolation.java:19)
 	at Solution.main(Solution.java:31)
 ----------------------------------------
 
@@ -251,8 +230,7 @@ true
 
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 98
-	at Percolation.isOpen(Percolation.java:12)
-	at Percolation.open(Percolation.java:18)
+	at Percolation.open(Percolation.java:19)
 	at Solution.main(Solution.java:31)
 ----------------------------------------
 
