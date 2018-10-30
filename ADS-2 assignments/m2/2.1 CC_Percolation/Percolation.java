@@ -23,18 +23,29 @@ class Percolation {
 	 *
 	 * @param      sze   The sze
 	 */
-	Percolation(int sze) {
+	Percolation(final int sze) {
 		this.size = sze;
 		ghl = new GraphList((sze * sze) + 2);
 		grid = new boolean[size][size];
 	}
-	// public boolean isOpen(int r, int c) {
-	// 	return grid[r][c];
-	// }
-	public int getIndex(int i, int j) {
+	/**.
+	 * Gets the index.
+	 *
+	 * @param      i     { parameter_description }
+	 * @param      j     { parameter_description }
+	 *
+	 * @return     The index.
+	 */
+	public int getIndex(final int i, final int j) {
 		return (i*size) + j;
 	}
-	public void open(int r, int c) {
+	/**.
+	 * { function_description }
+	 *
+	 * @param      r     { parameter_description }
+	 * @param      c     { parameter_description }
+	 */
+	public void open(final int r, final int c) {
 
 			grid[r][c] = true;
 			count += 1;
@@ -57,9 +68,11 @@ class Percolation {
         	ghl.addEdge(getIndex(r, c), getIndex(r - 1, c) );
         }
 	}
-	// public int numberOfOpenSites() {
-	// 	return count;
-	// }
+	/**.
+	 * { function_description }
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public boolean percolates() {
 		ConnectedComponent concom = new ConnectedComponent(ghl);
 
