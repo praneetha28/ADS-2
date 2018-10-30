@@ -75,8 +75,6 @@ class Percolation {
      */
     public boolean percolates() {
         ConnectedComponent concom = new ConnectedComponent(ghl);
-
         return concom.connected(size * size, (size * size) + 1);
-
     }
 }

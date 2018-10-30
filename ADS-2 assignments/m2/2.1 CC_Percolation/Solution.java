@@ -25,7 +25,7 @@ public final class Solution {
         int n = sc.nextInt();
         sc.nextLine();
         Percolation p = new Percolation(n);
-        while(sc.hasNext()) {
+        while (sc.hasNext()) {
             String line = sc.nextLine();
             String[] tokens = line.split(" ");
             p.open(Integer.parseInt(tokens[0]) - 1,
