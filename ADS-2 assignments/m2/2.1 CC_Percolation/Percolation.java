@@ -24,7 +24,7 @@ class Percolation {
 		if (r == size - 1) {
 			ghl.addEdge((size * size) + 1, getIndex(r, c));
 		}
-        if (c < size - 1 && grid[r][c + 1]) { //bottom
+        if (c < size - 1 && grid[r][c]) { //bottom
         	ghl.addEdge(getIndex(r, c), getIndex(r, c + 1) );
         }
         if (c > 0 && grid[r][c - 1]) { // left
