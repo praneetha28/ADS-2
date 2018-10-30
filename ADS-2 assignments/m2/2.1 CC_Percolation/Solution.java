@@ -28,8 +28,8 @@ public final class Solution {
         while(sc.hasNext()) {
             String line = sc.nextLine();
             String[] tokens = line.split(" ");
-            p.open(Integer.parseInt(tokens[0]),
-                         Integer.parseInt(tokens[1]));
+            p.open(Integer.parseInt(tokens[0]) - 1,
+                         Integer.parseInt(tokens[1]) - 1);
         }
         System.out.println(p.percolates());
     }
