@@ -2,9 +2,9 @@
  * Class for connected component.
  */
 public class ConnectedComponent {
-	/**.
-	 * { var_description }
-	 */
+    /**.
+     * { var_description }
+     */
     private boolean[] marked;
     /**.
      * { var_description }
@@ -53,7 +53,7 @@ public class ConnectedComponent {
     //         }
     //     }
     // }
-    /**
+    /**.
      * method on depth first traversal
      * @param  g the undirected graph
      * @param  v the vertex
@@ -122,6 +122,7 @@ public class ConnectedComponent {
      *
      * @param  v one vertex
      * @param  w the other vertex
+     * @return the true or false
      */
     public boolean connected(final int v, final int w) {
         return id(v) == id(w);
@@ -133,6 +134,7 @@ public class ConnectedComponent {
      *
      * @param  v one vertex
      * @param  w the other vertex
+     * @return the true or false
      */
     public boolean areConnected(final int v, final int w) {
         return id(v) == id(w);
