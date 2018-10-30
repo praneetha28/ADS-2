@@ -54,6 +54,7 @@ public class ConnectedComponent {
     //     }
     // }
     /**.
+     * time complexity is O(N).
      * method on depth first traversal
      * @param  g the undirected graph
      * @param  v the vertex
@@ -81,10 +82,8 @@ public class ConnectedComponent {
     // }
 
 
-    /**
-     * Returns the component id of the connected
-     * component containing vertex {@code v}.
-     *
+    /**.
+     * time complexity in average case is 1.
      * @param  v the vertex
      * @return the component id of the connected
      * component containing vertex {@code v}
@@ -93,10 +92,8 @@ public class ConnectedComponent {
         return id[v];
     }
 
-    /**
-     * Returns the number of vertices in the connected
-     * component containing vertex {@code v}.
-     *
+    /**.
+     * time complexity in average case is 1.
      * @param  v the vertex
      * @return the number of vertices in the connected
      * component containing vertex {@code v}
@@ -106,6 +103,7 @@ public class ConnectedComponent {
     }
 
     /**
+     * time complexity in average case is 1.
      * Returns the number of connected components
      * in the graph {@code G}.
      *
@@ -117,8 +115,7 @@ public class ConnectedComponent {
     }
 
     /**
-     * Returns true if vertices v and w are in the same
-     * connected component.
+     * time complexity in average case is 1.
      *
      * @param  v one vertex
      * @param  w the other vertex
@@ -129,8 +126,7 @@ public class ConnectedComponent {
     }
 
     /**
-     * Returns true if vertices v and w are in the same
-     * connected component.
+     * time complexity in average case is 1.
      *
      * @param  v one vertex
      * @param  w the other vertex
