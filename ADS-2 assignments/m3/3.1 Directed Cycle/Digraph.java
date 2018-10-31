@@ -1,3 +1,6 @@
+/**.
+ * Class for digraph.
+ */
 public class Digraph {
     /**.
      * { var_description }
@@ -15,6 +18,9 @@ public class Digraph {
      * { var_description }
      */
     private int size = 0;
+    /**.
+     * { var_description }
+     */
     private int[] indegree;
     /**
      * Initializes an empty graph with V vertices and 0 edges.

@@ -1,19 +1,11 @@
 Starting audit...
 Audit done.
 Starting audit...
-[ERROR] F:\ADS-2\ADS-2 assignments\m3\3.1 Directed Cycle\Digraph.java:1: Missing a Javadoc comment. [JavadocType]
-[ERROR] F:\ADS-2\ADS-2 assignments\m3\3.1 Directed Cycle\Digraph.java:18:5: Missing a Javadoc comment. [JavadocVariable]
 Audit done.
-Checkstyle ends with 2 errors.
 Starting audit...
 [ERROR] F:\ADS-2\ADS-2 assignments\m3\3.1 Directed Cycle\DirectedCycle.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] F:\ADS-2\ADS-2 assignments\m3\3.1 Directed Cycle\DirectedCycle.java:26:26: Parameter g should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m3\3.1 Directed Cycle\DirectedCycle.java:30: 'for' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m3\3.1 Directed Cycle\DirectedCycle.java:31: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m3\3.1 Directed Cycle\DirectedCycle.java:39:22: Parameter g should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m3\3.1 Directed Cycle\DirectedCycle.java:39:33: Parameter v should be final. [FinalParameters]
 Audit done.
-Checkstyle ends with 6 errors.
+Checkstyle ends with 1 errors.
 Starting audit...
 Audit done.
 Starting audit...
