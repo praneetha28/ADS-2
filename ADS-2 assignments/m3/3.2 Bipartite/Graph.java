@@ -2,29 +2,28 @@
  * Class for graph.
  */
 public class Graph {
-	/**.
-	 * { var_description }
-	 */
-    private final int V;
     /**.
      * { var_description }
      */
-    private int E;
+    private final int ver;
+    /**.
+     * { var_description }
+     */
+    private int edg;
     /**.
      * { var_description }
      */
     private Bag<Integer>[] adj;
-   	/**.
-   	 * Constructs the object.
-   	 *
-   	 * @param      V     { parameter_description }
-   	 */
-    public Graph(final int V) {
-        if (V < 0) throw new RuntimeException("Number of vertices must be nonnegative");
-        this.V = V;
-        this.E = 0;
-        adj = (Bag<Integer>[]) new Bag[V];
-        for (int v = 0; v < V; v++) {
+    /**.
+     * Constructs the object.
+     *
+     * @param      vt     { parameter_description }
+     */
+    public Graph(final int vt) {
+        this.ver = vt;
+        this.edg = 0;
+        adj = (Bag<Integer>[]) new Bag[ver];
+        for (int v = 0; v < ver; v++) {
             adj[v] = new Bag<Integer>();
         }
     }
@@ -63,16 +62,16 @@ public class Graph {
      *
      * @return     { description_of_the_return_value }
      */
-    public int V() {
-    	return V;
+    public int vert() {
+        return ver;
     }
     /**.
      * { function_description }
      *
      * @return     { description_of_the_return_value }
      */
-    public int E() {
-    	return E;
+    public int edge() {
+        return edg;
     }
     /**.
      * Adds an edge.
@@ -81,7 +80,7 @@ public class Graph {
      * @param      w     { parameter_description }
      */
     public void addEdge(final int v, final int w) {
-        E++;
+        edg++;
         adj[v].add(w);
         adj[w].add(v);
     }
@@ -95,23 +94,23 @@ public class Graph {
     public Iterable<Integer> adj(final int v) {
         return adj[v];
     }
-    /**.
-     * Returns a string representation of the object.
-     *
-     * @return     String representation of the object.
-     */
-    public String toString() {
-        StringBuilder s = new StringBuilder();
-        String NEWLINE = System.getProperty("line.separator");
-        s.append(V + " vertices, " + E + " edges " + NEWLINE);
-        for (int v = 0; v < V; v++) {
-            s.append(v + ": ");
-            for (int w : adj[v]) {
-                s.append(w + " ");
-            }
-            s.append(NEWLINE);
-        }
-        return s.toString();
-    }
+    // /**.
+    //  * Returns a string representation of the object.
+    //  *
+    //  * @return     String representation of the object.
+    //  */
+    // public String toString() {
+    //     StringBuilder s = new StringBuilder();
+    //     String NEWLINE = System.getProperty("line.separator");
+    //     s.append(V + " vertices, " + E + " edges " + NEWLINE);
+    //     for (int v = 0; v < V; v++) {
+    //         s.append(v + ": ");
+    //         for (int w : adj[v]) {
+    //             s.append(w + " ");
+    //         }
+    //         s.append(NEWLINE);
+    //     }
+    //     return s.toString();
+    // }
 
 }
