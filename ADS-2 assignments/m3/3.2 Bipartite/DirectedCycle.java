@@ -14,6 +14,9 @@ public class DirectedCycle {
      * { var_description }
      */
     private boolean[] onStack;
+    /**.
+     * { var_description }
+     */
     private boolean isBipartite = false;
     /**.
      * { var_description }
@@ -70,6 +73,11 @@ public class DirectedCycle {
     public boolean hasCycle() {
         return cycle != null;
     }
+    /**.
+     * Determines if bipartite.
+     *
+     * @return     True if bipartite, False otherwise.
+     */
     public boolean isBipartite() {
         return isBipartite;
     }
