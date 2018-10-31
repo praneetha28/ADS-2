@@ -1,50 +1,40 @@
-########## Testcase 0: Failed ##########
+########## Testcase 0: Passed ##########
 Expected Output: 
 Graph is bipartite
 
 Your Output: 
-Exception in thread "main" java.lang.NoSuchMethodError: Graph.V()I
-	at DirectedCycle.<init>(DirectedCycle.java:31)
-	at Solution.main(Solution.java:35)
+Graph is bipartite
 ----------------------------------------
 
-########## Testcase 1: Failed ##########
+########## Testcase 1: Passed ##########
 Expected Output: 
 Graph is bipartite
 
 Your Output: 
-Exception in thread "main" java.lang.NoSuchMethodError: Graph.V()I
-	at DirectedCycle.<init>(DirectedCycle.java:31)
-	at Solution.main(Solution.java:35)
+Graph is bipartite
 ----------------------------------------
 
-########## Testcase 2: Failed ##########
+########## Testcase 2: Passed ##########
 Expected Output: 
 Graph is bipartite
 
 Your Output: 
-Exception in thread "main" java.lang.NoSuchMethodError: Graph.V()I
-	at DirectedCycle.<init>(DirectedCycle.java:31)
-	at Solution.main(Solution.java:35)
+Graph is bipartite
 ----------------------------------------
 
-########## Testcase 3: Failed ##########
+########## Testcase 3: Passed ##########
 Expected Output: 
 Graph is not a bipartite
 
 Your Output: 
-Exception in thread "main" java.lang.NoSuchMethodError: Graph.V()I
-	at DirectedCycle.<init>(DirectedCycle.java:31)
-	at Solution.main(Solution.java:35)
+Graph is not a bipartite
 ----------------------------------------
 
-########## Testcase 4: Failed ##########
+########## Testcase 4: Passed ##########
 Expected Output: 
 Graph is not a bipartite
 
 Your Output: 
-Exception in thread "main" java.lang.NoSuchMethodError: Graph.V()I
-	at DirectedCycle.<init>(DirectedCycle.java:31)
-	at Solution.main(Solution.java:35)
+Graph is not a bipartite
 ----------------------------------------
 
