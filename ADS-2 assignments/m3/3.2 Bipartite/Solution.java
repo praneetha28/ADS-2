@@ -33,7 +33,7 @@ public final class Solution {
                          Integer.parseInt(tokens[1]));
         }
         DirectedCycle dc = new DirectedCycle(g);
-        if (!dc.isBipartite()) {
+        if (dc.isBipartite()) {
             System.out.println("Graph is bipartite");
         } else {
             System.out.println("Graph is not a bipartite");

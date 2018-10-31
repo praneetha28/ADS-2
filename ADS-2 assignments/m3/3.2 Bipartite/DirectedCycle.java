@@ -14,7 +14,7 @@ public class DirectedCycle {
      * { var_description }
      */
     private boolean[] onStack;
-    private boolean isBipartite = true;
+    private boolean isBipartite = false;
     /**.
      * { var_description }
      */
