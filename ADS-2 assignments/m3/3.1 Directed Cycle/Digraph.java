@@ -82,11 +82,6 @@ public class Digraph {
      * @param  w the other vertex in the edge
      */
     public void addEdge(final int v, final int w) {
-        if (v == w) {
-            System.out.println(ver + " vertices, " + edg + " edges");
-            System.out.println("No edges");
-            return;
-        }
         edg++;
         adj[v].add(w);
         indegree[w]++;
