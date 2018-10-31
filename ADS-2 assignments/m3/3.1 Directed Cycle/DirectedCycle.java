@@ -27,39 +27,39 @@ public class DirectedCycle {
         marked  = new boolean[g.vert()];
         onStack = new boolean[g.vert()];
         edgeTo  = new int[g.vert()];
-        // for (int v = 0; v < g.vert(); v++) {
-        //     if (!marked[v]) {
-        //         dfs(g, v);
-        //     }
-        // }
+        for (int v = 0; v < g.vert(); v++) {
+            if (!marked[v] && cycle == null) {
+                dfs(g, v);
+            }
+        }
     }
-    // /**.
-    //  * { function_description }
-    //  *
-    //  * @param      g     { parameter_description }
-    //  * @param      v     { parameter_description }
-    //  */
-    // private void dfs(final Digraph g, final int v) {
-    //     onStack[v] = true;
-    //     marked[v] = true;
-    //     for (int w : g.adj(v)) {
-    //         if (cycle != null) {
-    //             return;
-    //         } else if (!marked[w]) {
-    //             edgeTo[w] = v;
-    //             dfs(g, w);
-    //         } else if (onStack[w]) {
-    //             cycle = new Stack<Integer>();
-    //             for (int x = v; x != w; x = edgeTo[x]) {
-    //                 cycle.push(x);
-    //             }
-    //             cycle.push(w);
-    //             cycle.push(v);
-    //             // assert check();
-    //         }
-    //     }
-    //     onStack[v] = false;
-    // }
+    /**.
+     * { function_description }
+     *
+     * @param      g     { parameter_description }
+     * @param      v     { parameter_description }
+     */
+    private void dfs(final Digraph g, final int v) {
+        onStack[v] = true;
+        marked[v] = true;
+        for (int w : g.adj(v)) {
+            if (cycle != null) {
+                return;
+            } else if (!marked[w]) {
+                edgeTo[w] = v;
+                dfs(g, w);
+            } else if (onStack[w]) {
+                cycle = new Stack<Integer>();
+                for (int x = v; x != w; x = edgeTo[x]) {
+                    cycle.push(x);
+                }
+                cycle.push(w);
+                cycle.push(v);
+                // assert check();
+            }
+        }
+        onStack[v] = false;
+    }
     /**.
      * Determines if it has cycle.
      *
@@ -75,28 +75,5 @@ public class DirectedCycle {
      */
     public Iterable<Integer> cycle() {
         return cycle;
-    }
-    public boolean dfs(final Digraph g) {
-        boolean r = false;
-        for (int v = 0; v < g.vert(); v++) {
-            if (!marked[v]) {
-                r = dfs(g, v);
-            }
-        }
-        return r;
-    }
-    public boolean dfs(final Digraph g, final int v) {
-        // onStack[v] = true;
-        if (marked[v]) {
-            return false;
-        } else {
-            marked[v] = true;
-            for (int w : g.adj(v)) {
-                if (!marked[w]) {
-                    dfs(g, w);
-                }
-            }
-        }
-        return false;
     }
 }
