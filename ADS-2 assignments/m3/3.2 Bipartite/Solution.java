@@ -34,9 +34,9 @@ public final class Solution {
         }
         DirectedCycle dc = new DirectedCycle(g);
         if (!dc.isBipartite()) {
-            System.out.println("Graph is Bipartite");
+            System.out.println("Graph is bipartite");
         } else {
-            System.out.println("Graph is not a Bipartite");
+            System.out.println("Graph is not a bipartite");
         }
     }
 }
