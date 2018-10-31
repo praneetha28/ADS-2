@@ -22,6 +22,7 @@ public class Digraph {
      * { var_description }
      */
     private int[] indegree;
+    private boolean[] marked;
     /**
      * Initializes an empty graph with V vertices and 0 edges.
      * param V the number of vertices
@@ -31,6 +32,7 @@ public class Digraph {
     Digraph(final int vt) {
         this.ver = vt;
         this.edg = 0;
+        this.marked = new boolean[vt];
         indegree = new int[ver];
         size = 0;
         adj = (Bag<Integer>[]) new Bag[ver];
@@ -123,6 +125,30 @@ public class Digraph {
      */
     public int indegree(final int v) {
         return indegree[v];
+    }
+
+    private boolean dfs(final Digraph g) {
+        boolean r = false;
+        for (int v = 0; v < vert(); v++) {
+            if (!marked[v]) {
+                r = dfs(g, v);
+            }
+        }
+        return r;
+    }
+    private boolean dfs(final Digraph g, final int v) {
+        // onStack[v] = true;
+        if (marked[v]) {
+            return false;
+        } else {
+            marked[v] = true;
+            for (int w : g.adj(v)) {
+                if (!marked[w]) {
+                    dfs(g, w);
+                }
+            }
+        }
+        return false;
     }
 
 }

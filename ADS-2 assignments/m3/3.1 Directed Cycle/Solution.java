@@ -33,7 +33,7 @@ public final class Solution {
                          Integer.parseInt(tokens[1]));
         }
         DirectedCycle dc = new DirectedCycle(dg);
-        if (dc.hasCycle()) {
+        if (dc.dfs(dg, n)) {
             System.out.println("Cycle exists.");
         } else {
             System.out.println("Cycle doesn't exists.");

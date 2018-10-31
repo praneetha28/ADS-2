@@ -1,9 +1,18 @@
 Starting audit...
 Audit done.
 Starting audit...
+[ERROR] F:\ADS-2\ADS-2 assignments\m3\3.1 Directed Cycle\Digraph.java:25:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] F:\ADS-2\ADS-2 assignments\m3\3.1 Directed Cycle\Digraph.java:130:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] F:\ADS-2\ADS-2 assignments\m3\3.1 Directed Cycle\Digraph.java:139:5: Missing a Javadoc comment. [JavadocMethod]
 Audit done.
+Checkstyle ends with 3 errors.
 Starting audit...
+[ERROR] F:\ADS-2\ADS-2 assignments\m3\3.1 Directed Cycle\DirectedCycle.java:79:5: Class 'DirectedCycle' looks like designed for extension (can be subclassed), but the method 'dfs' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'DirectedCycle' final or making the method 'dfs' static/final/abstract/empty, or adding allowed annotation for the method. [DesignForExtension]
+[ERROR] F:\ADS-2\ADS-2 assignments\m3\3.1 Directed Cycle\DirectedCycle.java:79:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] F:\ADS-2\ADS-2 assignments\m3\3.1 Directed Cycle\DirectedCycle.java:88:5: Class 'DirectedCycle' looks like designed for extension (can be subclassed), but the method 'dfs' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'DirectedCycle' final or making the method 'dfs' static/final/abstract/empty, or adding allowed annotation for the method. [DesignForExtension]
+[ERROR] F:\ADS-2\ADS-2 assignments\m3\3.1 Directed Cycle\DirectedCycle.java:88:5: Missing a Javadoc comment. [JavadocMethod]
 Audit done.
+Checkstyle ends with 4 errors.
 Starting audit...
 Audit done.
 Starting audit...
