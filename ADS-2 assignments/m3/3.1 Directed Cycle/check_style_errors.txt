@@ -9,7 +9,4 @@ Checkstyle ends with 1 errors.
 Starting audit...
 Audit done.
 Starting audit...
-[ERROR] F:\ADS-2\ADS-2 assignments\m3\3.1 Directed Cycle\Stack.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] F:\ADS-2\ADS-2 assignments\m3\3.1 Directed Cycle\Stack.java:144: 'if' construct must use '{}'s. [NeedBraces]
-Audit done.
-Checkstyle ends with 2 errors.
+Checkstyle ends with 1 errors.
