@@ -69,7 +69,7 @@ public class GraphMatrix {
     }
     /**.
      * { function_description }
-     *
+     * time complexity is 1 in avg case
      * @return     { description_of_the_return_value }
      */
     public int vert() {
@@ -77,7 +77,7 @@ public class GraphMatrix {
     }
     /**.
      * { function_description }
-     *
+     * time complexity is 1 in avg case
      * @return     { description_of_the_return_value }
      */
     public int edge() {
@@ -85,7 +85,7 @@ public class GraphMatrix {
     }
     /**.
      * Adds a vertex.
-     *
+     * time complexity is 1 in avg case
      * @param      v     { parameter_description }
      */
     public void addVertex(final String v) {
@@ -94,7 +94,7 @@ public class GraphMatrix {
     }
     /**
      * .
-     *
+     * time complexity is 1 in avg case
      * @param      v     { parameter_description }
      * @param      w     { parameter_description }
      */
@@ -112,7 +112,7 @@ public class GraphMatrix {
     }
     /**.
      * { function_description }
-     *
+     * time complexity is 1 in avg case
      * @param      v     { parameter_description }
      * @param      w     { parameter_description }
      *
@@ -123,14 +123,13 @@ public class GraphMatrix {
     }
     /**.
      * Returns a string representation of the object.
-     *
+     * time complexity is O(N^2).
      * @return     String representation of the object.
      */
     public String toString() {
         StringBuilder s = new StringBuilder();
         s.append(ver + " vertices, " + edg + " edges" + '\n');
         for (int v = 0; v < ver; v++) {
-            // s.append(v + ": ");
             for (int w : adj[v]) {
                 if (w == 1) {
                     s.append(1 + " ");
