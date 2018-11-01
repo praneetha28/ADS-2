@@ -54,7 +54,7 @@ public class ConnectedComponent {
     //     }
     // }
     /**.
-     * time complexity is O(N).
+     * time complexity in average case is no of edges + 2 * no of vertices.
      * method on depth first traversal
      * @param  g the undirected graph
      * @param  v the vertex
