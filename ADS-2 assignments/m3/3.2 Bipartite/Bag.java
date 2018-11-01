@@ -39,7 +39,7 @@ public class Bag<Item> implements Iterable<Item> {
     }
 /**.
  * Determines if empty.
- *
+ * time complexity in average case is 1.
  * @return     True if empty, False otherwise.
  */
     public boolean isEmpty() {
@@ -47,7 +47,7 @@ public class Bag<Item> implements Iterable<Item> {
     }
 /**.
  * { function_description }
- *
+ * time complexity in average case is 1.
  * @return     { description_of_the_return_value }
  */
     public int size() {
@@ -55,7 +55,7 @@ public class Bag<Item> implements Iterable<Item> {
     }
 /**.
  * { function_description }
- *
+ * time complexity in average case is 1.
  * @param      item  The item
  */
     public void add(final Item item) {
@@ -67,7 +67,7 @@ public class Bag<Item> implements Iterable<Item> {
     }
 /**.
  * { function_description }
- *
+ * time complexity in average case is 1.
  * @return     { description_of_the_return_value }
  */
     public Iterator<Item> iterator()  {
@@ -83,13 +83,14 @@ public class Bag<Item> implements Iterable<Item> {
         private Node current = first;
         /**.
          * Determines if it has next.
-         *
+         * time complexity in average case is 1.
          * @return     True if has next, False otherwise.
          */
         public boolean hasNext() {
             return current != null;
         }
         /**.
+         * time complexity in average case is 1.
          * { function_description }
          */
         public void remove() {
@@ -97,7 +98,7 @@ public class Bag<Item> implements Iterable<Item> {
         }
         /**.
          * { function_description }
-         *
+         * time complexity in average case is 1.
          * @return     { description_of_the_return_value }
          */
         public Item next() {

@@ -59,7 +59,7 @@ public class Graph {
     }*/
     /**.
      * { function_description }
-     *
+     * time complexity in average case is 1.
      * @return     { description_of_the_return_value }
      */
     public int vert() {
@@ -67,7 +67,7 @@ public class Graph {
     }
     /**.
      * { function_description }
-     *
+     * time complexity in average case is 1.
      * @return     { description_of_the_return_value }
      */
     public int edge() {
@@ -75,7 +75,7 @@ public class Graph {
     }
     /**.
      * Adds an edge.
-     *
+     * time complexity in average case is 1.
      * @param      v     { parameter_description }
      * @param      w     { parameter_description }
      */
@@ -86,7 +86,7 @@ public class Graph {
     }
     /**.
      * { function_description }
-     *
+     * time complexity in average case is 1.
      * @param      v     { parameter_description }
      *
      * @return     { description_of_the_return_value }
