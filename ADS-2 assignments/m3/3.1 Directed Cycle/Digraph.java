@@ -106,7 +106,7 @@ public class Digraph {
 
     /**
      * Returns the degree of vertex {@code v}.
-     *
+     * time complexity in average case is 1.
      * @param  v the vertex
      * @return the degree of vertex {@code v}
      */
@@ -115,8 +115,7 @@ public class Digraph {
     }
 
     /**
-     * Returns the number of directed edges incident to vertex {@code v}.
-     * This is known as the <em>indegree</em> of vertex {@code v}.
+     * time complexity in average case is 1.
      *
      * @param  v the vertex
      * @return the indegree of vertex {@code v}

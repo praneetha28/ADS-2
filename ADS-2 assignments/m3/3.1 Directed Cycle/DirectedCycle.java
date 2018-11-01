@@ -35,7 +35,7 @@ public class DirectedCycle {
     }
     /**.
      * { function_description }
-     *
+     * time complexity in average case is no of Edges + no of Vertices.
      * @param      g     { parameter_description }
      * @param      v     { parameter_description }
      */
@@ -62,7 +62,7 @@ public class DirectedCycle {
     }
     /**.
      * Determines if it has cycle.
-     *
+     * time complexity in average case is 1.
      * @return     True if has cycle, False otherwise.
      */
     public boolean hasCycle() {
@@ -70,7 +70,7 @@ public class DirectedCycle {
     }
     /**.
      * { function_description }
-     *
+     * time complexity in average case is 1.
      * @return     { description_of_the_return_value }
      */
     public Iterable<Integer> cycle() {
