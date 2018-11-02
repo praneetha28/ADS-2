@@ -22,8 +22,8 @@ public final class Solution {
     // time complexity for the main method is O(N).
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
-        String n = "Files"+"\\" + sc.nextLine();
-        String m = "Files"+"\\" + sc.nextLine();
+        String n = "Files" + "\\" + sc.nextLine();
+        String m = "Files" + "\\" + sc.nextLine();
         String word = sc.nextLine();
         try {
             // System.out.println("in try");
@@ -38,11 +38,11 @@ public final class Solution {
                     String[] tokens = sc.nextLine().split(" ");
                     String str = wn.sap(tokens[0], tokens[1]);
                     int id = wn.distance(tokens[0], tokens[1]);
-                    System.out.println("distance = "+ id +", ancestor = "+ str);
+                    System.out.println("distance = " + id + ", ancestor = "+ str);
                 }
             }
-        } catch(Exception e) {
-            System.out.println("IllegalArgumentException");;
+        } catch (Exception e) {
+            System.out.println("IllegalArgumentException");
         }
     }
 }

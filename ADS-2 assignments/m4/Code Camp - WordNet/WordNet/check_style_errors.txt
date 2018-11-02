@@ -138,17 +138,10 @@ Starting audit...
 Audit done.
 Checkstyle ends with 25 errors.
 Starting audit...
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Solution.java:25:27: '+' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Solution.java:25:28: '+' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Solution.java:26:27: '+' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Solution.java:26:28: '+' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Solution.java:41:53: '+' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Solution.java:41:59: '+' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Solution.java:41:74: '+' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Solution.java:44:16: 'catch' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Solution.java:45:60: Empty statement. [EmptyStatement]
+[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Solution.java:41: Line is longer than 80 characters (found 82). [LineLength]
+[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Solution.java:41:76: '+' is not preceded with whitespace. [WhitespaceAround]
 Audit done.
-Checkstyle ends with 9 errors.
+Checkstyle ends with 2 errors.
 Starting audit...
 [ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Stack.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Stack.java:13: Line has trailing spaces. [RegexpSingleline]
