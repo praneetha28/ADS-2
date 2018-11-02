@@ -5,12 +5,7 @@ public class Digraph {
     /**.
      * { var_description }
      */
-    private static final String NEWLINE = System.
-    getProperty("line.separator");
-    /**.
-     * { var_description }
-     */
-    private final int ver;
+    private int ver;
     /**.
      * { var_description }
      */
@@ -22,158 +17,111 @@ public class Digraph {
     /**.
      * { var_description }
      */
-    private int[] indegree;
+    private int size = 0;
     /**.
-     * Constructs the object.
-     *
-     * @param      vt     { parameter_description }
+     * { var_description }
      */
-    public Digraph(final int vt) {
+    private int[] indegree;
+    /**
+     * Initializes an empty graph with V vertices and 0 edges.
+     * param V the number of vertices
+     *
+     * @param  vt number of vertices
+     */
+    Digraph(final int vt) {
         this.ver = vt;
         this.edg = 0;
         indegree = new int[ver];
+        size = 0;
         adj = (Bag<Integer>[]) new Bag[ver];
         for (int v = 0; v < ver; v++) {
             adj[v] = new Bag<Integer>();
         }
     }
-    /**
-     * Initializes a new digraph that is a deep copy of the specified digraph.
-     *
-     * @param  g the digraph to copy
-     */
-    public Digraph(final Digraph g) {
-        this(g.vert());
-        this.edg = g.edge();
-        for (int v = 0; v < ver; v++) {
-            this.indegree[v] = g.indegree(v);
-        }
-        for (int v = 0; v < g.vert(); v++) {
-            // reverse so that adjacency list is in same order as original
-            Stack<Integer> reverse = new Stack<Integer>();
-            for (int w : g.adj[v]) {
-                reverse.push(w);
-            }
-            for (int w : reverse) {
-                adj[v].add(w);
-            }
-        }
-    }
 
     /**
-     * Returns the number of vertices in this digraph.
-     *
-     * @return the number of vertices in this digraph
+     * Returns the number of vertices in this graph.
+     * time complexity is 1 in avg case
+     * @return the number of vertices in this graph
      */
     public int vert() {
         return ver;
     }
 
     /**
-     * Returns the number of edges in this digraph.
-     *
-     * @return the number of edges in this digraph
+     * Returns the number of edges in this graph.
+     * time complexity is 1 in avg case
+     * @return the number of edges in this graph
      */
     public int edge() {
         return edg;
     }
+    // /**.
+    //  * Adds a vertex.
+    //  * time complexity is 1
+    //  * @param      v     { parameter_description }
+    //  */
+    // public void addVertex(final String v) {
+    //     vertexes[size] = v;
+    //     size++;
+    // }
     /**.
-     * { function_description }
-     *
+     * Determines if it has edge.
+     * time complexity is O(N).
      * @param      v     { parameter_description }
-     */
-    private void validateVertex(final int v) {
-        if (v < 0 || v >= ver) {
-            throw new IllegalArgumentException("vertex " + v
-             + " is not between 0 and " + (v - 1));
-        }
-    }
-
-    /**.
-     * Adds the directed edge v→w to this digraph.
+     * @param      w     { parameter_description }
      *
-     * @param  v the tail vertex
-     * @param  w the head vertex
+     * @return     True if has edge, False otherwise.
+     */
+    public boolean hasEdge(final int v, final int w) {
+        for (int i : adj[w]) {
+            if (i == w) {
+                return true;
+            }
+        }
+        return false;
+    }
+    /**
+     * Adds the undirected edge v-w to this graph.
+     * time complexity is 1 in avg case
+     * @param  v one vertex in the edge
+     * @param  w the other vertex in the edge
      */
     public void addEdge(final int v, final int w) {
-        validateVertex(v);
-        validateVertex(w);
+        edg++;
         adj[v].add(w);
         indegree[w]++;
-        edg++;
+        // adj[w].add(v);
     }
-
     /**
-     * Returns the vertices adjacent from vertex {@code v} in this digraph.
-     *
+     * Returns the vertices adjacent to vertex {@code v}.
+     * time complexity is 1 in avg case
      * @param  v the vertex
-     * @return the vertices adjacent from vertex {@code v}
-     *  in this digraph, as an iterable
+     * @return the vertices adjacent to vertex {@code v}, as an iterable
      * @throws IllegalArgumentException unless {@code 0 <= v < V}
      */
     public Iterable<Integer> adj(final int v) {
-        validateVertex(v);
         return adj[v];
     }
 
     /**
-     * Returns the number of directed edges incident from vertex {@code v}.
-     * This is known as the <em>outdegree</em> of vertex {@code v}.
-     *
+     * Returns the degree of vertex {@code v}.
+     * time complexity in average case is 1.
      * @param  v the vertex
-     * @return the outdegree of vertex {@code v}
-     * @throws IllegalArgumentException unless {@code 0 <= v < V}
+     * @return the degree of vertex {@code v}
      */
     public int outdegree(final int v) {
-        validateVertex(v);
         return adj[v].size();
     }
 
     /**
-     * Returns the number of directed edges incident to vertex {@code v}.
-     * This is known as the <em>indegree</em> of vertex {@code v}.
+     * time complexity in average case is 1.
      *
      * @param  v the vertex
      * @return the indegree of vertex {@code v}
-     * @throws IllegalArgumentException unless {@code 0 <= v < V}
      */
     public int indegree(final int v) {
-        validateVertex(v);
         return indegree[v];
     }
 
-    /**
-     * Returns the reverse of the digraph.
-     *
-     * @return the reverse of the digraph
-     */
-    public Digraph reverse() {
-        Digraph reverse = new Digraph(ver);
-        for (int v = 0; v < ver; v++) {
-            for (int w : adj(v)) {
-                reverse.addEdge(w, v);
-            }
-        }
-        return reverse;
-    }
-
-    /**
-     * Returns a string representation of the graph.
-     *
-     * @return the number of vertices <em>V</em>,
-     * followed by the number of edges <em>E</em>,
-     *         followed by the <em>V</em> adjacency lists
-     */
-    public String toString() {
-        StringBuilder s = new StringBuilder();
-        s.append(ver + " vertices, " + edg + " edges " + NEWLINE);
-        for (int v = 0; v < ver; v++) {
-            s.append(String.format("%d: ", v));
-            for (int w : adj[v]) {
-                s.append(String.format("%d ", w));
-            }
-            s.append(NEWLINE);
-        }
-        return s.toString();
-    }
 }
