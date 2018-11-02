@@ -1,27 +1,5 @@
 Starting audit...
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Bag.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Bag.java:15:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Bag.java:16:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Bag.java:19: Missing a Javadoc comment. [JavadocType]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Bag.java:20:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Bag.java:21:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Bag.java:56:21: Parameter item should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Bag.java:66: Line is longer than 80 characters (found 87). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Bag.java:68: Line is longer than 80 characters (found 86). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Bag.java:75: Missing a Javadoc comment. [JavadocType]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Bag.java:76:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Bag.java:78:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Bag.java:78:9: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Bag.java:78:29: Parameter first should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Bag.java:78:40: 'first' hides a field. [HiddenField]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Bag.java:82: Line is longer than 80 characters (found 81). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Bag.java:82:35: '{' at column 35 should have line break after. [LeftCurly]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Bag.java:83: Line is longer than 80 characters (found 81). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Bag.java:83:35: '{' at column 35 should have line break after. [LeftCurly]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Bag.java:85:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Bag.java:86: 'if' construct must use '{}'s. [NeedBraces]
 Audit done.
-Checkstyle ends with 21 errors.
 Starting audit...
 [ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\BreadthFirstSearch.java:5:5: Missing a Javadoc comment. [JavadocVariable]
 [ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\BreadthFirstSearch.java:6:5: Missing a Javadoc comment. [JavadocVariable]

@@ -3,90 +3,111 @@
  */
 import java.util.Iterator;
 /**.
- * { item_description }
- */
-import java.util.NoSuchElementException;
-/**.
  * Class for bag.
  *
  * @param      <Item>  The item
  */
 public class Bag<Item> implements Iterable<Item> {
-    private Node<Item> first;
+    /**.
+     * { var_description }
+     */
     private int n;
-
-    // helper linked list class
-    private static class Node<Item> {
+    /**.
+     * { var_description }
+     */
+    private Node first;
+    /**.
+     * Class for node.
+     */
+    private class Node {
+        /**.
+         * { var_description }
+         */
         private Item item;
-        private Node<Item> next;
+        /**.
+         * { var_description }
+         */
+        private Node next;
     }
 
-    /**
-     * Initializes an empty bag.
+   /**
+     * Create an empty stack.
      */
     public Bag() {
         first = null;
         n = 0;
     }
-
-    /**
-     * Returns true if this bag is empty.
-     *
-     * @return {@code true} if this bag is empty;
-     *         {@code false} otherwise
-     */
+/**.
+ * Determines if empty.
+ * time complexity in average case is 1.
+ * @return     True if empty, False otherwise.
+ */
     public boolean isEmpty() {
         return first == null;
     }
-
-    /**
-     * Returns the number of items in this bag.
-     *
-     * @return the number of items in this bag
-     */
+/**.
+ * { function_description }
+ * time complexity in average case is 1.
+ * @return     { description_of_the_return_value }
+ */
     public int size() {
         return n;
     }
-
-    /**
-     * Adds the item to this bag.
-     *
-     * @param  item the item to add to this bag
-     */
-    public void add(Item item) {
-        Node<Item> oldfirst = first;
-        first = new Node<Item>();
+/**.
+ * { function_description }
+ * time complexity in average case is 1.
+ * @param      item  The item
+ */
+    public void add(final Item item) {
+        Node oldfirst = first;
+        first = new Node();
         first.item = item;
         first.next = oldfirst;
         n++;
     }
-
-
-    /**
-     * Returns an iterator that iterates over the items in this bag in arbitrary order.
-     *
-     * @return an iterator that iterates over the items in this bag in arbitrary order
-     */
+/**.
+ * { function_description }
+ * time complexity in average case is 1.
+ * @return     { description_of_the_return_value }
+ */
     public Iterator<Item> iterator()  {
-        return new ListIterator<Item>(first);
+        return new ListIterator();
     }
-
-    // an iterator, doesn't implement remove() since it's optional
-    private class ListIterator<Item> implements Iterator<Item> {
-        private Node<Item> current;
-
-        public ListIterator(Node<Item> first) {
-            current = first;
+/**.
+ * Class for list iterator.
+ */
+    private class ListIterator implements Iterator<Item> {
+        /**.
+         * { var_description }
+         */
+        private Node current = first;
+        /**.
+         * Determines if it has next.
+         * time complexity in average case is 1.
+         * @return     True if has next, False otherwise.
+         */
+        public boolean hasNext() {
+            return current != null;
         }
-
-        public boolean hasNext()  { return current != null;                     }
-        public void remove()      { throw new UnsupportedOperationException();  }
-
+        /**.
+         * time complexity in average case is 1.
+         * { function_description }
+         */
+        public void remove() {
+            throw new UnsupportedOperationException();
+        }
+        /**.
+         * { function_description }
+         * time complexity in average case is 1.
+         * @return     { description_of_the_return_value }
+         */
         public Item next() {
-            if (!hasNext()) throw new NoSuchElementException();
             Item item = current.item;
             current = current.next;
             return item;
         }
     }
+
 }
+
+
