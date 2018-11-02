@@ -70,8 +70,7 @@ public class WordNet {
             }
             if (c > 1) {
                 System.out.println("Multiple roots");
-            }
-            if (dc.hasCycle()) {
+            } else if (dc.hasCycle()) {
                 System.out.println("Cycle detected");
             } else {
                 System.out.println(dg);
