@@ -28,30 +28,16 @@ public class BreadthFirstSearch {
         marked = new boolean[g.V()];
         distTo = new int[g.V()];
         edgeTo = new int[g.V()];
-        for (int v = 0; v < g.V(); v++)
+        for (int v = 0; v < g.V(); v++) {
             distTo[v] = INFINITY;
+        }
         validateVertex(s);
         bfs(g, s);
     }
-    // /**
-    //  * Computes the shortest path from any one of the source vertices in {@code sources}
-    //  * to every other vertex in graph {@code G}.
-    //  * @param G the digraph
-    //  * @param sources the source vertices
-    //  * @throws IllegalArgumentException unless each vertex {@code v} in
-    //  *         {@code sources} satisfies {@code 0 <= v < V}
-    //  */
-    // public BreadthFirstDirectedPaths(Digraph G, Iterable<Integer> sources) {
-    //     marked = new boolean[G.V()];
-    //     distTo = new int[G.V()];
-    //     edgeTo = new int[G.V()];
-    //     for (int v = 0; v < G.V(); v++)
-    //         distTo[v] = INFINITY;
-    //     validateVertices(sources);
-    //     bfs(G, sources);
-    // }
     /**.
      * bfs
+     * @param      g     { parameter_description }
+     * @param      s     { parameter_description }
      */
     private void bfs(final Digraph g, final int s) {
         Queue<Integer> q = new Queue<Integer>();
@@ -92,6 +78,7 @@ public class BreadthFirstSearch {
     // }
     /**.
      * Is there a directed path from the source
+     * @param      v     { parameter_description }
      * @return {@code true} if there is a directed path
      */
     public boolean hasPathTo(final int v) {
@@ -119,11 +106,14 @@ public class BreadthFirstSearch {
     public Iterable<Integer> pathTo(final int v) {
         validateVertex(v);
 
-        if (!hasPathTo(v)) return null;
+        if (!hasPathTo(v)) {
+            return null;
+        }
         Stack<Integer> path = new Stack<Integer>();
         int x;
-        for (x = v; distTo[x] != 0; x = edgeTo[x])
+        for (x = v; distTo[x] != 0; x = edgeTo[x]) {
             path.push(x);
+        }
         path.push(x);
         return path;
     }
@@ -133,9 +123,11 @@ public class BreadthFirstSearch {
      * @param      v     { parameter_description }
      */
     private void validateVertex(final int v) {
-        int V = marked.length;
-        if (v < 0 || v >= V)
-            throw new IllegalArgumentException("vertex " + v + " is not between 0 and " + (V-1));
+        int v1 = marked.length;
+        if (v < 0 || v >= v1) {
+            throw new IllegalArgumentException("vertex " + v
+                + " is not between 0 and " + (v1 - 1));
+        }
     }
     /**.
      * { function_description }
@@ -146,10 +138,11 @@ public class BreadthFirstSearch {
         if (vertices == null) {
             throw new IllegalArgumentException("argument is null");
         }
-        int V = marked.length;
+        int v2V = marked.length;
         for (int v : vertices) {
-            if (v < 0 || v >= V) {
-                throw new IllegalArgumentException("vertex " + v + " is not between 0 and " + (V-1));
+            if (v < 0 || v >= v2) {
+                throw new IllegalArgumentException("vertex " + v
+                 + " is not between 0 and " + (v2 - 1));
             }
         }
     }
