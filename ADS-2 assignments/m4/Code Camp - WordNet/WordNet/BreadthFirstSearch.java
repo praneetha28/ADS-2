@@ -25,10 +25,10 @@ public class BreadthFirstSearch {
      * @param      s     { parameter_description }
      */
     public BreadthFirstSearch(final Digraph g, final int s) {
-        marked = new boolean[g.vert()];
-        distTo = new int[g.vert()];
-        edgeTo = new int[g.vert()];
-        for (int v = 0; v < g.vert(); v++)
+        marked = new boolean[g.V()];
+        distTo = new int[g.V()];
+        edgeTo = new int[g.V()];
+        for (int v = 0; v < g.V(); v++)
             distTo[v] = INFINITY;
         validateVertex(s);
         bfs(g, s);
