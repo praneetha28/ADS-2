@@ -20,7 +20,7 @@ public class SAP {
     public int ancestor(int v, int w) {
         BreadthFirstSearch bfsv = new BreadthFirstSearch(dig, v);
         BreadthFirstSearch bfsw = new BreadthFirstSearch(dig, w);
-        for (int i = 0; i < dig.V(); i++) {
+        for (int i = 0; i < dig.vert(); i++) {
             if (bfsv.hasPathTo(i) && bfsw.hasPathTo(i)) {
                 int vlen = bfsv.distTo(i);
                 int wlen = bfsw.distTo(i);
