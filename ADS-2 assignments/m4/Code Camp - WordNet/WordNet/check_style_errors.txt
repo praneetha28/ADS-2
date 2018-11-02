@@ -2,20 +2,9 @@ Starting audit...
 Audit done.
 Starting audit...
 [ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Digraph.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Digraph.java:45: Line is longer than 80 characters (found 92). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Digraph.java:48: Line is longer than 80 characters (found 99). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Digraph.java:49: Line is longer than 80 characters (found 89). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Digraph.java:50: Line is longer than 80 characters (found 85). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Digraph.java:55: Line is longer than 80 characters (found 116). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Digraph.java:62: Line is longer than 80 characters (found 113). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Digraph.java:70: Line is longer than 80 characters (found 100). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Digraph.java:82: 'for' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Digraph.java:119: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Digraph.java:120: Line is longer than 80 characters (found 99). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Digraph.java:141: Line is longer than 80 characters (found 90). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Digraph.java:193: Line is longer than 80 characters (found 93). [LineLength]
+[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Digraph.java:163: Line is longer than 80 characters (found 93). [LineLength]
 Audit done.
-Checkstyle ends with 13 errors.
+Checkstyle ends with 2 errors.
 Starting audit...
 [ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\DirectedCycle.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\DirectedCycle.java:1: Missing a Javadoc comment. [JavadocType]
