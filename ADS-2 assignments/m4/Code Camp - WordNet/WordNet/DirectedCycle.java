@@ -24,10 +24,10 @@ public class DirectedCycle {
      * @param g the digraph
      */
     public DirectedCycle(final Digraph g) {
-        marked  = new boolean[g.V()];
-        onStack = new boolean[g.V()];
-        edgeTo  = new int[g.V()];
-        for (int v = 0; v < g.V(); v++) {
+        marked  = new boolean[g.vert()];
+        onStack = new boolean[g.vert()];
+        edgeTo  = new int[g.vert()];
+        for (int v = 0; v < g.vert(); v++) {
             if (!marked[v] && cycle == null) {
                 dfs(g, v);
             }
