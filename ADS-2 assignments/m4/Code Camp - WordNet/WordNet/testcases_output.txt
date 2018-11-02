@@ -29,10 +29,13 @@ distance = 7, ancestor = entity
 distance = 10, ancestor = entity
 
 Your Output: 
-File not found
-Exception in thread "main" java.util.NoSuchElementException: No line found
-	at java.base/java.util.Scanner.nextLine(Scanner.java:1651)
-	at Solution.main(Solution.java:28)
+Exception in thread "main" java.lang.NumberFormatException: For input string: "CRP"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:652)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at WordNet.readSynsets(WordNet.java:46)
+	at WordNet.<init>(WordNet.java:32)
+	at Solution.main(Solution.java:27)
 ----------------------------------------
 
 ########## Testcase 2: Failed ##########
@@ -45,10 +48,13 @@ distance = 7, ancestor = lipid lipide lipoid
 distance = 1, ancestor = animal_oil
 
 Your Output: 
-File not found
-Exception in thread "main" java.util.NoSuchElementException: No line found
-	at java.base/java.util.Scanner.nextLine(Scanner.java:1651)
-	at Solution.main(Solution.java:28)
+Exception in thread "main" java.lang.NumberFormatException: For input string: "type"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:652)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at WordNet.readSynsets(WordNet.java:46)
+	at WordNet.<init>(WordNet.java:32)
+	at Solution.main(Solution.java:27)
 ----------------------------------------
 
 ########## Testcase 3: Failed ##########
@@ -58,10 +64,13 @@ distance = 13, ancestor = thing
 distance = 2, ancestor = wax
 
 Your Output: 
-File not found
-Exception in thread "main" java.util.NoSuchElementException: No line found
-	at java.base/java.util.Scanner.nextLine(Scanner.java:1651)
-	at Solution.main(Solution.java:28)
+Exception in thread "main" java.lang.NumberFormatException: For input string: "type"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:652)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at WordNet.readSynsets(WordNet.java:46)
+	at WordNet.<init>(WordNet.java:32)
+	at Solution.main(Solution.java:27)
 ----------------------------------------
 
 ########## Testcase 4: Failed ##########
@@ -211,10 +220,13 @@ distance = 0, ancestor = era epoch
 distance = 8, ancestor = abstraction abstract_entity
 
 Your Output: 
-File not found
-Exception in thread "main" java.util.NoSuchElementException: No line found
-	at java.base/java.util.Scanner.nextLine(Scanner.java:1651)
-	at Solution.main(Solution.java:28)
+Exception in thread "main" java.lang.NumberFormatException: For input string: "a"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:652)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at WordNet.readSynsets(WordNet.java:46)
+	at WordNet.<init>(WordNet.java:32)
+	at Solution.main(Solution.java:27)
 ----------------------------------------
 
 ########## Testcase 14: Failed ##########

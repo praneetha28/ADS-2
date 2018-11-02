@@ -1,8 +1,7 @@
 public class SAP {
     private Digraph dig;
-    private static final int INFINITY = Integer.MAX_VALUE;
     int ancestor = -1;
-    int len = INFINITY;
+    int len = Integer.MAX_VALUE;
     // constructor takes a digraph (not necessarily a DAG)
     public SAP(Digraph g) {
         dig = g;
@@ -44,9 +43,6 @@ public class SAP {
     }
 
     public int ancestor(Iterable<Integer> v, Iterable<Integer> w) {
-        if (v == null || w == null) {
-            throw new IllegalArgumentException("IllegalArgumentException");
-        }
         for (int i : v) {
             for (int j : w) {
                 ancestor(i, j);

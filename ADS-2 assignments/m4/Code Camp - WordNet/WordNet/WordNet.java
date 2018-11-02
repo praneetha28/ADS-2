@@ -38,7 +38,6 @@ public class WordNet {
         htable = new HashTable<String, ArrayList<Integer>>();
         htable1 = new HashTable<Integer, String>();
         int id = 0;
-        try {
             In synIn = new In("./Files/" + synsets);
             while (!synIn.isEmpty()) {
                 ver++;
@@ -61,9 +60,6 @@ public class WordNet {
             }
             dg = new Digraph(ver);
             readHypernyms(hypernyms, dg);
-        } catch (Exception e) {
-            System.out.println("File not found");
-        }
 
     }
 
