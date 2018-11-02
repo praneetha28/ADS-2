@@ -20,6 +20,8 @@
     public static void main(String[] args)
 }
 */
+import java.io.*;
+import java.util.*;
 import java.util.ArrayList;
 public class WordNet {
     private SAP sap;
@@ -28,21 +30,21 @@ public class WordNet {
     HashTable<Integer, String> htable1;
     private int ver = 0;
 
-    WordNet(String synsets, String hypernyms) {
+    WordNet(String synsets, String hypernyms) throws Exception {
         readSynsets(synsets, hypernyms);
         // dg = new Digraph(ver);
         // readHypernyms(hypernyms);
         // sap = new SAP(dg);
     }
-    public void readSynsets(String synsets, String hypernyms) {
+    public void readSynsets(String synsets, String hypernyms) throws Exception {
         htable = new HashTable<String, ArrayList<Integer>>();
         htable1 = new HashTable<Integer, String>();
         int id = 0;
-            In synIn = new In("./Files/" + synsets);
-            while (!synIn.isEmpty()) {
+            Scanner synIn = new Scanner(new File(synsets));
+            while (!synIn.hasNextLine()) {
                 ver++;
                 // String line = synIn.readString();
-                String[] tokens = synIn.readString().split(",");
+                String[] tokens = synIn.nextLine().split(",");
                 id = Integer.parseInt(tokens[0]);
                 htable1.put(id, tokens[1]);
                 String[] word = tokens[1].split(" ");
@@ -63,11 +65,11 @@ public class WordNet {
 
     }
 
-    public void readHypernyms(String hypernyms, Digraph dg) {
-        In hyperIn = new In("./Files/" + hypernyms);
-        while (!hyperIn.isEmpty()) {
+    public void readHypernyms(String hypernyms, Digraph dg) throws Exception {
+        Scanner hyperIn = new Scanner(new File(hypernyms));
+        while (!hyperIn.hasNextLine()) {
             // String line = ;
-            String[] tokens = hyperIn.readString().split(",");
+            String[] tokens = hyperIn.nextLine().split(",");
             for(int i = 1; i < tokens.length; i++) {
                 dg.addEdge(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[i]));
             }

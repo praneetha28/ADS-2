@@ -22,8 +22,8 @@ public final class Solution {
     // time complexity for the main method is O(N).
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
-        String n = StdIn.readString();
-        String m = StdIn.readString();
+        String n = "Files"+"\\" + sc.nextLine();
+        String m = "Files"+"\\" + sc.nextLine();
         String word = sc.nextLine();
         try {
             WordNet wn = new WordNet(n , m);
