@@ -1,14 +1,36 @@
+/**.
+ * Class for sap.
+ */
 public class SAP {
+    /**.
+     * { var_description }
+     */
     private Digraph dig;
-    int ancestor = -1;
-    int len = Integer.MAX_VALUE;
-    // constructor takes a digraph (not necessarily a DAG)
-    public SAP(Digraph g) {
+    /**.
+     * { var_description }
+     */
+    private int ancestor = -1;
+    /**.
+     * { var_description }
+     */
+    private int len = Integer.MAX_VALUE;
+    /**.
+     * Constructs the object.
+     *
+     * @param      g     { parameter_description }
+     */
+    public SAP(final Digraph g) {
         dig = g;
     }
-
-    // length of shortest ancestral path between v and w; -1 if no such path
-    public int length(int v, int w) {
+    /**.
+     * { function_description }
+     *
+     * @param      v     { parameter_description }
+     * @param      w     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int length(final int v, final int w) {
         int a = ancestor(v, w);
         if (a == -1) {
             return -1;
@@ -16,8 +38,15 @@ public class SAP {
             return len;
         }
     }
-
-    public int ancestor(int v, int w) {
+    /**.
+     * { function_description }
+     *
+     * @param      v     { parameter_description }
+     * @param      w     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int ancestor(final int v, final int w) {
         BreadthFirstSearch bfsv = new BreadthFirstSearch(dig, v);
         BreadthFirstSearch bfsw = new BreadthFirstSearch(dig, w);
         for (int i = 0; i < dig.vert(); i++) {
@@ -32,8 +61,15 @@ public class SAP {
         }
         return ancestor;
     }
-
-    public int length(Iterable<Integer> v, Iterable<Integer> w) {
+    /**.
+     * { function_description }
+     *
+     * @param      v     { parameter_description }
+     * @param      w     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int length(final Iterable<Integer> v, final Iterable<Integer> w) {
         int a = ancestor(v, w);
         if (a == -1) {
             return -1;
@@ -41,8 +77,15 @@ public class SAP {
             return len;
         }
     }
-
-    public int ancestor(Iterable<Integer> v, Iterable<Integer> w) {
+    /**.
+     * { function_description }
+     *
+     * @param      v     { parameter_description }
+     * @param      w     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int ancestor(final Iterable<Integer> v, final Iterable<Integer> w) {
         for (int i : v) {
             for (int j : w) {
                 ancestor(i, j);
