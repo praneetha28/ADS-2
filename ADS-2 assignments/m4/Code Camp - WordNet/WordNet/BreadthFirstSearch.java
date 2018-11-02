@@ -28,7 +28,7 @@ public class BreadthFirstSearch {
         marked = new boolean[g.vert()];
         distTo = new int[g.vert()];
         edgeTo = new int[g.vert()];
-        for (int v = 0; v < g.v(); vert++) {
+        for (int v = 0; v < g.vert(); v++) {
             distTo[v] = INFINITY;
         }
         validateVertex(s);
@@ -138,7 +138,7 @@ public class BreadthFirstSearch {
         if (vertices == null) {
             throw new IllegalArgumentException("argument is null");
         }
-        int v2V = marked.length;
+        int v2 = marked.length;
         for (int v : vertices) {
             if (v < 0 || v >= v2) {
                 throw new IllegalArgumentException("vertex " + v
