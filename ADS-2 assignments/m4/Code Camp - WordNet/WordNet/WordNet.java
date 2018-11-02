@@ -20,13 +20,14 @@
     public static void main(String[] args)
 }
 */
-import java.util.HashMap;
+import java.util.ArrayList;
 public class WordNet {
-    // private SAP sap;
-    // private Digraph dg;
+    private SAP sap;
+    private Digraph dg;
+    HashTable<String, ArrayList<Integer>> htable;
+    HashTable<Integer, String> htable1;
     private int ver = 0;
-    // private HashMap<Integer, Bag<String>> idmap;
-    // private HashMap<String, Bag<Integer>> wordmap;
+
     WordNet(String synsets, String hypernyms) {
         readSynsets(synsets, hypernyms);
         // dg = new Digraph(ver);
@@ -34,6 +35,8 @@ public class WordNet {
         // sap = new SAP(dg);
     }
     public void readSynsets(String synsets, String hypernyms) {
+        htable = new HashTable<String, ArrayList<Integer>>();
+        htable1 = new HashTable<Integer, String>();
         int id = 0;
         try {
             In synIn = new In("./Files/" + synsets);
@@ -42,9 +45,21 @@ public class WordNet {
                 // String line = synIn.readString();
                 String[] tokens = synIn.readString().split(",");
                 id = Integer.parseInt(tokens[0]);
+                htable1.put(id, tokens[1]);
                 String[] word = tokens[1].split(" ");
+                for (int i = 0; i < word.length; i++) {
+                    if (htable.contains(word[i])) {
+                        ArrayList<Integer> list = htable.get(word[i]);
+                        list.add(id);
+                        htable.put(word[i], list);
+                    } else {
+                        ArrayList<Integer> list = new ArrayList<Integer>();
+                        list.add(Integer.parseInt(tokens[0]));
+                        htable.put(word[i], list);
+                    }
+                }
             }
-            Digraph dg = new Digraph(ver);
+            dg = new Digraph(ver);
             readHypernyms(hypernyms, dg);
         } catch (Exception e) {
             System.out.println("File not found");
@@ -53,7 +68,6 @@ public class WordNet {
     }
 
     public void readHypernyms(String hypernyms, Digraph dg) {
-        int c = 0;
         In hyperIn = new In("./Files/" + hypernyms);
         while (!hyperIn.isEmpty()) {
             // String line = ;
@@ -62,18 +76,34 @@ public class WordNet {
                 dg.addEdge(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[i]));
             }
         }
-            DirectedCycle dc = new DirectedCycle(dg);
-            for (int i = 0; i < ver; i++) {
-                if (dg.outdegree(i) == 0) {
-                    c++;
-                }
+    }
+    public void display() {
+        int c = 0;
+        DirectedCycle dc = new DirectedCycle(dg);
+        for (int i = 0; i < ver; i++) {
+            if (dg.outdegree(i) == 0) {
+                c++;
             }
-            if (c > 1) {
-                System.out.println("Multiple roots");
-            } else if (dc.hasCycle()) {
-                System.out.println("Cycle detected");
-            } else {
-                System.out.println(dg);
-            }
+        }
+        if (c > 1) {
+            System.out.println("Multiple roots");
+        } else if (dc.hasCycle()) {
+            System.out.println("Cycle detected");
+        } else {
+            System.out.println(dg);
+        }
+    }
+
+    public int distance(String nounA, String nounB) {
+        sap = new SAP(dg);
+        int dist = sap.length(htable.get(nounA), htable.get(nounB));
+        return dist;
+    }
+
+    public String sap(String nounA, String nounB) {
+        sap = new SAP(dg);
+        String str = "";
+        int id = sap.ancestor(htable.get(nounA), htable.get(nounB));
+        return htable1.get(id);
     }
 }

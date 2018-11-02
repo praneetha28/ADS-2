@@ -21,16 +21,24 @@ public final class Solution {
      */
     // time complexity for the main method is O(N).
     public static void main(final String[] args) {
-        // Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         String n = StdIn.readString();
         String m = StdIn.readString();
         WordNet wn = new WordNet(n , m);
-        // String word = sc.nextLine()
-        // DirectedCycle dc = new DirectedCycle(g);
-        // if (dc.isBipartite()) {
-        //     System.out.println("Graph is bipartite");
-        // } else {
-        //     System.out.println("Graph is not a bipartite");
-        // }
+        String word = sc.nextLine();
+        try {
+            if (word.equals("Graph")) {
+                wn.display();
+            } else if (word.equals("Queries")) {
+                while (sc.hasNextLine()) {
+                    String[] tokens = sc.nextLine().split(" ");
+                    String str = wn.sap(tokens[0], tokens[1]);
+                    int id = wn.distance(tokens[0], tokens[1]);
+                    System.out.println("distance = "+ id +", ancestor = "+ str);
+                }
+            }
+        } catch(Exception e) {
+            System.out.println("IllegalArgumentException");
+        }
     }
 }
