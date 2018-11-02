@@ -8,17 +8,9 @@ Starting audit...
 Checkstyle ends with 1 errors.
 Starting audit...
 [ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Queue.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Queue.java:74: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Queue.java:88: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Queue.java:89: 'else' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Queue.java:100: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Queue.java:104: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Queue.java:144:9: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Queue.java:144:29: Parameter first should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Queue.java:144:40: 'first' hides a field. [HiddenField]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Queue.java:167: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Queue.java:153:9: Redundant 'public' modifier. [RedundantModifier]
 Audit done.
-Checkstyle ends with 10 errors.
+Checkstyle ends with 2 errors.
 Starting audit...
 [ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\SAP.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\SAP.java:1: Missing a Javadoc comment. [JavadocType]

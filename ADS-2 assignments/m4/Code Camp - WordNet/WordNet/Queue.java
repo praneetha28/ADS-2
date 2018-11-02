@@ -71,7 +71,9 @@ public class Queue<Item> implements Iterable<Item> {
      * @throws NoSuchElementException if this queue is empty
      */
     public Item peek() {
-        if (isEmpty()) throw new NoSuchElementException("Queue underflow");
+        if (isEmpty()) {
+            throw new NoSuchElementException("Queue underflow");
+        }
         return first.item;
     }
 
@@ -85,8 +87,11 @@ public class Queue<Item> implements Iterable<Item> {
         last = new Node<Item>();
         last.item = item;
         last.next = null;
-        if (isEmpty()) first = last;
-        else           oldlast.next = last;
+        if (isEmpty()) {
+            first = last;
+        } else {
+            oldlast.next = last;
+        }
         n++;
     }
 
@@ -97,11 +102,15 @@ public class Queue<Item> implements Iterable<Item> {
      * @throws NoSuchElementException if this queue is empty
      */
     public Item dequeue() {
-        if (isEmpty()) throw new NoSuchElementException("Queue underflow");
+        if (isEmpty()) {
+            throw new NoSuchElementException("Queue underflow");
+        }
         Item item = first.item;
         first = first.next;
         n--;
-        if (isEmpty()) last = null;   // to avoid loitering
+        if (isEmpty()) {
+            last = null;
+        }
         return item;
     }
     /**.
@@ -139,10 +148,10 @@ public class Queue<Item> implements Iterable<Item> {
         /**.
          * Constructs the object.
          *
-         * @param      first  The first
+         * @param      fst  The first
          */
-        public ListIterator(Node<Item> first) {
-            current = first;
+        public ListIterator(final Node<Item> fst) {
+            current = fst;
         }
         /**.
          * Determines if it has next.
@@ -164,7 +173,9 @@ public class Queue<Item> implements Iterable<Item> {
          * @return     { description_of_the_return_value }
          */
         public Item next() {
-            if (!hasNext()) throw new NoSuchElementException();
+            if (!hasNext()) {
+                throw new NoSuchElementException();
+            }
             Item item = current.item;
             current = current.next;
             return item;
