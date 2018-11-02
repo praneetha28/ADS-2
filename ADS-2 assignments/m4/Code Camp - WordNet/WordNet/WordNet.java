@@ -1,43 +1,61 @@
-/*public class WordNet {
-
-    // constructor takes the name of the two input files
-    public WordNet(String synsets, String hypernyms)
-
-    // returns all WordNet nouns
-    public Iterable<String> nouns()
-
-    // is the word a WordNet noun?
-    public boolean isNoun(String word)
-
-    // distance between nounA and nounB (defined below)
-    public int distance(String nounA, String nounB)
-
-    // a synset (second field of synsets.txt) that is the common ancestor of nounA and nounB
-    // in a shortest ancestral path (defined below)
-    public String sap(String nounA, String nounB)
-
-    // do unit testing of this class
-    public static void main(String[] args)
-}
-*/
+/**.
+ * { item_description }
+ */
 import java.io.*;
-import java.util.*;
-import java.util.ArrayList;
-public class WordNet {
-    private SAP sap;
-    private Digraph dg;
-    HashTable<String, ArrayList<Integer>> htable;
-    HashTable<Integer, String> htable1;
-    private int ver = 0;
+/**
+ * { item_description }
+ */
 
-    WordNet(String synsets, String hypernyms) throws Exception {
+import java.util.*;
+/**.
+ * { item_description }
+ */
+import java.util.ArrayList;
+/**.
+ * Class for word net.
+ */
+public class WordNet {
+    /**.
+     * { var_description }
+     */
+    private SAP sap;
+    /**.
+     * { var_description }
+     */
+    private Digraph dg;
+    /**.
+     * { item_description }
+     */
+    private HashTable<String, ArrayList<Integer>> htable;
+    /**.
+     * { var_description }
+     */
+    private HashTable<Integer, String> htable1;
+    /**.
+     * { var_description }
+     */
+    private int ver = 0;
+    /**.
+     * Constructs the object.
+     *
+     * @param      synsets    The synsets
+     * @param      hypernyms  The hypernyms
+     */
+    WordNet(final String synsets, final String hypernyms) throws Exception {
         readSynsets(synsets);
         readHypernyms(hypernyms);
         // dg = new Digraph(ver);
         // readHypernyms(hypernyms);
         // sap = new SAP(dg);
     }
-    public void readSynsets(String synsets) throws Exception {
+    /**.
+     * Reads synsets.
+     *
+     * @param      synsets    The synsets
+     *
+     * @throws     Exception  { exception_description }
+     */
+    public void readSynsets(final String synsets) throws Exception {
         htable = new HashTable<String, ArrayList<Integer>>();
         htable1 = new HashTable<Integer, String>();
         int id = 0;
@@ -62,8 +80,14 @@ public class WordNet {
                 }
             }
     }
-
-    public void readHypernyms(String hypernyms) throws Exception {
+    /**.
+     * Reads hypernyms.
+     *
+     * @param      hypernyms  The hypernyms
+     *
+     * @throws     Exception  { exception_description }
+     */
+    public void readHypernyms(final String hypernyms) throws Exception {
         dg = new Digraph(ver);
         Scanner hyperIn = new Scanner(new File(hypernyms));
         while (hyperIn.hasNextLine()) {
@@ -74,6 +98,9 @@ public class WordNet {
             }
         }
     }
+    /**.
+     * { function_description }
+     */
     public void display() {
         int c = 0;
         DirectedCycle dc = new DirectedCycle(dg);
@@ -90,14 +117,28 @@ public class WordNet {
             System.out.println(dg);
         }
     }
-
-    public int distance(String nounA, String nounB) {
+    /**.
+     * { function_description }
+     *
+     * @param      nounA  The noun a
+     * @param      nounB  The noun b
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int distance(final String nounA, final String nounB) {
         sap = new SAP(dg);
         int dist = sap.length(htable.get(nounA), htable.get(nounB));
         return dist;
     }
-
-    public String sap(String nounA, String nounB) {
+    /**.
+     * { function_description }
+     *
+     * @param      nounA  The noun a
+     * @param      nounB  The noun b
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public String sap(final String nounA, final String nounB) {
         sap = new SAP(dg);
         String str = "";
         int id = sap.ancestor(htable.get(nounA), htable.get(nounB));

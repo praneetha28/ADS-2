@@ -111,6 +111,4 @@ public class DirectedCycle {
         //     StdOut.println("No directed cycle");
         // }
         // StdOut.println();
-    }
-
 }
