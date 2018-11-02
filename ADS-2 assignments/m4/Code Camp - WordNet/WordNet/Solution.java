@@ -24,9 +24,9 @@ public final class Solution {
         Scanner sc = new Scanner(System.in);
         String n = StdIn.readString();
         String m = StdIn.readString();
-        WordNet wn = new WordNet(n , m);
         String word = sc.nextLine();
         try {
+            WordNet wn = new WordNet(n , m);
             if (word.equals("Graph")) {
                 wn.display();
             } else if (word.equals("Queries")) {

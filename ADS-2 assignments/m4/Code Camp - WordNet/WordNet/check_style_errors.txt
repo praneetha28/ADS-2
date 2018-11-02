@@ -378,7 +378,7 @@ Starting audit...
 Audit done.
 Checkstyle ends with 25 errors.
 Starting audit...
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Solution.java:27:35: ',' is preceded with whitespace. [NoWhitespaceBefore]
+[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Solution.java:29:39: ',' is preceded with whitespace. [NoWhitespaceBefore]
 [ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Solution.java:37:53: '+' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Solution.java:37:59: '+' is not followed by whitespace. [WhitespaceAround]
 [ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Solution.java:37:74: '+' is not preceded with whitespace. [WhitespaceAround]
