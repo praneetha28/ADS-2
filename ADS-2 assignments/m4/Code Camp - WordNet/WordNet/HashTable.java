@@ -1,4 +1,4 @@
-import java.util.Arrays;
+
 public class HashTable<Key, Value> {
     private static final int INIT_CAPACITY = 4;
 
@@ -61,7 +61,7 @@ public class HashTable<Key, Value> {
 
     // hash function for keys - returns value between 0 and M-1
     private int hash(Key key) {
-        return (key.hashCode() * 11) % m;
+        return (key.hashCode() & 0x7fffffff) % m;
     }
 
     // resizes the hash table to the given capacity by re-hashing all of the keys
@@ -78,7 +78,10 @@ public class HashTable<Key, Value> {
     }
 
     /**
-     time complexity in average case:constant time
+     * Inserts the specified key-value pair into the symbol table, overwriting the old
+     * value with the new value if the symbol table already contains the specified key.
+     * Deletes the specified key (and its associated value) from this symbol table
+     * if the specified value is {@code null}.
      *
      * @param  key the key
      * @param  val the value
@@ -108,7 +111,7 @@ public class HashTable<Key, Value> {
     }
 
     /**
-     time complexity in average case:constant time
+     * Returns the value associated with the specified key.
      * @param key the key
      * @return the value associated with {@code key};
      *         {@code null} if no such value
@@ -123,7 +126,9 @@ public class HashTable<Key, Value> {
     }
 
     /**
-     time complexity in average case:constant time
+     * Removes the specified key and its associated value from this symbol table
+     * (if the key is in this symbol table).
+     *
      * @param  key the key
      * @throws IllegalArgumentException if {@code key} is {@code null}
      */
@@ -158,19 +163,58 @@ public class HashTable<Key, Value> {
 
         // halves size of array if it's 12.5% full or less
         if (n > 0 && n <= m/8) resize(m/2);
+
+        assert check();
     }
-    //time complexity is O(N).
-	public String display() {
-		String s = "{";
-		if (size() == 0) {
-			return "{}";
-		}
-		for (int i = 0; i < m; i++) {
-			if (keys[i] != null) {
-				s += keys[i] + ":" + vals[i] +", ";
-			}
-		}
-			s = s.substring(0, s.length() - 2) + "}";
-		return s;
-	}
+
+    /**
+     * Returns all keys in this symbol table as an {@code Iterable}.
+     * To iterate over all of the keys in the symbol table named {@code st},
+     * use the foreach notation: {@code for (Key key : st.keys())}.
+     *
+     * @return all keys in this symbol table
+     */
+    public Iterable<Key> keys() {
+        Queue<Key> queue = new Queue<Key>();
+        for (int i = 0; i < m; i++)
+            if (keys[i] != null) queue.enqueue(keys[i]);
+        return queue;
+    }
+
+    // integrity check - don't check after each put() because
+    // integrity not maintained during a delete()
+    private boolean check() {
+
+        // check that hash table is at most 50% full
+        if (m < 2*n) {
+            System.err.println("Hash table size m = " + m + "; array size n = " + n);
+            return false;
+        }
+
+        // check that each key in table can be found by get()
+        for (int i = 0; i < m; i++) {
+            if (keys[i] == null) continue;
+            else if (get(keys[i]) != vals[i]) {
+                System.err.println("get[" + keys[i] + "] = " + get(keys[i]) + "; vals[i] = " + vals[i]);
+                return false;
+            }
+        }
+        return true;
+    }
+    // /**
+    //  * Unit tests the {@code LinearProbingHashST} data type.
+    //  *
+    //  * @param args the command-line arguments
+    //  */
+    // public static void main(String[] args) {
+    //     LinearProbingHashST<String, Integer> st = new LinearProbingHashST<String, Integer>();
+    //     for (int i = 0; !StdIn.isEmpty(); i++) {
+    //         String key = StdIn.readString();
+    //         st.put(key, i);
+    //     }
+
+    //     // print keys
+    //     for (String s : st.keys())
+    //         StdOut.println(s + " " + st.get(s));
+    // }
 }

@@ -26,11 +26,15 @@ public final class Solution {
         String m = "Files"+"\\" + sc.nextLine();
         String word = sc.nextLine();
         try {
-            WordNet wn = new WordNet(n , m);
+            // System.out.println("in try");
+            WordNet wn = new WordNet(n, m);
             if (word.equals("Graph")) {
                 wn.display();
+                // System.out.println("display");
             } else if (word.equals("Queries")) {
+                // System.out.println("in queries");
                 while (sc.hasNextLine()) {
+                    // System.out.println("inn while");
                     String[] tokens = sc.nextLine().split(" ");
                     String str = wn.sap(tokens[0], tokens[1]);
                     int id = wn.distance(tokens[0], tokens[1]);
@@ -38,7 +42,7 @@ public final class Solution {
                 }
             }
         } catch(Exception e) {
-            System.out.println("IllegalArgumentException");
+            e.printStackTrace();
         }
     }
 }
