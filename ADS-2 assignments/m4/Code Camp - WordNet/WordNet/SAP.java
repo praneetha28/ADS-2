@@ -24,7 +24,7 @@ public class SAP {
     }
     /**.
      * { function_description }
-     *
+     * time complexity is 1 in avg case
      * @param      v     { parameter_description }
      * @param      w     { parameter_description }
      *
@@ -40,7 +40,7 @@ public class SAP {
     }
     /**.
      * { function_description }
-     *
+     * time complexity is O(N).
      * @param      v     { parameter_description }
      * @param      w     { parameter_description }
      *
@@ -63,7 +63,7 @@ public class SAP {
     }
     /**.
      * { function_description }
-     *
+     * time complexity is 1 in avg case
      * @param      v     { parameter_description }
      * @param      w     { parameter_description }
      *
@@ -79,7 +79,7 @@ public class SAP {
     }
     /**.
      * { function_description }
-     *
+     * time complexity is O(N^2)
      * @param      v     { parameter_description }
      * @param      w     { parameter_description }
      *

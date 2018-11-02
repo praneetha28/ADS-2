@@ -19,7 +19,7 @@ public final class Solution {
      *
      * @param      args  The arguments
      */
-    // time complexity for the main method is O(N).
+    // time complexity for the main method is 1.
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         String n = "Files" + "\\" + sc.nextLine();

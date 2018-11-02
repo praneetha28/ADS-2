@@ -35,7 +35,7 @@ public class DirectedCycle {
     }
     /**.
      * { function_description }
-     *
+     * time complexity is 1 in avg case
      * @param      g     { parameter_description }
      * @param      v     { parameter_description }
      */
@@ -62,7 +62,7 @@ public class DirectedCycle {
     }
 /**.
  * Determines if it has cycle.
- *
+ * time complexity is 1 in avg case
  * @return     True if has cycle, False otherwise.
  */
     public boolean hasCycle() {
@@ -78,7 +78,7 @@ public class DirectedCycle {
     }
     /**.
      * { function_description }
-     *
+     * time complexity is O(N).
      * @return     { description_of_the_return_value }
      */
     private boolean check() {

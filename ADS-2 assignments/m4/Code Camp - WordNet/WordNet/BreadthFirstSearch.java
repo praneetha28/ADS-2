@@ -36,6 +36,7 @@ public class BreadthFirstSearch {
     }
     /**.
      * bfs
+     * time complexity is 1 in avg case
      * @param      g     { parameter_description }
      * @param      s     { parameter_description }
      */
@@ -78,6 +79,7 @@ public class BreadthFirstSearch {
     // }
     /**.
      * Is there a directed path from the source
+     time complexity is 1 in avg case
      * @param      v     { parameter_description }
      * @return {@code true} if there is a directed path
      */
@@ -88,6 +90,7 @@ public class BreadthFirstSearch {
     /**
      * Returns the number of edges in
      * (or sources) to vertex {@code v}?
+     * time complexity is 1 in avg case
      * @param v the vertex
      * @return the number of edges in a shortest path
      */
@@ -99,6 +102,7 @@ public class BreadthFirstSearch {
     /**
      * Returns a shortest path from {@code s} (or sources) to {@code v}, or
      * {@code null} if no such path.
+     * time complexity is O(N).
      * @param v the vertex
      * @return the sequence of vertices on a shortest path, as an Iterable
      * @throws IllegalArgumentException unless {@code 0 <= v < V}
@@ -119,7 +123,7 @@ public class BreadthFirstSearch {
     }
     /**.
      * { function_description }
-     *
+     * time complexity is 1 in avg case
      * @param      v     { parameter_description }
      */
     private void validateVertex(final int v) {
@@ -131,7 +135,7 @@ public class BreadthFirstSearch {
     }
     /**.
      * { function_description }
-     *
+     * time complexity is O(N).
      * @param      vertices  The vertices
      */
     private void validateVertices(final Iterable<Integer> vertices) {
