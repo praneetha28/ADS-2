@@ -6,7 +6,7 @@ public class DirectedCycle {
      * { var_description }
      */
     private boolean[] marked;
-    /**
+    /**.
      * { var_description }
      */
     private int[] edgeTo;
@@ -23,12 +23,15 @@ public class DirectedCycle {
      *
      * @param      g     { parameter_description }
      */
-    public DirectedCycle(Digraph g) {
+    public DirectedCycle(final Digraph g) {
         marked  = new boolean[g.vert()];
         onStack = new boolean[g.vert()];
         edgeTo  = new int[g.vert()];
-        for (int v = 0; v < g.vert(); v++)
-            if (!marked[v] && cycle == null) dfs(g, v);
+        for (int v = 0; v < g.vert(); v++) {
+            if (!marked[v] && cycle == null) {
+                dfs(g, v);
+            }
+        }
     }
     /**.
      * { function_description }
@@ -36,10 +39,10 @@ public class DirectedCycle {
      * @param      g     { parameter_description }
      * @param      v     { parameter_description }
      */
-    private void dfs(Digraph G, int v) {
+    private void dfs(final Digraph g, final int v) {
         onStack[v] = true;
         marked[v] = true;
-        for (int w : G.adj(v)) {
+        for (int w : g.adj(v)) {
             if (cycle != null) {
                 return;
             } else if (!marked[w]) {
@@ -83,7 +86,9 @@ public class DirectedCycle {
             // verify cycle
             int first = -1, last = -1;
             for (int v : cycle()) {
-                if (first == -1) first = v;
+                if (first == -1) {
+                    first = v;
+                }
                 last = v;
             }
             if (first != last) {

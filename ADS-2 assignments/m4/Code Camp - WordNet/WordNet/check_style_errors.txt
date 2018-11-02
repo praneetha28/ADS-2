@@ -6,18 +6,8 @@ Audit done.
 Checkstyle ends with 1 errors.
 Starting audit...
 [ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\DirectedCycle.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\DirectedCycle.java:9: First sentence should end with a period. [JavadocStyle]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\DirectedCycle.java:26:26: Parameter g should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\DirectedCycle.java:30: 'for' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\DirectedCycle.java:31: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\DirectedCycle.java:36:8: Unused @param tag for 'g'. [JavadocMethod]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\DirectedCycle.java:39:22: Parameter G should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\DirectedCycle.java:39:30: Expected @param tag for 'G'. [JavadocMethod]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\DirectedCycle.java:39:30: Name 'G' must match pattern '^[a-z][a-zA-Z0-9]*$'. [ParameterName]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\DirectedCycle.java:39:33: Parameter v should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\DirectedCycle.java:86: 'if' construct must use '{}'s. [NeedBraces]
 Audit done.
-Checkstyle ends with 11 errors.
+Checkstyle ends with 1 errors.
 Starting audit...
 [ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\Queue.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 Audit done.
