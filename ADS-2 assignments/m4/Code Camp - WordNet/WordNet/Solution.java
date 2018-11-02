@@ -38,7 +38,8 @@ public final class Solution {
                     String[] tokens = sc.nextLine().split(" ");
                     String str = wn.sap(tokens[0], tokens[1]);
                     int id = wn.distance(tokens[0], tokens[1]);
-                    System.out.println("distance = " + id + ", ancestor = "+ str);
+                    System.out.println("distance = " + id
+                        + ", ancestor = " + str);
                 }
             }
         } catch (Exception e) {
