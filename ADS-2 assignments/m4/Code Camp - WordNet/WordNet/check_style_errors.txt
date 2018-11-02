@@ -469,6 +469,7 @@ Starting audit...
 [ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\WordNet.java:15: Line is longer than 80 characters (found 92). [LineLength]
 [ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\WordNet.java:23:8: Unused import - java.util.HashMap. [UnusedImports]
 [ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\WordNet.java:24: Missing a Javadoc comment. [JavadocType]
+[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\WordNet.java:27:5: Missing a Javadoc comment. [JavadocVariable]
 [ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\WordNet.java:30:5: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\WordNet.java:30:13: Parameter synsets should be final. [FinalParameters]
 [ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\WordNet.java:30:29: Parameter hypernyms should be final. [FinalParameters]
@@ -476,11 +477,11 @@ Starting audit...
 [ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\WordNet.java:36:5: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\WordNet.java:36:29: Parameter synsets should be final. [FinalParameters]
 [ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\WordNet.java:36:45: Parameter hypernyms should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\WordNet.java:56:5: Class 'WordNet' looks like designed for extension (can be subclassed), but the method 'readHypernyms' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'WordNet' final or making the method 'readHypernyms' static/final/abstract/empty, or adding allowed annotation for the method. [DesignForExtension]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\WordNet.java:56:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\WordNet.java:56:31: Parameter hypernyms should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\WordNet.java:56:49: Parameter dg should be final. [FinalParameters]
+[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\WordNet.java:55:5: Class 'WordNet' looks like designed for extension (can be subclassed), but the method 'readHypernyms' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'WordNet' final or making the method 'readHypernyms' static/final/abstract/empty, or adding allowed annotation for the method. [DesignForExtension]
+[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\WordNet.java:55:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\WordNet.java:55:31: Parameter hypernyms should be final. [FinalParameters]
+[ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\WordNet.java:55:49: Parameter dg should be final. [FinalParameters]
 [ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\WordNet.java:61:16: 'for' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] F:\ADS-2\ADS-2 assignments\m4\Code Camp - WordNet\WordNet\WordNet.java:62: Line is longer than 80 characters (found 85). [LineLength]
 Audit done.
-Checkstyle ends with 17 errors.
+Checkstyle ends with 18 errors.

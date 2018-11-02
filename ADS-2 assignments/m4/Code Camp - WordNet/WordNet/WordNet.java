@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class WordNet {
     // private SAP sap;
     // private Digraph dg;
-    // private int ver = 0;
+    private int ver = 0;
     // private HashMap<Integer, Bag<String>> idmap;
     // private HashMap<String, Bag<Integer>> wordmap;
     WordNet(String synsets, String hypernyms) {
@@ -34,7 +34,6 @@ public class WordNet {
         // sap = new SAP(dg);
     }
     public void readSynsets(String synsets, String hypernyms) {
-        int ver = 0;
         int id = 0;
         try {
             In synIn = new In("./Files/" + synsets);
@@ -54,6 +53,7 @@ public class WordNet {
     }
 
     public void readHypernyms(String hypernyms, Digraph dg) {
+        int c = 0;
         In hyperIn = new In("./Files/" + hypernyms);
         while (!hyperIn.isEmpty()) {
             // String line = ;
@@ -63,6 +63,14 @@ public class WordNet {
             }
         }
             DirectedCycle dc = new DirectedCycle(dg);
+            for (int i = 0; i < ver; i++) {
+                if (dg.outdegree(i) == 0) {
+                    c++;
+                }
+            }
+            if (c > 1) {
+                System.out.println("Multiple roots");
+            }
             if (dc.hasCycle()) {
                 System.out.println("Cycle detected");
             } else {
