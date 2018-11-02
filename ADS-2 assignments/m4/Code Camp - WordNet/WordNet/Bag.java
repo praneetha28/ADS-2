@@ -1,59 +1,19 @@
-/******************************************************************************
- *  Compilation:  javac Bag.java
- *  Execution:    java Bag < input.txt
- *  Dependencies: StdIn.java StdOut.java
- *
- *  A generic bag or multiset, implemented using a singly linked list.
- *
- *  % more tobe.txt 
- *  to be or not to - be - - that - - - is
- *
- *  % java Bag < tobe.txt
- *  size of bag = 14
- *  is
- *  -
- *  -
- *  -
- *  that
- *  -
- *  -
- *  be
- *  -
- *  to
- *  not
- *  or
- *  be
- *  to
- *
- ******************************************************************************/
-
-
+/**.
+ * { item_description }
+ */
 import java.util.Iterator;
+/**.
+ * { item_description }
+ */
 import java.util.NoSuchElementException;
-
-/**
- *  The {@code Bag} class represents a bag (or multiset) of 
- *  generic items. It supports insertion and iterating over the 
- *  items in arbitrary order.
- *  <p>
- *  This implementation uses a singly linked list with a static nested class Node.
- *  See {@link LinkedBag} for the version from the
- *  textbook that uses a non-static nested class.
- *  See {@link ResizingArrayBag} for a version that uses a resizing array.
- *  The <em>add</em>, <em>isEmpty</em>, and <em>size</em> operations
- *  take constant time. Iteration takes time proportional to the number of items.
- *  <p>
- *  For additional documentation, see <a href="https://algs4.cs.princeton.edu/13stacks">Section 1.3</a> of
- *  <i>Algorithms, 4th Edition</i> by Robert Sedgewick and Kevin Wayne.
+/**.
+ * Class for bag.
  *
- *  @author Robert Sedgewick
- *  @author Kevin Wayne
- *
- *  @param <Item> the generic type of an item in this bag
+ * @param      <Item>  The item
  */
 public class Bag<Item> implements Iterable<Item> {
-    private Node<Item> first;    // beginning of bag
-    private int n;               // number of elements in bag
+    private Node<Item> first;
+    private int n;
 
     // helper linked list class
     private static class Node<Item> {
@@ -108,7 +68,7 @@ public class Bag<Item> implements Iterable<Item> {
      * @return an iterator that iterates over the items in this bag in arbitrary order
      */
     public Iterator<Item> iterator()  {
-        return new ListIterator<Item>(first);  
+        return new ListIterator<Item>(first);
     }
 
     // an iterator, doesn't implement remove() since it's optional
@@ -125,7 +85,7 @@ public class Bag<Item> implements Iterable<Item> {
         public Item next() {
             if (!hasNext()) throw new NoSuchElementException();
             Item item = current.item;
-            current = current.next; 
+            current = current.next;
             return item;
         }
     }
