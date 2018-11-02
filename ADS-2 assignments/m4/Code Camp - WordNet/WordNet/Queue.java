@@ -150,7 +150,7 @@ public class Queue<Item> implements Iterable<Item> {
          *
          * @param      fst  The first
          */
-        public ListIterator(final Node<Item> fst) {
+        ListIterator(final Node<Item> fst) {
             current = fst;
         }
         /**.
