@@ -1,12 +1,12 @@
 /**.
  * { item_description }
  */
-import java.io.*;
-/**
+import java.io.File;
+/**.
  * { item_description }
  */
 
-import java.util.*;
+import java.util.Scanner;
 /**.
  * { item_description }
  */
@@ -37,7 +37,7 @@ public class WordNet {
     private int ver = 0;
     /**.
      * Constructs the object.
-     *
+     * @throws     Exception  { exception_description }
      * @param      synsets    The synsets
      * @param      hypernyms  The hypernyms
      */
@@ -93,8 +93,9 @@ public class WordNet {
         while (hyperIn.hasNextLine()) {
             // String line = ;
             String[] tokens = hyperIn.nextLine().split(",");
-            for(int i = 1; i < tokens.length; i++) {
-                dg.addEdge(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[i]));
+            for (int i = 1; i < tokens.length; i++) {
+                dg.addEdge(Integer.parseInt(tokens[0]),
+                 Integer.parseInt(tokens[i]));
             }
         }
     }
