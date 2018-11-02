@@ -31,17 +31,18 @@ public class WordNet {
     private int ver = 0;
 
     WordNet(String synsets, String hypernyms) throws Exception {
-        readSynsets(synsets, hypernyms);
+        readSynsets(synsets);
+        readHypernyms(hypernyms);
         // dg = new Digraph(ver);
         // readHypernyms(hypernyms);
         // sap = new SAP(dg);
     }
-    public void readSynsets(String synsets, String hypernyms) throws Exception {
+    public void readSynsets(String synsets) throws Exception {
         htable = new HashTable<String, ArrayList<Integer>>();
         htable1 = new HashTable<Integer, String>();
         int id = 0;
             Scanner synIn = new Scanner(new File(synsets));
-            while (!synIn.hasNextLine()) {
+            while (synIn.hasNextLine()) {
                 ver++;
                 // String line = synIn.readString();
                 String[] tokens = synIn.nextLine().split(",");
@@ -60,14 +61,12 @@ public class WordNet {
                     }
                 }
             }
-            dg = new Digraph(ver);
-            readHypernyms(hypernyms, dg);
-
     }
 
-    public void readHypernyms(String hypernyms, Digraph dg) throws Exception {
+    public void readHypernyms(String hypernyms) throws Exception {
+        dg = new Digraph(ver);
         Scanner hyperIn = new Scanner(new File(hypernyms));
-        while (!hyperIn.hasNextLine()) {
+        while (hyperIn.hasNextLine()) {
             // String line = ;
             String[] tokens = hyperIn.nextLine().split(",");
             for(int i = 1; i < tokens.length; i++) {
