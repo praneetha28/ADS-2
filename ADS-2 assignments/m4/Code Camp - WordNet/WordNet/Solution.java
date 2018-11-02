@@ -42,7 +42,7 @@ public final class Solution {
                 }
             }
         } catch(Exception e) {
-            e.printStackTrace();
+            System.out.println("IllegalArgumentException");;
         }
     }
 }

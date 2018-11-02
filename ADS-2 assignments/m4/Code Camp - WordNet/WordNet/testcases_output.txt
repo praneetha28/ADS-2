@@ -204,26 +204,20 @@ Your Output:
 Multiple roots
 ----------------------------------------
 
-########## Testcase 11: Failed ##########
+########## Testcase 11: Passed ##########
 Expected Output: 
 IllegalArgumentException
 
 Your Output: 
-java.lang.NullPointerException
-	at SAP.ancestor(SAP.java:46)
-	at WordNet.sap(WordNet.java:103)
-	at Solution.main(Solution.java:39)
+IllegalArgumentException
 ----------------------------------------
 
-########## Testcase 12: Failed ##########
+########## Testcase 12: Passed ##########
 Expected Output: 
 IllegalArgumentException
 
 Your Output: 
-java.lang.NullPointerException
-	at SAP.ancestor(SAP.java:46)
-	at WordNet.sap(WordNet.java:103)
-	at Solution.main(Solution.java:39)
+IllegalArgumentException
 ----------------------------------------
 
 ########## Testcase 13: Passed ##########
