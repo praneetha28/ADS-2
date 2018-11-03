@@ -2,10 +2,8 @@ Starting audit...
 Audit done.
 Starting audit...
 [ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\Digraph.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\Digraph.java:66: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\Digraph.java:144: Line is longer than 80 characters (found 93). [LineLength]
 Audit done.
-Checkstyle ends with 3 errors.
+Checkstyle ends with 1 errors.
 Starting audit...
 [ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\HashTable.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\HashTable.java:8:1: File contains tab characters (this is the first instance). [FileTabCharacter]

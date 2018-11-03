@@ -63,9 +63,10 @@ public class Digraph {
      * @param      v     { parameter_description }
      */
     private void validateVertex(final int v) {
-        if (v < 0 || v >= ver)
+        if (v < 0 || v >= ver) {
             throw new IllegalArgumentException("vertex " + v
              + " is not between 0 and " + (ver - 1));
+        }
     }
 
     /**.
@@ -141,7 +142,7 @@ public class Digraph {
     /**.
      * Returns a string representation of the graph.
      *
-     * @return the number of vertices <em>V</em>, followed by the number of edges <em>E</em>,
+     * @return the number of vertices <em>V</em>
      *         followed by the <em>V</em> adjacency lists
      */
     public String toString() {
