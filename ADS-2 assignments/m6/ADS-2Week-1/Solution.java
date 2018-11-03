@@ -1,10 +1,29 @@
-// class WebSearch {
-
-// }
+/**.
+ * { item_description }
+ */
 import java.util.Scanner;
-public class Solution {
-	public static void main(String[] args) {
-		// read the first line of the input to get the number of vertices
+/**.
+ * { item_description }
+ */
+public final class Solution {
+    /**.
+     * Constructs the object.
+     */
+    private Solution() {
+        /**.
+         * { item_description }
+         */
+    }
+    /**.
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
+    // time complexity for the main method is N
+    // Because there is one while loop.
+    // while loop iterates until it has next line i.e N times.
+	public static void main(final String[] args) {
+
 		Scanner sc = new Scanner(System.in);
 		int vertices = sc.nextInt();
 		sc.nextLine();
@@ -13,7 +32,8 @@ public class Solution {
 			String line = sc.nextLine();
 			String[] tokens = line.split(" ");
 			for (int j = 1; j < tokens.length; j++) {
-				dig.addEdge(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[j]));
+				dig.addEdge(Integer.parseInt(tokens[0]),
+					Integer.parseInt(tokens[j]));
 			}
 		}
 		System.out.println(dig);
@@ -22,8 +42,9 @@ public class Solution {
 		// and build the graph
 		PageRank pgr = new PageRank(dig);
 		pgr.getPR();
-		pgr.String();
-		// Create page rank object and pass the graph object to the constructor
+		pgr.string();
+		// Create page rank object and pass the graph
+		//object to the constructor
 
 		// print the page rank object
 
@@ -33,7 +54,8 @@ public class Solution {
 		String file = "WebContent.txt";
 
 		// instantiate web search object
-		// and pass the page rank object and the file path to the constructor
+		// and pass the page rank object and the file path
+		// to the constructor
 
 		// read the search queries from std in
 		// remove the q= prefix and extract the search word

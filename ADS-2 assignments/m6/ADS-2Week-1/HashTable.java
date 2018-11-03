@@ -5,9 +5,9 @@
  * @param      <Value>  The value
  */
 public class HashTable<Key, Value> {
-	/**.
-	 * { var_description }
-	 */
+    /**.
+     * { var_description }
+     */
     private static final int INIT_CAPACITY = 4;
     /**.
      * { var_description }
@@ -112,7 +112,7 @@ public class HashTable<Key, Value> {
 
         // double table size if 50% full
         if (n >= m / 2) {
-        	resize(2 * m);
+            resize(2 * m);
         }
         int i;
         for (i = hash(key); keys[i] != null; i = (i + 1) % m) {
@@ -147,7 +147,7 @@ public class HashTable<Key, Value> {
      */
     public void delete(final Key key) {
         if (!contains(key)) {
-        	return;
+            return;
         }
         int i = hash(key);
         while (!key.equals(keys[i])) {
@@ -175,7 +175,7 @@ public class HashTable<Key, Value> {
 
         // halves size of array if it's 12.5% full or less
         if (n > 0 && n <= m / 2 + 2 + 2 + 2) {
-        	resize(m / 2);
+            resize(m / 2);
         }
         assert check();
     }
@@ -191,7 +191,7 @@ public class HashTable<Key, Value> {
         Queue<Key> queue = new Queue<Key>();
         for (int i = 0; i < m; i++) {
             if (keys[i] != null) {
-            	queue.enqueue(keys[i]);
+                queue.enqueue(keys[i]);
             }
         }
         return queue;
@@ -206,14 +206,14 @@ public class HashTable<Key, Value> {
         // check that hash table is at most 50% full
         if (m < 2 * n) {
             System.err.println("Hash table size m = " + m
-            	+ "; array size n = " + n);
+                + "; array size n = " + n);
             return false;
         }
 
         // check that each key in table can be found by get()
         for (int i = 0; i < m; i++) {
             if (keys[i] == null) {
-            	continue;
+                continue;
             } else if (get(keys[i]) != vals[i]) {
                 System.err.println("get[" + keys[i] + "] = " + get(keys[i])
                  + "; vals[i] = " + vals[i]);
