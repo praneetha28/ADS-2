@@ -8,11 +8,11 @@ class PageRank {
 	}
 	public void getPR() {
 		double prevpr = 0.25;
-		for (int p = 0; p < dg.V(); p++) {
+		for (int p = 0; p < dg.vert(); p++) {
 			ht.put(p, prevpr);
 		}
 		for (int i = 0; i < 1000; i++) {
-			for (int j = 0; j < dg.V(); j++) {
+			for (int j = 0; j < dg.vert(); j++) {
 				double temp = 0.0;
 				double temp1 = 0.0;
 				for (int k : dg.adj(j)) {

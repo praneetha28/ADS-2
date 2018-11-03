@@ -1,33 +1,48 @@
-
+/**.
+ * Class for hash table.
+ *
+ * @param      <Key>    The key
+ * @param      <Value>  The value
+ */
 public class HashTable<Key, Value> {
+	/**.
+	 * { var_description }
+	 */
     private static final int INIT_CAPACITY = 4;
-
-    private int n;           // number of key-value pairs in the symbol table
-    private int m;           // size of linear probing table
-    private Key[] keys;      // the keys
-    private Value[] vals;    // the values
-
-
-    /**
+    /**.
+     * { var_description }
+     */
+    private int n;
+    /**.
+     * { var_description }
+     */
+    private int m;
+    /**.
+     * { var_description }
+     */
+    private Key[] keys;
+    /**.
+     * { var_description }
+     */
+    private Value[] vals;
+    /**.
      * Initializes an empty symbol table.
      */
     public HashTable() {
         this(INIT_CAPACITY);
     }
-
-    /**
+    /**.
      * Initializes an empty symbol table with the specified initial capacity.
      *
      * @param capacity the initial capacity
      */
-    public HashTable(int capacity) {
+    public HashTable(final int capacity) {
         m = capacity;
         n = 0;
         keys = (Key[])   new Object[m];
         vals = (Value[]) new Object[m];
     }
-
-    /**
+    /**.
      * Returns the number of key-value pairs in this symbol table.
      *
      * @return the number of key-value pairs in this symbol table
@@ -35,37 +50,40 @@ public class HashTable<Key, Value> {
     public int size() {
         return n;
     }
-
-    /**
-     * Returns true if this symbol table is empty.
+    /**.
+     * Determines if empty.
      *
-     * @return {@code true} if this symbol table is empty;
-     *         {@code false} otherwise
+     * @return     True if empty, False otherwise.
      */
     public boolean isEmpty() {
         return size() == 0;
     }
-
-    /**
-     * Returns true if this symbol table contains the specified key.
+    /**.
+     * { function_description }
      *
-     * @param  key the key
-     * @return {@code true} if this symbol table contains {@code key};
-     *         {@code false} otherwise
-     * @throws IllegalArgumentException if {@code key} is {@code null}
+     * @param      key   The key
+     *
+     * @return     { description_of_the_return_value }
      */
-    public boolean contains(Key key) {
-        if (key == null) throw new IllegalArgumentException("argument to contains() is null");
+    public boolean contains(final Key key) {
         return get(key) != null;
     }
-
-    // hash function for keys - returns value between 0 and M-1
-    private int hash(Key key) {
+    /**.
+     * { function_description }
+     *
+     * @param      key   The key
+     *
+     * @return     { description_of_the_return_value }
+     */
+    private int hash(final Key key) {
         return (key.hashCode() & 0x7fffffff) % m;
     }
-
-    // resizes the hash table to the given capacity by re-hashing all of the keys
-    private void resize(int capacity) {
+    /**.
+     * { function_description }
+     *
+     * @param      capacity  The capacity
+     */
+    private void resize(final int capacity) {
         HashTable<Key, Value> temp = new HashTable<Key, Value>(capacity);
         for (int i = 0; i < m; i++) {
             if (keys[i] != null) {
@@ -76,20 +94,13 @@ public class HashTable<Key, Value> {
         vals = temp.vals;
         m    = temp.m;
     }
-
-    /**
-     * Inserts the specified key-value pair into the symbol table, overwriting the old
-     * value with the new value if the symbol table already contains the specified key.
-     * Deletes the specified key (and its associated value) from this symbol table
-     * if the specified value is {@code null}.
+    /**.
+     * { function_description }
      *
-     * @param  key the key
-     * @param  val the value
-     * @throws IllegalArgumentException if {@code key} is {@code null}
+     * @param      key   The key
+     * @param      val   The value
      */
-    public void put(Key key, Value val) {
-        if (key == null) throw new IllegalArgumentException("first argument to put() is null");
-
+    public void put(final Key key, final Value val) {
         if (val == null) {
             delete(key);
             return;
@@ -109,34 +120,30 @@ public class HashTable<Key, Value> {
         vals[i] = val;
         n++;
     }
-
-    /**
-     * Returns the value associated with the specified key.
-     * @param key the key
-     * @return the value associated with {@code key};
-     *         {@code null} if no such value
-     * @throws IllegalArgumentException if {@code key} is {@code null}
+    /**.
+     * { function_description }
+     *
+     * @param      key   The key
+     *
+     * @return     { description_of_the_return_value }
      */
-    public Value get(Key key) {
-        if (key == null) throw new IllegalArgumentException("argument to get() is null");
-        for (int i = hash(key); keys[i] != null; i = (i + 1) % m)
-            if (keys[i].equals(key))
+    public Value get(final Key key) {
+        for (int i = hash(key); keys[i] != null; i = (i + 1) % m) {
+            if (keys[i].equals(key)) {
                 return vals[i];
+            }
+        }
         return null;
     }
-
-    /**
-     * Removes the specified key and its associated value from this symbol table
-     * (if the key is in this symbol table).
+    /**.
+     * { function_description }
      *
-     * @param  key the key
-     * @throws IllegalArgumentException if {@code key} is {@code null}
+     * @param      key   The key
      */
-    public void delete(Key key) {
-        if (key == null) throw new IllegalArgumentException("argument to delete() is null");
-        if (!contains(key)) return;
-
-        // find position i of key
+    public void delete(final Key key) {
+        if (!contains(key)) {
+        	return;
+        }
         int i = hash(key);
         while (!key.equals(keys[i])) {
             i = (i + 1) % m;
@@ -167,7 +174,7 @@ public class HashTable<Key, Value> {
         assert check();
     }
 
-    /**
+    /**.
      * Returns all keys in this symbol table as an {@code Iterable}.
      * To iterate over all of the keys in the symbol table named {@code st},
      * use the foreach notation: {@code for (Key key : st.keys())}.
@@ -187,7 +194,8 @@ public class HashTable<Key, Value> {
 
         // check that hash table is at most 50% full
         if (m < 2*n) {
-            System.err.println("Hash table size m = " + m + "; array size n = " + n);
+            System.err.println("Hash table size m = " + m +
+             "; array size n = " + n);
             return false;
         }
 
@@ -195,7 +203,8 @@ public class HashTable<Key, Value> {
         for (int i = 0; i < m; i++) {
             if (keys[i] == null) continue;
             else if (get(keys[i]) != vals[i]) {
-                System.err.println("get[" + keys[i] + "] = " + get(keys[i]) + "; vals[i] = " + vals[i]);
+                System.err.println("get[" + keys[i] + "] = " + get(keys[i]) +
+                 "; vals[i] = " + vals[i]);
                 return false;
             }
         }
