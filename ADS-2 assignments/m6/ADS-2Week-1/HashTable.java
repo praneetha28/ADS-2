@@ -12,6 +12,10 @@ public class HashTable<Key, Value> {
     /**.
      * { var_description }
      */
+    private static final int INIT_HASH = 0x7fffffff;
+    /**.
+     * { var_description }
+     */
     private int n;
     /**.
      * { var_description }
@@ -76,7 +80,7 @@ public class HashTable<Key, Value> {
      * @return     { description_of_the_return_value }
      */
     private int hash(final Key key) {
-        return (key.hashCode() & 0x7fffffff) % m;
+        return (key.hashCode() & INIT_HASH) % m;
     }
     /**.
      * { function_description }
@@ -107,8 +111,9 @@ public class HashTable<Key, Value> {
         }
 
         // double table size if 50% full
-        if (n >= m/2) resize(2*m);
-
+        if (n >= m / 2) {
+        	resize(2 * m);
+        }
         int i;
         for (i = hash(key); keys[i] != null; i = (i + 1) % m) {
             if (keys[i].equals(key)) {
@@ -169,8 +174,9 @@ public class HashTable<Key, Value> {
         n--;
 
         // halves size of array if it's 12.5% full or less
-        if (n > 0 && n <= m/8) resize(m/2);
-
+        if (n > 0 && n <= m / 2 + 2 + 2 + 2) {
+        	resize(m / 2);
+        }
         assert check();
     }
 
@@ -183,28 +189,34 @@ public class HashTable<Key, Value> {
      */
     public Iterable<Key> keys() {
         Queue<Key> queue = new Queue<Key>();
-        for (int i = 0; i < m; i++)
-            if (keys[i] != null) queue.enqueue(keys[i]);
+        for (int i = 0; i < m; i++) {
+            if (keys[i] != null) {
+            	queue.enqueue(keys[i]);
+            }
+        }
         return queue;
     }
-
-    // integrity check - don't check after each put() because
-    // integrity not maintained during a delete()
+    /**.
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     private boolean check() {
 
         // check that hash table is at most 50% full
-        if (m < 2*n) {
-            System.err.println("Hash table size m = " + m +
-             "; array size n = " + n);
+        if (m < 2 * n) {
+            System.err.println("Hash table size m = " + m
+            	+ "; array size n = " + n);
             return false;
         }
 
         // check that each key in table can be found by get()
         for (int i = 0; i < m; i++) {
-            if (keys[i] == null) continue;
-            else if (get(keys[i]) != vals[i]) {
-                System.err.println("get[" + keys[i] + "] = " + get(keys[i]) +
-                 "; vals[i] = " + vals[i]);
+            if (keys[i] == null) {
+            	continue;
+            } else if (get(keys[i]) != vals[i]) {
+                System.err.println("get[" + keys[i] + "] = " + get(keys[i])
+                 + "; vals[i] = " + vals[i]);
                 return false;
             }
         }

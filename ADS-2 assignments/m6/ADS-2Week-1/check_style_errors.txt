@@ -7,28 +7,8 @@ Checkstyle ends with 1 errors.
 Starting audit...
 [ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\HashTable.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\HashTable.java:8:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\HashTable.java:79:34: '0x7fffffff' is a magic number. [MagicNumber]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\HashTable.java:110: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\HashTable.java:110:19: '/' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\HashTable.java:110:20: '/' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\HashTable.java:110:31: '*' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\HashTable.java:110:32: '*' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\HashTable.java:172: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\HashTable.java:172:28: '/' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\HashTable.java:172:29: '/' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\HashTable.java:172:29: '8' is a magic number. [MagicNumber]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\HashTable.java:172:40: '/' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\HashTable.java:172:41: '/' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\HashTable.java:186: 'for' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\HashTable.java:187: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\HashTable.java:193:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\HashTable.java:196:18: '*' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\HashTable.java:196:19: '*' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\HashTable.java:197:59: '+' should be on a new line. [OperatorWrap]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\HashTable.java:204: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\HashTable.java:206:77: '+' should be on a new line. [OperatorWrap]
 Audit done.
-Checkstyle ends with 22 errors.
+Checkstyle ends with 2 errors.
 Starting audit...
 [ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:1: Missing a Javadoc comment. [JavadocType]
 [ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:2:1: File contains tab characters (this is the first instance). [FileTabCharacter]
