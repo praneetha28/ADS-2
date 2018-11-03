@@ -1,17 +1,45 @@
+/**.
+ * Class for page rank.
+ */
 class PageRank {
+	/**.
+	 * { var_description }
+	 */
 	private Digraph dg;
+	/**.
+	 * { var_description }
+	 */
 	private HashTable<Integer, Double> ht;
+	/**.
+	 * { var_description }
+	 */
+	private static final double PRERV_PR = 0.25;
+	/**.
+	 * { var_description }
+	 */
+	private static final long IT_ER = 1000;
+	/**.
+	 * { var_description }
+	 */
 	private int size = 0;
+	/**.
+	 * Constructs the object.
+	 *
+	 * @param      dig   The dig
+	 */
 	PageRank(final Digraph dig) {
 		dg = dig;
 		ht = new HashTable<Integer, Double>();
 	}
+	/**.
+	 * Gets the pr.
+	 */
 	public void getPR() {
-		double prevpr = 0.25;
+		// double prevpr = 0.25;
 		for (int p = 0; p < dg.vert(); p++) {
-			ht.put(p, prevpr);
+			ht.put(p, PRERV_PR);
 		}
-		for (int i = 0; i < 1000; i++) {
+		for (int i = 0; i < IT_ER; i++) {
 			for (int j = 0; j < dg.vert(); j++) {
 				double temp = 0.0;
 				double temp1 = 0.0;
@@ -30,6 +58,9 @@ class PageRank {
 			}
 		}
 	}
+	/**.
+	 * { function_description }
+	 */
 	public void String() {
 		for (int i : ht.keys()) {
 			String s = "";

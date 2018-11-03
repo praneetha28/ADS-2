@@ -10,19 +10,10 @@ Starting audit...
 Audit done.
 Checkstyle ends with 2 errors.
 Starting audit...
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:1: Missing a Javadoc comment. [JavadocType]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:2:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:2:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:3:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:4:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:5:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:9:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:10:33: '0.25' is a magic number. [MagicNumber]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:14:37: '1000' is a magic number. [MagicNumber]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:33:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:33:21: Name 'String' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
+[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:5:1: File contains tab characters (this is the first instance). [FileTabCharacter]
+[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:64:21: Name 'String' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
 Audit done.
-Checkstyle ends with 11 errors.
+Checkstyle ends with 2 errors.
 Starting audit...
 Audit done.
 Starting audit...
