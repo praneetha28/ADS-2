@@ -7,7 +7,6 @@ class PageRank {
 		ht = new HashTable<Integer, Double>();
 	}
 	public void getPR() {
-		double res = 0.0;
 		double prevpr = 0.25;
 		for (int p = 0; p < dg.V(); p++) {
 			ht.put(p, prevpr);
@@ -15,11 +14,19 @@ class PageRank {
 		for (int i = 0; i < 1000; i++) {
 			for (int j = 0; j < dg.V(); j++) {
 				double temp = 0.0;
+				double temp1 = 0.0;
 				for (int k : dg.adj(j)) {
-					temp = ht.get(k) / dg.outdegree(k);
-					res = res + temp;
-				}
-				ht.put(j, res);
+                    //int cnt = 0;
+                    if (dg.hasParallelEdges(k)) {
+                        temp = ht.get(k) / dg.outdegree(k) + 1;
+                        temp1 = temp1 + temp;
+                    } else {
+                        temp = ht.get(j) / dg.outdegree(j);
+                        temp1 = temp1 + temp;
+                    }
+                    //System.out.println(finaltemp);
+                }
+				ht.put(j, temp1);
 			}
 		}
 	}
