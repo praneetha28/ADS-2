@@ -15,7 +15,7 @@ class PageRank {
 		for (int i = 0; i < 1000; i++) {
 			for (int j = 0; j < dg.V(); j++) {
 				double temp = 0.0;
-				for (int k : dg.adj(i)) {
+				for (int k : dg.adj(j)) {
 					temp = ht.get(k) / dg.outdegree(k);
 					res = res + temp;
 				}
