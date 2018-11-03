@@ -48,7 +48,7 @@ public class HashTable<Key, Value> {
     }
     /**.
      * Returns the number of key-value pairs in this symbol table.
-     *
+     * time complexity in avg case is 1.
      * @return the number of key-value pairs in this symbol table
      */
     public int size() {
@@ -56,7 +56,7 @@ public class HashTable<Key, Value> {
     }
     /**.
      * Determines if empty.
-     *
+     * time complexity in avg case is 1.
      * @return     True if empty, False otherwise.
      */
     public boolean isEmpty() {
@@ -64,7 +64,7 @@ public class HashTable<Key, Value> {
     }
     /**.
      * { function_description }
-     *
+     * time complexity in avg case is 1.
      * @param      key   The key
      *
      * @return     { description_of_the_return_value }
@@ -74,7 +74,7 @@ public class HashTable<Key, Value> {
     }
     /**.
      * { function_description }
-     *
+     * time complexity in avg case is 1.
      * @param      key   The key
      *
      * @return     { description_of_the_return_value }
@@ -84,7 +84,7 @@ public class HashTable<Key, Value> {
     }
     /**.
      * { function_description }
-     *
+     * time complexity is O(N).
      * @param      capacity  The capacity
      */
     private void resize(final int capacity) {
@@ -100,7 +100,7 @@ public class HashTable<Key, Value> {
     }
     /**.
      * { function_description }
-     *
+     * time complexity is in constant time.
      * @param      key   The key
      * @param      val   The value
      */
@@ -127,7 +127,7 @@ public class HashTable<Key, Value> {
     }
     /**.
      * { function_description }
-     *
+     * time complexity in avg case is in constant time.
      * @param      key   The key
      *
      * @return     { description_of_the_return_value }
@@ -142,7 +142,7 @@ public class HashTable<Key, Value> {
     }
     /**.
      * { function_description }
-     *
+     * time complexity in avg case is in constant time.
      * @param      key   The key
      */
     public void delete(final Key key) {
@@ -184,7 +184,7 @@ public class HashTable<Key, Value> {
      * Returns all keys in this symbol table as an {@code Iterable}.
      * To iterate over all of the keys in the symbol table named {@code st},
      * use the foreach notation: {@code for (Key key : st.keys())}.
-     *
+     * time complexity is O(N).
      * @return all keys in this symbol table
      */
     public Iterable<Key> keys() {

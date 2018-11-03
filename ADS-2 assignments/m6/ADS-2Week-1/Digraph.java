@@ -42,7 +42,7 @@ public class Digraph {
     }
     /**.
      * { function_description }
-     *
+     * time complexity in average case is 1.
      * @return     { description_of_the_return_value }
      */
     public int vert() {
@@ -51,7 +51,7 @@ public class Digraph {
 
     /**.
      * Returns the number of edges in this digraph.
-     *
+     * time complexity in average case is 1.
      * @return the number of edges in this digraph
      */
     public int edge() {
@@ -59,7 +59,7 @@ public class Digraph {
     }
     /**.
      * { function_description }
-     *
+     * time complexity in average case is 1.
      * @param      v     { parameter_description }
      */
     private void validateVertex(final int v) {
@@ -71,7 +71,7 @@ public class Digraph {
 
     /**.
      * Adds the directed edge v→w to this digraph.
-     *
+     * time complexity in average case is 1.
      * @param  v the tail vertex
      * @param  w the head vertex
      * @throws IllegalArgumentException unless both
@@ -87,7 +87,7 @@ public class Digraph {
 
     /**.
      * Returns the vertices adjacent from vertex {@code v} in this digraph.
-     *
+     * time complexity in average case is 1.
      * @param  v the vertex
      * @return the vertices adjacent from vertex {@code v} in this
      *  digraph, as an iterable
@@ -101,7 +101,7 @@ public class Digraph {
     /**.
      * Returns the number of directed edges incident from vertex {@code v}.
      * This is known as the <em>outdegree</em> of vertex {@code v}.
-     *
+     * time complexity in average case is 1.
      * @param  v the vertex
      * @return the outdegree of vertex {@code v}
      * @throws IllegalArgumentException unless {@code 0 <= v < V}
@@ -113,8 +113,8 @@ public class Digraph {
 
     /**.
      * Returns the number of directed edges incident to vertex {@code v}.
-     * This is known as the <em>indegree</em> of vertex {@code v}.
      *
+     * time complexity in average case is 1.
      * @param  v the vertex
      * @return the indegree of vertex {@code v}
      * @throws IllegalArgumentException unless {@code 0 <= v < V}
@@ -126,7 +126,7 @@ public class Digraph {
 
     /**.
      * Returns the reverse of the digraph.
-     *
+     * time complexity is O(N^2).
      * @return the reverse of the digraph
      */
     public Digraph reverse() {
@@ -141,7 +141,7 @@ public class Digraph {
 
     /**.
      * Returns a string representation of the graph.
-     *
+     * time complexity is O(N^2).
      * @return the number of vertices <em>V</em>
      *         followed by the <em>V</em> adjacency lists
      */
@@ -159,7 +159,7 @@ public class Digraph {
     }
     /**.
      * Determines if it has parallel edges.
-     *
+     * time complexity is O(N).
      * @param      v     { parameter_description }
      *
      * @return     True if has parallel edges, False otherwise.
