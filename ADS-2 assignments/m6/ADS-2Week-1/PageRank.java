@@ -13,7 +13,7 @@ class PageRank {
     /**.
      * { var_description }
      */
-    private static final double PRERV_PR = 0.25;
+    private double[] prvalues;
     /**.
      * { var_description }
      */
@@ -29,42 +29,36 @@ class PageRank {
      */
     PageRank(final Digraph dig) {
         dg = dig;
-        ht = new HashTable<Integer, Double>();
-    }
-    /**.
-     * Gets the pr.
-     */
-    public void getPR() {
-        // double prevpr = 0.25;
-        for (int p = 0; p < dg.vert(); p++) {
-            ht.put(p, PRERV_PR);
+        prvalues = new double[dg.vert()];
+        for (int i = 0; i < dg.vert(); i++) {
+            prvalues[i] = 1.0 / (dg.vert());
         }
         for (int i = 0; i < IT_ER; i++) {
             for (int j = 0; j < dg.vert(); j++) {
                 double temp = 0.0;
-                double temp1 = 0.0;
-                for (int k : dg.adj(j)) {
-                    //int cnt = 0;
-                    if (dg.hasParallelEdges(k)) {
-                        temp = ht.get(k) / dg.outdegree(k) + 1;
-                        temp1 = temp1 + temp;
-                    } else {
-                        temp = ht.get(j) / dg.outdegree(j);
-                        temp1 = temp1 + temp;
-                    }
-                    //System.out.println(finaltemp);
+                for (int k = 0; k < dg.vert(); k++) {
+                	for (int h : dg.adj(k)) {
+		                if (h == j) {
+		                	temp += (double) (prvalues[k] / dg.outdegree(k));
+		                }
+	                }
                 }
-                ht.put(j, temp1);
+
+                prvalues[j] = temp;
             }
         }
+
+    }
+    public Double getPR(int v) {
+    	return prvalues[v];
     }
     /**.
      * { function_description }
      */
     public void string() {
-        for (int i : ht.keys()) {
+        for (int i = 0; i < prvalues.length; i++) {
             String s = "";
-            s += String.valueOf(i) + " - " + ht.get(i);
+            s += String.valueOf(i) + " - " + prvalues[i];
             System.out.println(s);
         }
     }

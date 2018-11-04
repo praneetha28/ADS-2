@@ -37,11 +37,14 @@ public final class Solution {
             }
         }
         System.out.println(dig);
-        // iterate count of vertices times
-        // to read the adjacency list from std input
-        // and build the graph
+        for (int j = 0; j < dig.vert(); j++) {
+            if (dig.outdegree(j) == 0) {
+                for (int i = 0; i < dig.vert(); i++) {
+                    dig.addEdge(j, i);
+                }
+            }
+        }
         PageRank pgr = new PageRank(dig);
-        pgr.getPR();
         pgr.string();
         // Create page rank object and pass the graph
         //object to the constructor
