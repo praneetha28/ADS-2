@@ -1,11 +1,11 @@
-class Edge {
+class Edge implements Comparable<Edge>{
 	private int v;
 	private int w;
 	private double weight;
-	Edge(final int ver, final int edg, final int wt) {
+	Edge(final int ver, final int edg, final double wt) {
 		this.v = ver;
 		this.w = edg;
-		this.weight = (double) wt;
+		this.weight = wt;
 	}
 	public double weight() {
 		return weight;
@@ -20,7 +20,13 @@ class Edge {
 			return v;
 		}
 	}
-	// public int compareTo(Edge that) {
-	// 	return this.weight.compareTo(that.weight);
-	// }
+    public int compareTo(Edge that) {
+        if (this.weight < that.weight) {
+        	return -1;
+        } else if (this.weight > that.weight) {
+        	return 1;
+        } else {
+        	return 0;
+        }
+    }
 }

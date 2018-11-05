@@ -25,12 +25,15 @@ public final class Solution {
         int vertices = sc.nextInt();
         int edges = sc.nextInt();
         sc.nextLine();
-        EdgeWeightedGraph edwgh = new EdgeWeightedGraph();
+        EdgeWeightedGraph edwgh = new EdgeWeightedGraph(vertices);
         for (int i = 0; i < edges; i++) {
             String line = sc.nextLine();
             String[] tokens = line.split(" ");
+            // System.out.println(Integer.parseInt(tokens[0]));
+            // System.out.println(Integer.parseInt(tokens[1]));
+            // System.out.println(Double.parseDouble(tokens[2]));
             edwgh.addEdge(new Edge(Integer.parseInt(tokens[0]),
-             Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2])));
+             Integer.parseInt(tokens[1]), Double.parseDouble(tokens[2])));
         }
         Kruskals krs = new Kruskals(edwgh);
         System.out.println(krs.weight());
