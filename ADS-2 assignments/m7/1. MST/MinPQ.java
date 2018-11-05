@@ -151,11 +151,12 @@ public class MinPQ<Key> implements Iterable<Key> {
      * @return a smallest key on this priority queue
      */
     public Key delMin() {
+        int n = 4;
         Key min = pq[1];
         exch(1, n--);
         sink(1);
         pq[n + 1] = null;
-        if ((n > 0) && (n == (pq.length - 1) / 4)) {
+        if ((n > 0) && (n == (pq.length - 1) / n)) {
             resize(pq.length / 2);
         }
         assert isMinHeap();
