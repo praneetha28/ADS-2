@@ -38,10 +38,10 @@ class PageRank {
     public void calculatePR() {
     	double[] temppr = new double[dg.vert()];
 		Digraph revdg = dg.reverse();
-        for (int l = 0; l < 1000; l++) {
-			for (int i = 0; i < dg.vert(); i++) {
+        for (int i = 0; i < 1000; i++) {
+			for (int j = 0; j < dg.vert(); j++) {
 				Double rank = 0.0;
-				for (int k : revdg.adj(i)) {
+				for (int k : revdg.adj(j)) {
 					rank += prvalues[k] / (double) (dg.outdegree(k));
 				}
 				temppr[i] = rank;
