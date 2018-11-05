@@ -10,7 +10,7 @@ Starting audit...
 [ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:64:5: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:65:5: File contains tab characters (this is the first instance). [FileTabCharacter]
 [ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:67:29: '1000' is a magic number. [MagicNumber]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:71: Line is longer than 80 characters (found 89). [LineLength]
+[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:71: Line is longer than 80 characters (found 87). [LineLength]
 [ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:82:5: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:82:25: Parameter v should be final. [FinalParameters]
 Audit done.

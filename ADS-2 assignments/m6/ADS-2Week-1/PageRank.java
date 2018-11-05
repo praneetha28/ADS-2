@@ -68,7 +68,7 @@ class PageRank {
 			for (int j = 0; j < dg.vert(); j++) {
 				Double rank = 0.0;
 				for (int k : revdg.adj(j)) {
-					rank += prvalues[k] / (double) (dg.outdegree(k));
+					rank += prvalues[k] / (double) dg.outdegree(k);
 				}
 				temppr[i] = rank;
 			}
