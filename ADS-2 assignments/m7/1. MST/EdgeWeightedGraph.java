@@ -32,7 +32,7 @@ class EdgeWeightedGraph {
     }
     /**.
      * Adds an edge.
-     *
+     * TIME complexity in average case is 1.
      * @param      e     { parameter_description }
      */
     public void addEdge(final Edge e) {
@@ -44,7 +44,7 @@ class EdgeWeightedGraph {
     }
     /**.
      * { function_description }
-     *
+     * TIME complexity in average case is 1.
      * @return     { description_of_the_return_value }
      */
     public int vertices() {
@@ -52,7 +52,7 @@ class EdgeWeightedGraph {
     }
     /**.
      * { function_description }
-     *
+     * TIME complexity in average case is 1.
      * @return     { description_of_the_return_value }
      */
     public int edg() {
@@ -60,7 +60,7 @@ class EdgeWeightedGraph {
     }
     /**.
      * { function_description }
-     *
+     * TIME complexity in average case is 1.
      * @param      v     { parameter_description }
      *
      * @return     { description_of_the_return_value }
@@ -71,7 +71,7 @@ class EdgeWeightedGraph {
     }
     /**.
      * { function_description }
-     *
+     * TIME complexity in average case is 1.
      * @param      v     { parameter_description }
      *
      * @return     { description_of_the_return_value }
@@ -81,7 +81,7 @@ class EdgeWeightedGraph {
     }
     /**.
      * { function_description }
-     *
+     * TIME complexity is no of edges.
      * @return     { description_of_the_return_value }
      */
     public Iterable<Edge> edges() {
