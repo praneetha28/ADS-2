@@ -69,7 +69,7 @@ public class UF {
      * @param  p the integer representing one site
      * @param  q the integer representing the other site
      */
-    public void union(final int p, final int q) {
+    public void union(int p, int q) {
         int rootP = find(p);
         int rootQ = find(q);
         if (rootP == rootQ) {
