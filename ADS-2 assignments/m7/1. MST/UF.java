@@ -30,7 +30,7 @@ public class UF {
     }
     /**.
      * Searches for the first match.
-     *
+     * time complexity is O(N)
      * @param      p     { parameter_description }
      *
      * @return     { description_of_the_return_value }
@@ -45,7 +45,7 @@ public class UF {
     }
     /**.
      * Returns the number of components.
-     *
+     * time complexity is 1
      * @return the number of components (between {@code 1} and {@code n})
      */
     public int count() {
@@ -53,7 +53,7 @@ public class UF {
     }
     /**.
      * Returns true if the the two sites are in the same component.
-     *
+     * time complexity is 1
      * @param  p the integer representing one site
      * @param  q the integer representing the other site
      * @return {@code true} if the two sites {@code p}
@@ -65,7 +65,7 @@ public class UF {
     /**.
      * Merges the component containing site {@code p} with the
      * the component containing site {@code q}.
-     *
+     * time complexity is 1
      * @param  p the integer representing one site
      * @param  q the integer representing the other site
      */
@@ -87,7 +87,7 @@ public class UF {
     }
     /**.
      * { function_description }
-     *
+     * time complexity is 1
      * @param      p     { parameter_description }
      */
     private void validate(final int p) {

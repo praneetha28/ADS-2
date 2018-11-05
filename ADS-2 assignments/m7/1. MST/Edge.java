@@ -28,7 +28,7 @@ class Edge implements Comparable<Edge> {
     }
     /**.
      * { function_description }
-     *
+     * time complexity is 1
      * @return     { description_of_the_return_value }
      */
     public double weight() {
@@ -36,7 +36,7 @@ class Edge implements Comparable<Edge> {
     }
     /**.
      * { function_description }
-     *
+     * time complexity is 1
      * @return     { description_of_the_return_value }
      */
     public int either() {
@@ -44,7 +44,7 @@ class Edge implements Comparable<Edge> {
     }
     /**.
      * { function_description }
-     *
+     * time complexity is 1
      * @param      ver   The version
      *
      * @return     { description_of_the_return_value }
@@ -58,7 +58,7 @@ class Edge implements Comparable<Edge> {
     }
     /**.
      * { function_description }
-     *
+     * time complexity is 1
      * @param      that  The that
      *
      * @return     { description_of_the_return_value }
