@@ -16,9 +16,10 @@ Starting audit...
 [ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\MinPQ.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\MinPQ.java:154:13: 'n' hides a field. [HiddenField]
 [ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\MinPQ.java:154:17: '4' is a magic number. [MagicNumber]
+[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\MinPQ.java:159:48: '4' is a magic number. [MagicNumber]
 [ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\MinPQ.java:268:9: Redundant 'public' modifier. [RedundantModifier]
 Audit done.
-Checkstyle ends with 4 errors.
+Checkstyle ends with 5 errors.
 Starting audit...
 Audit done.
 Starting audit...

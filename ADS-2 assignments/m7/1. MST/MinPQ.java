@@ -156,7 +156,7 @@ public class MinPQ<Key> implements Iterable<Key> {
         exch(1, n--);
         sink(1);
         pq[n + 1] = null;
-        if ((n > 0) && (n == (pq.length - 1) / n)) {
+        if ((n > 0) && (n == (pq.length - 1) / 4)) {
             resize(pq.length / 2);
         }
         assert isMinHeap();
