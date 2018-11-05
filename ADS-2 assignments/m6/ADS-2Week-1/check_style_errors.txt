@@ -5,10 +5,10 @@ Audit done.
 Starting audit...
 Audit done.
 Starting audit...
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:40:17: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:42: Line is longer than 80 characters (found 89). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:52:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:52:25: Parameter v should be final. [FinalParameters]
+[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:37:9: File contains tab characters (this is the first instance). [FileTabCharacter]
+[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:50: Line is longer than 80 characters (found 89). [LineLength]
+[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:58:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:58:25: Parameter v should be final. [FinalParameters]
 Audit done.
 Checkstyle ends with 4 errors.
 Starting audit...
