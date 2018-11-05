@@ -65,14 +65,14 @@ public class MinPQ<Key> implements Iterable<Key> {
     //     this(1, comparator);
     // }
 
-    /**.
-     * Initializes a priority queue from the array of keys.
-     * <p>
-     * Takes time proportional to the number of keys, using
-     *  sink-based heap construction.
-     *
-     * @param  key the array of keys
-     */
+    // /**.
+    //  * Initializes a priority queue from the array of keys.
+    //  * <p>
+    //  * Takes time proportional to the number of keys, using
+    //  *  sink-based heap construction.
+    //  *
+    //  * @param  key the array of keys
+    //  */
     // public MinPQ(final Key[] key) {
     //     n = key.length;
     //     pq = (Key[]) new Object[keys.length + 1];

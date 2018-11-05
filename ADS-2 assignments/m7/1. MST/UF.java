@@ -35,8 +35,7 @@ public class UF {
      *
      * @return     { description_of_the_return_value }
      */
-    public int find(final int l) {
-        int p = l;
+    public int find(final int p) {
         validate(p);
         while (p != parent[p]) {
             parent[p] = parent[parent[p]];
