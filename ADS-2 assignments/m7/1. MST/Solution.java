@@ -31,7 +31,7 @@ public final class Solution {
             String[] tokens = line.split(" ");
             // System.out.println(Integer.parseInt(tokens[0]));
             // System.out.println(Integer.parseInt(tokens[1]));
-            // System.out.println(Double.parseDouble(tokens[2]));
+            System.out.println(Double.parseDouble(tokens[2]));
             edwgh.addEdge(new Edge(Integer.parseInt(tokens[0]),
              Integer.parseInt(tokens[1]), Double.parseDouble(tokens[2])));
         }
