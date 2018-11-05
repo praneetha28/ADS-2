@@ -30,6 +30,9 @@ class PageRank {
     PageRank(final Digraph dig) {
         dg = dig;
         prvalues = new double[dg.vert()];
+        for (int i = 0; i < dg.vert(); i++) {
+			prvalues[i] = 1.0 / dg.vert();
+		}
         for (int l = 0; l < 1000; l++) {
 			// Double[] tempArray = new Double[digraph.V()];
 			//System.out.println("first for loop");
