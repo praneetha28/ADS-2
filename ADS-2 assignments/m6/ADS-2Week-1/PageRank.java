@@ -15,8 +15,6 @@ class PageRank {
      * { var_description }
      */
     private double[] prvalues;
-    // private double[] pr1;
-    private int vertices;
     /**.
      * { var_description }
      */
@@ -31,35 +29,11 @@ class PageRank {
      * @param      dig   The dig
      */
     PageRank(final Digraph dig) {
-        dg = dig;
-        // vertices = dig.vert();
-        prvalues = new double[vertices];
-        // pr1 = new double[vertices];
-        for (int i = 0; i < vertices; i++) {
-            prvalues[i] = (1 / ((double) dig.vert()));
-        }
-        calculatePR();
-        // Digraph revdigraph = dig.reverse();
-        // for (int i = 0; i < 1000; i++) {
-        //     for (int j = 0; j < vertices; j++) {
-        //         double result = 0.0;
-        //         // System.out.println("helloS");
-        //         for (int k : revdigraph.adj(j)) {
-        //             result += ((pr[k]) / ((double) (dig.outdegree(k))));
-        //             // System.out.println(result);
-        //         }
-
-        //         pr1[j] = result;
-        //     }
-        //     if (Arrays.equals(pr, pr1)) {
-        //         break;
-        //     } else {
-        //         pr = pr1.clone();
-        //     }
-        // }
-        // for (int i = 0; i < vertices; i++) {
-        //     System.out.print(i + " - " + pr1[i] + "\n");
-        // }
+        this.dg = dig;
+        prvalues = new double[dg.vert()];
+        for (int i = 0; i < dg.vert(); i++) {
+			prvalues[i] = (1 / ((double) dg.vert()));
+		}
     }
     public void calculatePR() {
     	double[] temppr = new double[dg.vert()];
@@ -68,14 +42,14 @@ class PageRank {
 			for (int j = 0; j < dg.vert(); j++) {
 				Double rank = 0.0;
 				for (int k : revdg.adj(j)) {
-					rank += prvalues[k] / (double) dg.outdegree(k);
+					rank += prvalues[k] / (double) (dg.outdegree(k));
 				}
 				temppr[i] = rank;
 			}
 			if (Arrays.equals(prvalues, temppr)) {
 				break;
 			} else {
-				prvalues = temppr;
+				prvalues = temppr.clone();
 			}
 		}
     }
