@@ -1,77 +1,48 @@
-########## Testcase 0: Failed ##########
+########## Testcase 0: Passed ##########
 Expected Output: 
 614708.00000
 
 Your Output: 
-Exception in thread "main" java.lang.NullPointerException
-	at MinPQ.greater(MinPQ.java:204)
-	at MinPQ.sink(MinPQ.java:187)
-	at MinPQ.delMin(MinPQ.java:157)
-	at Kruskals.<init>(Kruskals.java:30)
-	at Solution.main(Solution.java:35)
+614708.00000
 ----------------------------------------
 
-########## Testcase 1: Failed ##########
+########## Testcase 1: Passed ##########
 Expected Output: 
 1.81000
 
 Your Output: 
-Exception in thread "main" java.lang.NullPointerException
-	at MinPQ.greater(MinPQ.java:204)
-	at MinPQ.sink(MinPQ.java:187)
-	at MinPQ.delMin(MinPQ.java:157)
-	at Kruskals.<init>(Kruskals.java:30)
-	at Solution.main(Solution.java:35)
+1.81000
 ----------------------------------------
 
-########## Testcase 2: Failed ##########
+########## Testcase 2: Passed ##########
 Expected Output: 
 10.46351
 
 Your Output: 
-Exception in thread "main" java.lang.NullPointerException
-	at MinPQ.greater(MinPQ.java:204)
-	at MinPQ.sink(MinPQ.java:187)
-	at MinPQ.delMin(MinPQ.java:157)
-	at Kruskals.<init>(Kruskals.java:30)
-	at Solution.main(Solution.java:35)
+10.46351
 ----------------------------------------
 
-########## Testcase 3: Failed ##########
+########## Testcase 3: Passed ##########
 Expected Output: 
 37.00000
 
 Your Output: 
-Exception in thread "main" java.lang.NullPointerException
-	at MinPQ.greater(MinPQ.java:204)
-	at MinPQ.sink(MinPQ.java:187)
-	at MinPQ.delMin(MinPQ.java:157)
-	at Kruskals.<init>(Kruskals.java:30)
-	at Solution.main(Solution.java:35)
+37.00000
 ----------------------------------------
 
-########## Testcase 4: Failed ##########
+########## Testcase 4: Passed ##########
 Expected Output: 
 19.00000
 
 Your Output: 
-Exception in thread "main" java.lang.NullPointerException
-	at MinPQ.greater(MinPQ.java:204)
-	at MinPQ.sink(MinPQ.java:187)
-	at MinPQ.delMin(MinPQ.java:157)
-	at Kruskals.<init>(Kruskals.java:30)
-	at Solution.main(Solution.java:35)
+19.00000
 ----------------------------------------
 
-########## Testcase 5: Failed ##########
+########## Testcase 5: Passed ##########
 Expected Output: 
 2.00000
 
 Your Output: 
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 4
-	at MinPQ.exch(MinPQ.java:217)
-	at MinPQ.delMin(MinPQ.java:156)
-	at Kruskals.<init>(Kruskals.java:30)
-	at Solution.main(Solution.java:35)
+2.00000
 ----------------------------------------
 

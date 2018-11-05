@@ -120,7 +120,6 @@ public class MinPQ<Key> implements Iterable<Key> {
      * @param      capacity  The capacity
      */
     private void resize(final int capacity) {
-        // assert capacity > n;
         Key[] temp = (Key[]) new Object[capacity];
         for (int i = 1; i <= n; i++) {
             temp[i] = pq[i];
@@ -151,7 +150,6 @@ public class MinPQ<Key> implements Iterable<Key> {
      * @return a smallest key on this priority queue
      */
     public Key delMin() {
-        int n = 4;
         Key min = pq[1];
         exch(1, n--);
         sink(1);
