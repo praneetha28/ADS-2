@@ -9,10 +9,11 @@ Starting audit...
 [ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:35:1: File contains tab characters (this is the first instance). [FileTabCharacter]
 [ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:38:5: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:41:29: '1000' is a magic number. [MagicNumber]
+[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:45: Line is longer than 80 characters (found 89). [LineLength]
 [ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:56:5: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:56:25: Parameter v should be final. [FinalParameters]
 Audit done.
-Checkstyle ends with 6 errors.
+Checkstyle ends with 7 errors.
 Starting audit...
 Audit done.
 Starting audit...

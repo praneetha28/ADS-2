@@ -32,7 +32,7 @@ class PageRank {
         this.dg = dig;
         prvalues = new double[dg.vert()];
         for (int i = 0; i < dg.vert(); i++) {
-			prvalues[i] = 1.0 / dg.vert();
+			prvalues[i] = 1.0 / (double) dg.vert();
 		}
     }
     public void calculatePR() {
@@ -42,7 +42,7 @@ class PageRank {
 			for (int i = 0; i < dg.vert(); i++) {
 				Double rank = 0.0;
 				for (int k : revdg.adj(i)) {
-					rank += prvalues[k] / dg.outdegree(k);
+					rank += prvalues[k] / (double) (dg.outdegree(k));
 				}
 				temppr[i] = rank;
 			}
