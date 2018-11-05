@@ -120,7 +120,7 @@ public class MinPQ<Key> implements Iterable<Key> {
      * @param      capacity  The capacity
      */
     private void resize(final int capacity) {
-        assert capacity > n;
+        // assert capacity > n;
         Key[] temp = (Key[]) new Object[capacity];
         for (int i = 1; i <= n; i++) {
             temp[i] = pq[i];
@@ -155,7 +155,7 @@ public class MinPQ<Key> implements Iterable<Key> {
         exch(1, n--);
         sink(1);
         pq[n + 1] = null;
-        if ((n > 0) && (n == (pq.length - 1) / 2 + 2)) {
+        if ((n > 0) && (n == (pq.length - 1) / 4)) {
             resize(pq.length / 2);
         }
         assert isMinHeap();

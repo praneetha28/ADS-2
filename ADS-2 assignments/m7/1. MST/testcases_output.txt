@@ -1,13 +1,9 @@
-########## Testcase 0: Failed ##########
+########## Testcase 0: Passed ##########
 Expected Output: 
 614708.00000
 
 Your Output: 
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 65536
-	at MinPQ.resize(MinPQ.java:126)
-	at MinPQ.delMin(MinPQ.java:159)
-	at Kruskals.<init>(Kruskals.java:30)
-	at Solution.main(Solution.java:35)
+614708.00000
 ----------------------------------------
 
 ########## Testcase 1: Passed ##########
@@ -18,28 +14,20 @@ Your Output:
 1.81000
 ----------------------------------------
 
-########## Testcase 2: Failed ##########
+########## Testcase 2: Passed ##########
 Expected Output: 
 10.46351
 
 Your Output: 
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 1024
-	at MinPQ.resize(MinPQ.java:126)
-	at MinPQ.delMin(MinPQ.java:159)
-	at Kruskals.<init>(Kruskals.java:30)
-	at Solution.main(Solution.java:35)
+10.46351
 ----------------------------------------
 
-########## Testcase 3: Failed ##########
+########## Testcase 3: Passed ##########
 Expected Output: 
 37.00000
 
 Your Output: 
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 8
-	at MinPQ.resize(MinPQ.java:126)
-	at MinPQ.delMin(MinPQ.java:159)
-	at Kruskals.<init>(Kruskals.java:30)
-	at Solution.main(Solution.java:35)
+37.00000
 ----------------------------------------
 
 ########## Testcase 4: Passed ##########
