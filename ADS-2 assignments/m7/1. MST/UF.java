@@ -35,7 +35,8 @@ public class UF {
      *
      * @return     { description_of_the_return_value }
      */
-    public int find(final int p) {
+    public int find(final int l) {
+        int p = l;
         validate(p);
         while (p != parent[p]) {
             parent[p] = parent[parent[p]];
@@ -69,7 +70,7 @@ public class UF {
      * @param  p the integer representing one site
      * @param  q the integer representing the other site
      */
-    public void union(int p, int q) {
+    public void union(final int p, final int q) {
         int rootP = find(p);
         int rootQ = find(q);
         if (rootP == rootQ) {
