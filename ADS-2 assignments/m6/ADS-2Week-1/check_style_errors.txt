@@ -5,14 +5,14 @@ Audit done.
 Starting audit...
 Audit done.
 Starting audit...
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:34:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:39:43: 'if' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:39:45: '!=' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:39:47: '!=' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:39:49: '{' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:45:29: '1000' is a magic number. [MagicNumber]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:68:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:68:25: Parameter v should be final. [FinalParameters]
+[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:5: Missing a Javadoc comment. [JavadocType]
+[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:35:1: File contains tab characters (this is the first instance). [FileTabCharacter]
+[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:38:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:43:43: 'if' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:43:51: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:50:29: '1000' is a magic number. [MagicNumber]
+[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:67:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] F:\ADS-2\ADS-2 assignments\m6\ADS-2Week-1\PageRank.java:67:25: Parameter v should be final. [FinalParameters]
 Audit done.
 Checkstyle ends with 8 errors.
 Starting audit...

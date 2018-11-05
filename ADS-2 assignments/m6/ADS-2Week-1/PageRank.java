@@ -1,15 +1,16 @@
 /**.
  * Class for page rank.
  */
+import java.util.Arrays;
 class PageRank {
     /**.
      * { var_description }
      */
     private Digraph dg;
-    /**.
-     * { var_description }
-     */
-    private HashTable<Integer, Double> ht;
+    // /**.
+    //  * { var_description }
+    //  */
+    // private HashTable<Integer, Double> ht;
     /**.
      * { var_description }
      */
@@ -28,38 +29,36 @@ class PageRank {
      * @param      dig   The dig
      */
     PageRank(final Digraph dig) {
-        dg = dig;
+        this.dg = dig;
         prvalues = new double[dg.vert()];
         for (int i = 0; i < dg.vert(); i++) {
 			prvalues[i] = 1.0 / dg.vert();
 		}
-		for (int i = 0; i < dg.vert(); i++) {
+    }
+    public void calculatePR() {
+    	double[] temppr = new double[dg.vert()];
+    	for (int i = 0; i < dg.vert(); i++) {
 			if (dg.outdegree(i) == 0) {
 				for (int j = 0; j < dg.vert(); j++) {
-					if(i!=j){
+					if(i != j){
 						dg.addEdge(i, j);
 					}
 				}
 			}
 		}
+		Digraph revdg = dg.reverse();
         for (int l = 0; l < 1000; l++) {
-			// Double[] tempArray = new Double[digraph.V()];
-			//System.out.println("first for loop");
-
 			for (int i = 0; i < dg.vert(); i++) {
 				Double rank = 0.0;
-				//for (int j = 0; j < digraph.V(); j++) {
-				//System.out.println("second for loop");
-
-				for (int k : dg.reverse().adj(i)) {
-					//if (k == i) {
-					//if (digraph.outdegree(j) > 0) {
+				for (int k : revdg.adj(i)) {
 					rank += prvalues[k] / dg.outdegree(k);
-					//	}
-					//}
-					//}
 				}
-				prvalues[i] = rank;
+				temppr[i] = rank;
+			}
+			if (Arrays.equals(prvalues, temppr)) {
+				break;
+			} else {
+				prvalues = temppr;
 			}
 
 		}
