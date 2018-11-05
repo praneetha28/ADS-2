@@ -47,7 +47,7 @@ public final class Solution {
             }
         }
         PageRank pgr = new PageRank(dig);
-        pgr.string();
+        // pgr.string();
         // Create page rank object and pass the graph
         //object to the constructor
 
