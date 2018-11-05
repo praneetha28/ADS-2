@@ -31,10 +31,10 @@ public class MinPQ<Key> implements Iterable<Key> {
     /**.
      * Constructs the object.
      *
-     * @param      initCapacity  The initialize capacity
+     * @param      intCapacity  The initialize capacity
      */
-    public MinPQ(final int initCapacity) {
-        pq = (Key[]) new Object[initCapacity + 1];
+    public MinPQ(final int intCapacity) {
+        pq = (Key[]) new Object[intCapacity + 1];
         n = 0;
     }
     /**.
@@ -47,21 +47,21 @@ public class MinPQ<Key> implements Iterable<Key> {
      * Initializes an empty priority queue with the given initial capacity,
      * using the given comparator.
      *
-     * @param  initCapacity the initial capacity of this priority queue
-     * @param  comparator the order in which to compare the keys
+     * @param  intCapacity the initial capacity of this priority queue
+     * @param  compartor the order in which to compare the keys
      */
-    public MinPQ(final int initCapacity, final Comparator<Key> comparator) {
-        this.comparator = comparator;
-        pq = (Key[]) new Object[initCapacity + 1];
+    public MinPQ(final int intCapacity, final Comparator<Key> compartor) {
+        this.comparator = compartor;
+        pq = (Key[]) new Object[intCapacity + 1];
         n = 0;
     }
 
     /**.
      * Initializes an empty priority queue using the given comparator.
      *
-     * @param  comparator the order in which to compare the keys
+     * @param  compartor the order in which to compare the keys
      */
-    public MinPQ(final Comparator<Key> comparator) {
+    public MinPQ(final Comparator<Key> compartor) {
         this(1, comparator);
     }
 
@@ -71,10 +71,10 @@ public class MinPQ<Key> implements Iterable<Key> {
      * Takes time proportional to the number of keys, using
      *  sink-based heap construction.
      *
-     * @param  keys the array of keys
+     * @param  key the array of keys
      */
-    public MinPQ(final Key[] keys) {
-        n = keys.length;
+    public MinPQ(final Key[] key) {
+        n = key.length;
         pq = (Key[]) new Object[keys.length + 1];
         for (int i = 0; i < n; i++) {
             pq[i + 1] = keys[i];
@@ -109,8 +109,8 @@ public class MinPQ<Key> implements Iterable<Key> {
      */
     public Key min() {
         if (isEmpty()) {
-            throw new NoSuchElementException
-            ("Priority queue underflow");
+            throw new NoSuchElementException(
+            "Priority queue underflow");
         }
         return pq[1];
     }
@@ -155,7 +155,7 @@ public class MinPQ<Key> implements Iterable<Key> {
         exch(1, n--);
         sink(1);
         pq[n + 1] = null;
-        if ((n > 0) && (n == (pq.length - 1) / 4)) {
+        if ((n > 0) && (n == (pq.length - 1) / 2 + 2)) {
             resize(pq.length / 2);
         }
         assert isMinHeap();
@@ -163,7 +163,7 @@ public class MinPQ<Key> implements Iterable<Key> {
     }
     /**.
      * time complexity in average case is log N
-     *
+     * @param  l the key to shift
      */
     private void swim(final int l) {
         int k = l;
@@ -174,13 +174,13 @@ public class MinPQ<Key> implements Iterable<Key> {
     }
     /**.
      * time complexity in average case is log N
-     *
+     * @param  l the key to shift
      */
     private void sink(final int l) {
         int k = l;
-        while (2*k <= n) {
-            int j = 2*k;
-            if (j < n && greater(j, j+1)) {
+        while (2 * k <= n) {
+            int j = 2 * k;
+            if (j < n && greater(j, j + 1)) {
                 j++;
             }
             if (!greater(k, j)) {
@@ -201,8 +201,7 @@ public class MinPQ<Key> implements Iterable<Key> {
     private boolean greater(final int i, final int j) {
         if (comparator == null) {
             return ((Comparable<Key>) pq[i]).compareTo(pq[j]) > 0;
-        }
-        else {
+        } else {
             return comparator.compare(pq[i], pq[j]) > 0;
         }
     }
@@ -295,7 +294,9 @@ public class MinPQ<Key> implements Iterable<Key> {
          * @return     { description_of_the_return_value }
          */
         public Key next() {
-            if (!hasNext()) throw new NoSuchElementException();
+            if (!hasNext()) {
+                throw new NoSuchElementException();
+            }
             return copy.delMin();
         }
     }

@@ -13,23 +13,9 @@ Starting audit...
 Audit done.
 Checkstyle ends with 1 errors.
 Starting audit...
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\MinPQ.java:53:64: 'comparator' hides a field. [HiddenField]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\MinPQ.java:64:40: 'comparator' hides a field. [HiddenField]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\MinPQ.java:113:13: '(' should be on the previous line. [MethodParamPad]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\MinPQ.java:158:48: '4' is a magic number. [MagicNumber]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\MinPQ.java:168:33: Expected @param tag for 'l'. [JavadocMethod]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\MinPQ.java:179:33: Expected @param tag for 'l'. [JavadocMethod]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\MinPQ.java:181:17: '*' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\MinPQ.java:181:18: '*' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\MinPQ.java:182:22: '*' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\MinPQ.java:182:23: '*' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\MinPQ.java:183:38: '+' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\MinPQ.java:183:39: '+' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\MinPQ.java:204:9: '}' at column 9 should be on the same line as the next part of a multi-block statement (one that directly contains multiple blocks: if/else-if/else, do/while or try/catch/finally). [RightCurly]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\MinPQ.java:268:9: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\MinPQ.java:298: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\MinPQ.java:267:9: Redundant 'public' modifier. [RedundantModifier]
 Audit done.
-Checkstyle ends with 15 errors.
+Checkstyle ends with 1 errors.
 Starting audit...
 Audit done.
 Starting audit...
@@ -39,28 +25,4 @@ Checkstyle ends with 1 errors.
 Starting audit...
 Audit done.
 Starting audit...
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\UF.java:2: Missing a Javadoc comment. [JavadocType]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\UF.java:4:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\UF.java:5: Line is longer than 80 characters (found 88). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\UF.java:5:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\UF.java:6:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\UF.java:16:15: Parameter n should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\UF.java:17: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\UF.java:28: Line is longer than 80 characters (found 84). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\UF.java:31: Line is longer than 80 characters (found 83). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\UF.java:34:21: Parameter p should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\UF.java:57: Line is longer than 80 characters (found 95). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\UF.java:62:30: Parameter p should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\UF.java:62:37: Parameter q should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\UF.java:75:23: Parameter p should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\UF.java:75:30: Parameter q should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\UF.java:78: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\UF.java:81: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\UF.java:82: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\UF.java:91:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\UF.java:91:27: Parameter p should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\UF.java:94: Line is longer than 80 characters (found 96). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\UF.java:94:92: '-' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\UF.java:94:93: '-' is not followed by whitespace. [WhitespaceAround]
 Audit done.
-Checkstyle ends with 23 errors.
