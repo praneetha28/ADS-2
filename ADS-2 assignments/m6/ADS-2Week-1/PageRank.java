@@ -33,18 +33,20 @@ class PageRank {
         for (int i = 0; i < dg.vert(); i++) {
 			prvalues[i] = 1.0 / dg.vert();
 		}
+		for (int i = 0; i < dg.vert(); i++) {
+			if (dg.outdegree(i) == 0) {
+				for (int j = 0; j < dg.vert(); j++) {
+					if(i!=j){
+						dg.addEdge(i, j);
+					}
+				}
+			}
+		}
         for (int l = 0; l < 1000; l++) {
 			// Double[] tempArray = new Double[digraph.V()];
 			//System.out.println("first for loop");
 
 			for (int i = 0; i < dg.vert(); i++) {
-				if (dg.outdegree(i) == 0) {
-					for (int j = 0; j < dg.vert(); j++) {
-						if(i!=j){
-						dg.addEdge(i, j);
-						}
-					}
-				}
 				Double rank = 0.0;
 				//for (int j = 0; j < digraph.V(); j++) {
 				//System.out.println("second for loop");
