@@ -256,7 +256,7 @@ public class MinPQ<Key> implements Iterable<Key> {
     /**.
      * Class for heap iterator.
      */
-    private class HeapIterator implements Iterator<Key> {
+    private final class HeapIterator implements Iterator<Key> {
         /**.
          * { var_description }
          */
