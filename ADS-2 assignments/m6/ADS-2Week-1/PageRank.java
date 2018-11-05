@@ -45,9 +45,10 @@ class PageRank {
         for (int i = 0; i < IT_ER; i++) {
             for (int j = 0; j < dg.vert(); j++) {
                 double temp = 0.0;
-                	for (int k : dg.adj(j)) {
-
-		                	temp += (double) (prvalues[k] / dg.outdegree(k));
+                	for (int k : dg.reverse().adj(j)) {
+                		// System.out.println(k);
+                		// System.out.println(dg.outdegree(k));
+		                temp += (double) (prvalues[k] / dg.outdegree(k));
 	                }
 
                 prvalues[j] = temp;
