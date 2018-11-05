@@ -2,18 +2,12 @@ Starting audit...
 Audit done.
 Starting audit...
 [ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\Edge.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\Edge.java:5:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\Edge.java:66:26: Parameter that should be final. [FinalParameters]
 Audit done.
-Checkstyle ends with 3 errors.
+Checkstyle ends with 1 errors.
 Starting audit...
 [ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\EdgeWeightedGraph.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\EdgeWeightedGraph.java:5:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\EdgeWeightedGraph.java:94:17: '}' at column 17 should be on the same line as the next part of a multi-block statement (one that directly contains multiple blocks: if/else-if/else, do/while or try/catch/finally). [RightCurly]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\EdgeWeightedGraph.java:95: Line is longer than 80 characters (found 87). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\EdgeWeightedGraph.java:97: 'if' construct must use '{}'s. [NeedBraces]
 Audit done.
-Checkstyle ends with 5 errors.
+Checkstyle ends with 1 errors.
 Starting audit...
 [ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\Kruskals.java:5:1: File contains tab characters (this is the first instance). [FileTabCharacter]
 Audit done.
