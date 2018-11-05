@@ -56,14 +56,14 @@ public class MinPQ<Key> implements Iterable<Key> {
         n = 0;
     }
 
-    /**.
-     * Initializes an empty priority queue using the given comparator.
-     *
-     * @param  compartor the order in which to compare the keys
-     */
-    public MinPQ(final Comparator<Key> compartor) {
-        this(1, comparator);
-    }
+    // /**.
+    //  * Initializes an empty priority queue using the given comparator.
+    //  *
+    //  * @param  compartor the order in which to compare the keys
+    //  */
+    // public MinPQ(final Comparator<Key> compartor) {
+    //     this(1, comparator);
+    // }
 
     /**.
      * Initializes a priority queue from the array of keys.
@@ -73,17 +73,17 @@ public class MinPQ<Key> implements Iterable<Key> {
      *
      * @param  key the array of keys
      */
-    public MinPQ(final Key[] key) {
-        n = key.length;
-        pq = (Key[]) new Object[keys.length + 1];
-        for (int i = 0; i < n; i++) {
-            pq[i + 1] = keys[i];
-        }
-        for (int k = n / 2; k >= 1; k--) {
-            sink(k);
-        }
-        assert isMinHeap();
-    }
+    // public MinPQ(final Key[] key) {
+    //     n = key.length;
+    //     pq = (Key[]) new Object[keys.length + 1];
+    //     for (int i = 0; i < n; i++) {
+    //         pq[i + 1] = keys[i];
+    //     }
+    //     for (int k = n / 2; k >= 1; k--) {
+    //         sink(k);
+    //     }
+    //     assert isMinHeap();
+    // }
     /**.
      * Returns true if this priority queue is empty.
      *

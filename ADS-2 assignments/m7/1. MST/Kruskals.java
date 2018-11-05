@@ -16,7 +16,7 @@ class Kruskals {
     private double weight;
     /**.
      * Constructs the object.
-     * time complexity in average case is E log E
+     *
      * @param      ewg   The ewg
      */
     Kruskals(final EdgeWeightedGraph ewg) {
@@ -39,7 +39,7 @@ class Kruskals {
     }
     /**.
      * { function_description }
-     * time complexity is 1
+     *
      * @return     { description_of_the_return_value }
      */
     public Iterable<Edge> edges() {
@@ -47,7 +47,7 @@ class Kruskals {
     }
     /**.
      * { function_description }
-     * time complexity is 1
+     *
      * @return     { description_of_the_return_value }
      */
     public double weight() {

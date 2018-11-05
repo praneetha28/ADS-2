@@ -3,14 +3,17 @@ Audit done.
 Starting audit...
 Audit done.
 Starting audit...
+[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\EdgeWeightedGraph.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 Audit done.
+Checkstyle ends with 1 errors.
 Starting audit...
+[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\Kruskals.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 Audit done.
+Checkstyle ends with 1 errors.
 Starting audit...
-[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\MinPQ.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\MinPQ.java:267:9: Redundant 'public' modifier. [RedundantModifier]
 Audit done.
-Checkstyle ends with 2 errors.
+Checkstyle ends with 1 errors.
 Starting audit...
 Audit done.
 Starting audit...
@@ -18,4 +21,8 @@ Audit done.
 Starting audit...
 Audit done.
 Starting audit...
+[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\UF.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\UF.java:34:8: Unused @param tag for 'p'. [JavadocMethod]
+[ERROR] F:\ADS-2\ADS-2 assignments\m7\1. MST\UF.java:38:31: Expected @param tag for 'l'. [JavadocMethod]
 Audit done.
+Checkstyle ends with 3 errors.
