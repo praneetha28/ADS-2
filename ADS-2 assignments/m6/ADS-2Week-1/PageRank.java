@@ -32,7 +32,7 @@ class PageRank {
         this.dg = dig;
         prvalues = new double[dg.vert()];
         for (int i = 0; i < dg.vert(); i++) {
-			prvalues[i] = 1.0 / (double) dg.vert();
+			prvalues[i] = (1 / ((double) dg.vert()));
 		}
     }
     public void calculatePR() {
