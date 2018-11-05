@@ -62,7 +62,7 @@ public class MinPQ<Key> implements Iterable<Key> {
      * @param  compartor the order in which to compare the keys
      */
     public MinPQ(final Comparator<Key> compartor) {
-        this(1, compartor);
+        this(1, comparator);
     }
 
     /**.
@@ -75,9 +75,9 @@ public class MinPQ<Key> implements Iterable<Key> {
      */
     public MinPQ(final Key[] key) {
         n = key.length;
-        pq = (Key[]) new Object[key.length + 1];
+        pq = (Key[]) new Object[keys.length + 1];
         for (int i = 0; i < n; i++) {
-            pq[i + 1] = key[i];
+            pq[i + 1] = keys[i];
         }
         for (int k = n / 2; k >= 1; k--) {
             sink(k);
@@ -264,7 +264,7 @@ public class MinPQ<Key> implements Iterable<Key> {
         /**.
          * Constructs the object.
          */
-        private HeapIterator() {
+        public HeapIterator() {
             if (comparator == null) {
                 copy = new MinPQ<Key>(size());
             } else {
