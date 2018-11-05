@@ -36,6 +36,7 @@ public final class Solution {
              Integer.parseInt(tokens[1]), Double.parseDouble(tokens[2])));
         }
         Kruskals krs = new Kruskals(edwgh);
-        System.out.println(krs.weight());
+        double res = krs.weight();
+        System.out.format("%.5f", res);
     }
 }
