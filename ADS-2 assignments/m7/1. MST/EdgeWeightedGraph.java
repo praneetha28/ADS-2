@@ -1,35 +1,89 @@
+/**.
+ * Class for edge weighted graph.
+ */
 class EdgeWeightedGraph {
+	/**.
+	 * { var_description }
+	 */
 	private int ver;
+	/**.
+	 * { var_description }
+	 */
 	private int edg;
+	/**.
+	 * { var_description }
+	 */
 	private double weight;
+	/**.
+	 * { var_description }
+	 */
 	private Bag<Edge>[] adj;
-	EdgeWeightedGraph(int v) {
+	/**.
+	 * Constructs the object.
+	 *
+	 * @param      v     { parameter_description }
+	 */
+	EdgeWeightedGraph(final int v) {
 		this.ver = v;
 		adj = (Bag<Edge>[]) new Bag[v];
         for (int i = 0; i < v; i++) {
             adj[i] = new Bag<Edge>();
         }
 	}
-	public void addEdge(Edge e) {
+	/**.
+	 * Adds an edge.
+	 *
+	 * @param      e     { parameter_description }
+	 */
+	public void addEdge(final Edge e) {
 		int v = e.either();
 		int w = e.other(v);
 		adj[v].add(e);
 		adj[w].add(e);
 		edg++;
 	}
+	/**.
+	 * { function_description }
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public int vertices() {
 		return ver;
 	}
+	/**.
+	 * { function_description }
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public int edg() {
 		return edg;
 	}
-	public Iterable<Edge> adj(int v) {
+	/**.
+	 * { function_description }
+	 *
+	 * @param      v     { parameter_description }
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
+	public Iterable<Edge> adj(final int v) {
         // validateVertex(v);
         return adj[v];
     }
-    public int degree(int v) {
+    /**.
+     * { function_description }
+     *
+     * @param      v     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int degree(final int v) {
     	return adj[v].size();
     }
+    /**.
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public Iterable<Edge> edges() {
         Bag<Edge> list = new Bag<Edge>();
         for (int i = 0; i < ver; i++) {

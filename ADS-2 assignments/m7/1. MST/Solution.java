@@ -19,7 +19,7 @@ public final class Solution {
      *
      * @param      args  The arguments
      */
-    // time complexity for the main method is N.
+    // time complexity for the main method is E.
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         int vertices = sc.nextInt();
