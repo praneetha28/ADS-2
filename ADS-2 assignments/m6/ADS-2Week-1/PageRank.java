@@ -33,15 +33,15 @@ class PageRank {
         for (int i = 0; i < dg.vert(); i++) {
             prvalues[i] = 1.0 / (dg.vert());
         }
-        for (int i = 0; i < dg.vert(); i++) {
-        	if (dg.outdegree(i) == 0) {
-        		for (int j = 0; j < dg.vert(); j++) {
-        			if (i != j) {
-        				dg.addEdge(i, j);
-        			}
-        		}
-        	}
-        }
+        // for (int i = 0; i < dg.vert(); i++) {
+        // 	if (dg.outdegree(i) == 0) {
+        // 		for (int j = 0; j < dg.vert(); j++) {
+        // 			if (i != j) {
+        // 				dg.addEdge(i, j);
+        // 			}
+        // 		}
+        // 	}
+        // }
         for (int i = 0; i < IT_ER; i++) {
             for (int j = 0; j < dg.vert(); j++) {
                 double temp = 0.0;
