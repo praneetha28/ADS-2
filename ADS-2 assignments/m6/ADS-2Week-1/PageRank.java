@@ -37,15 +37,6 @@ class PageRank {
     }
     public void calculatePR() {
     	double[] temppr = new double[dg.vert()];
-    	for (int i = 0; i < dg.vert(); i++) {
-			if (dg.outdegree(i) == 0) {
-				for (int j = 0; j < dg.vert(); j++) {
-					if(i != j){
-						dg.addEdge(i, j);
-					}
-				}
-			}
-		}
 		Digraph revdg = dg.reverse();
         for (int l = 0; l < 1000; l++) {
 			for (int i = 0; i < dg.vert(); i++) {
@@ -60,9 +51,7 @@ class PageRank {
 			} else {
 				prvalues = temppr;
 			}
-
 		}
-
     }
     public Double getPR(int v) {
     	return prvalues[v];

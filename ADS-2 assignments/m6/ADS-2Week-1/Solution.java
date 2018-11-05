@@ -37,6 +37,15 @@ public final class Solution {
             }
         }
         System.out.println(dig);
+        for (int i = 0; i < dig.vert(); i++) {
+            if (dig.outdegree(i) == 0) {
+                for (int j = 0; j < dig.vert(); j++) {
+                    if(i != j){
+                        dig.addEdge(i, j);
+                    }
+                }
+            }
+        }
         PageRank pgr = new PageRank(dig);
         pgr.string();
         // Create page rank object and pass the graph
