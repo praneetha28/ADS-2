@@ -27,6 +27,10 @@ public class MinPQ<Key> implements Iterable<Key> {
     /**.
      * { var_description }
      */
+    private static final int N_U_M = 4;
+    /**.
+     * { var_description }
+     */
     private Comparator<Key> comparator;
     /**.
      * Constructs the object.
@@ -154,7 +158,7 @@ public class MinPQ<Key> implements Iterable<Key> {
         exch(1, n--);
         sink(1);
         pq[n + 1] = null;
-        if ((n > 0) && (n == (pq.length - 1) / 4)) {
+        if ((n > 0) && (n == (pq.length - 1) / N_U_M)) {
             resize(pq.length / 2);
         }
         assert isMinHeap();
@@ -263,7 +267,7 @@ public class MinPQ<Key> implements Iterable<Key> {
         /**.
          * Constructs the object.
          */
-        public HeapIterator() {
+        private HeapIterator() {
             if (comparator == null) {
                 copy = new MinPQ<Key>(size());
             } else {
