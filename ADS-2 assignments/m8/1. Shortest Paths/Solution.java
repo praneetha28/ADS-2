@@ -32,22 +32,24 @@ public final class Solution {
         for (int i = 0; i < stnames.length; i++) {
             stations.add(stnames[i]);
         }
-        EdgeWeightedDiGraph edwdgh = new EdgeWeightedDiGraph(Integer.parseInt(line[0]));
+        EdgeWeightedDiGraph ewdgh = new EdgeWeightedDiGraph(
+            Integer.parseInt(line[0]));
         for (int i = 0; i < Integer.parseInt(line[1]); i++) {
-            String line1 = sc.nextLine();
-            String[] tokens1 = line1.split(" ");
-            edwdgh.addEdge(new DirectedEdge(stations.indexOf(tokens1[0]),
-             stations.indexOf(tokens1[1]), Double.parseDouble(tokens1[2])));
-            edwdgh.addEdge(new DirectedEdge(stations.indexOf(tokens1[1]),
-             stations.indexOf(tokens1[0]), Double.parseDouble(tokens1[2])));
+            String[] line1 = sc.nextLine().split(" ");
+            ewdgh.addEdge(new DirectedEdge(
+                stations.indexOf(line1[0]), stations.indexOf(
+                    line1[1]), Double.parseDouble(line1[2])));
+            ewdgh.addEdge(new DirectedEdge(
+                stations.indexOf(line1[1]), stations.indexOf(
+                    line1[0]), Double.parseDouble(line1[2])));
         }
-        int query = sc.nextInt();
-        for (int i = 0; i < query; i++) {
-        	String[] quer = sc.nextLine().split(" ");
-        	// System.out.println(stations.indexOf(quer[0]));
-        	Dijkstras dij = new Dijkstras(edwdgh, stations.indexOf(quer[0]));
-        	System.out.println((long) dij.distTo(stations.indexOf(quer[1])));
-
+        int query = Integer.parseInt(sc.nextLine());
+        for (int k = 0; k < query; k++) {
+            String[] quer = sc.nextLine().split(" ");
+            Dijkstras dij = new Dijkstras(
+                ewdgh, stations.indexOf(quer[0]));
+            System.out.println((long) dij.distTo(
+                                   stations.indexOf(quer[1])));
         }
     }
 }
