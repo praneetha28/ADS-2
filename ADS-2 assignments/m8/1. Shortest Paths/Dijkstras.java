@@ -23,8 +23,8 @@ class Dijkstras {
     Dijkstras(final EdgeWeightedDiGraph g, final int s) {
         for (DirectedEdge e : g.edges()) {
             if (e.weight() < 0) {
-                throw new IllegalArgumentException
-                ("edge " + e + " has negative weight");
+                throw new IllegalArgumentException(
+                "edge " + e + " has negative weight");
             }
         }
 
