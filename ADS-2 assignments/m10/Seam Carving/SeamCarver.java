@@ -42,23 +42,23 @@ public class SeamCarver {
 		return red * red + blue * blue + green * green;
 	}
 
-	// // sequence of indices for horizontal seam
-	// public int[] findHorizontalSeam() {
-	// 	return new int[0];
-	// }
+	// sequence of indices for horizontal seam
+	public int[] findHorizontalSeam() {
+		return new int[0];
+	}
 
-	// // sequence of indices for vertical seam
-	// public int[] findVerticalSeam() {
-	// 	return new int[0];
-	// }
+	// sequence of indices for vertical seam
+	public int[] findVerticalSeam() {
+		return new int[0];
+	}
 
-	// // remove horizontal seam from current picture
-	// public void removeHorizontalSeam(int[] seam) {
+	// remove horizontal seam from current picture
+	public void removeHorizontalSeam(int[] seam) {
 
-	// }
+	}
 
-	// // remove vertical seam from current picture
-	// public void removeVerticalSeam(int[] seam) {
+	// remove vertical seam from current picture
+	public void removeVerticalSeam(int[] seam) {
 
-	// }
+	}
 }
