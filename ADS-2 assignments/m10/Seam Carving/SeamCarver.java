@@ -8,6 +8,7 @@ public class SeamCarver {
 		pic = picture;
 		if (pic == null) {
 			System.out.println("picture is null");
+			return;
 		}
 		height = pic.height();
 		width = pic.width();
