@@ -21,10 +21,10 @@ class Dijkstras {
 	 * @param      s     { parameter_description }
 	 */
 	Dijkstras(final EdgeWeightedDiGraph g, final int s) {
-		// for (DirectedEdge e : g.edg()) {
-  //           if (e.weight() < 0)
-  //               throw new IllegalArgumentException("edge " + e + " has negative weight");
-  //       }
+		for (DirectedEdge e : g.edges()) {
+            if (e.weight() < 0)
+                throw new IllegalArgumentException("edge " + e + " has negative weight");
+        }
 
         distTo = new double[g.vertices()];
         edgeTo = new DirectedEdge[g.vertices()];
