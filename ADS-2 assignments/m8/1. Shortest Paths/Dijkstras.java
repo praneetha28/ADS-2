@@ -16,7 +16,7 @@ class Dijkstras {
     private MinPQ<Double> pq;
     /**.
      * Constructs the object.
-     *
+     * TIME complexity in average case is E log V.
      * @param      g     { parameter_description }
      * @param      s     { parameter_description }
      */
@@ -45,7 +45,7 @@ class Dijkstras {
     }
     /**.
      * { function_description }
-     *
+     * TIME complexity in average case is 1.
      * @param      e     { parameter_description }
      */
     public void relax(final DirectedEdge e) {
@@ -63,7 +63,7 @@ class Dijkstras {
     }
     /**.
      * { function_description }
-     *
+     * TIME complexity in average case is 1.
      * @param      v     { parameter_description }
      *
      * @return     { description_of_the_return_value }
@@ -73,7 +73,7 @@ class Dijkstras {
     }
     /**.
      * Determines if it has path to.
-     *
+     * TIME complexity in average case is 1.
      * @param      v     { parameter_description }
      *
      * @return     True if has path to, False otherwise.
@@ -83,7 +83,7 @@ class Dijkstras {
     }
     /**.
      * { function_description }
-     *
+     * TIME complexity in O(E) .
      * @param      v     { parameter_description }
      *
      * @return     { description_of_the_return_value }

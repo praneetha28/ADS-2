@@ -23,7 +23,7 @@ public final class Solution {
      *
      * @param      args  The arguments
      */
-    // time complexity for the main method is E.
+    // time complexity for the main method is E + V.
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         ArrayList<String> stations = new ArrayList<>();
