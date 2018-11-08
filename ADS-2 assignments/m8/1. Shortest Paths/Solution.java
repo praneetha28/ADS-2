@@ -26,7 +26,7 @@ public final class Solution {
     // time complexity for the main method is E.
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
-        ArrayList<String> stations= new ArrayList<String>();
+        ArrayList<String> stations= new ArrayList<>();
         String line = sc.nextLine();
         String[] tokens = line.split(" ");
         int vertices = Integer.parseInt(tokens[0]);
