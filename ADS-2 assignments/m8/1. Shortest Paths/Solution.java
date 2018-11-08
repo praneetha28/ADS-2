@@ -45,6 +45,7 @@ public final class Solution {
         int query = sc.nextInt();
         for (int i = 0; i < query; i++) {
         	String[] quer = sc.nextLine().split(" ");
+        	System.out.println(stations.indexOf(quer[0]));
         	Dijkstras dij = new Dijkstras(edwdgh, stations.indexOf(quer[0]));
         	System.out.println((long) dij.distTo(stations.indexOf(quer[1])));
 
