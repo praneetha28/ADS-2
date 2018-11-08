@@ -11,7 +11,7 @@ Your Output:
 -1
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: -1
 	at Dijkstras.<init>(Dijkstras.java:34)
-	at Solution.main(Solution.java:49)
+	at Solution.main(Solution.java:48)
 ----------------------------------------
 
 ########## Testcase 1: Failed ##########
@@ -27,7 +27,7 @@ Your Output:
 -1
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: -1
 	at Dijkstras.<init>(Dijkstras.java:34)
-	at Solution.main(Solution.java:49)
+	at Solution.main(Solution.java:48)
 ----------------------------------------
 
 ########## Testcase 2: Failed ##########
@@ -736,7 +736,7 @@ Your Output:
 -1
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: -1
 	at Dijkstras.<init>(Dijkstras.java:34)
-	at Solution.main(Solution.java:49)
+	at Solution.main(Solution.java:48)
 ----------------------------------------
 
 ########## Testcase 3: Failed ##########
@@ -4198,7 +4198,7 @@ Your Output:
 -1
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: -1
 	at Dijkstras.<init>(Dijkstras.java:34)
-	at Solution.main(Solution.java:49)
+	at Solution.main(Solution.java:48)
 ----------------------------------------
 
 ########## Testcase 4: Failed ##########
@@ -6575,7 +6575,7 @@ Your Output:
 -1
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: -1
 	at Dijkstras.<init>(Dijkstras.java:34)
-	at Solution.main(Solution.java:49)
+	at Solution.main(Solution.java:48)
 ----------------------------------------
 
 ########## Testcase 5: Failed ##########
@@ -11535,6 +11535,6 @@ Your Output:
 -1
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: -1
 	at Dijkstras.<init>(Dijkstras.java:34)
-	at Solution.main(Solution.java:49)
+	at Solution.main(Solution.java:48)
 ----------------------------------------
 
