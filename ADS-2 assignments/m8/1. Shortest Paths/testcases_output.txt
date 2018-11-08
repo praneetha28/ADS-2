@@ -8,7 +8,6 @@ Expected Output:
 50
 
 Your Output: 
--1
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: -1
 	at Dijkstras.<init>(Dijkstras.java:34)
 	at Solution.main(Solution.java:48)
@@ -24,7 +23,6 @@ Expected Output:
 30
 
 Your Output: 
--1
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: -1
 	at Dijkstras.<init>(Dijkstras.java:34)
 	at Solution.main(Solution.java:48)
@@ -733,7 +731,6 @@ Expected Output:
 29
 
 Your Output: 
--1
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: -1
 	at Dijkstras.<init>(Dijkstras.java:34)
 	at Solution.main(Solution.java:48)
@@ -4195,7 +4192,6 @@ Expected Output:
 22
 
 Your Output: 
--1
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: -1
 	at Dijkstras.<init>(Dijkstras.java:34)
 	at Solution.main(Solution.java:48)
@@ -6572,7 +6568,6 @@ Expected Output:
 216
 
 Your Output: 
--1
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: -1
 	at Dijkstras.<init>(Dijkstras.java:34)
 	at Solution.main(Solution.java:48)
@@ -11532,7 +11527,6 @@ Expected Output:
 60
 
 Your Output: 
--1
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: -1
 	at Dijkstras.<init>(Dijkstras.java:34)
 	at Solution.main(Solution.java:48)
