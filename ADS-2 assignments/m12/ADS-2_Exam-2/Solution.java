@@ -46,11 +46,15 @@ public class Solution {
 			String[] line1 = sc.nextLine().split(" ");
 			Dijkstras dijk = new Dijkstras(
                 edwgh, Integer.parseInt(line1[0]));
-            double num1 = dijk.distTo(Integer.parseInt(line1[2]));
-            if (!dijk.hasPathTo(Integer.parseInt(line1[2]))) {
+			Dijkstras dijk1 = new Dijkstras(
+                edwgh, Integer.parseInt(line1[1]));
+            double num1 = dijk.distTo(Integer.parseInt(line1[1]));
+            double num2 = dijk1.distTo(Integer.parseInt(line1[2]));
+            if (!dijk.hasPathTo(Integer.parseInt(line1[1])) || !dijk.hasPathTo(Integer.parseInt(line1[2]))) {
             	System.out.println("No Path Found.");
             } else {
-            	System.out.println(num1);
+            	System.out.println(num1 + num2);
+            	System.out.println(dijk.pathTo(Integer.parseInt(line1[2])));
             }
 			break;
 
