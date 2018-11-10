@@ -43,6 +43,15 @@ public class Solution {
 			// third is the destination.
 			// If the path exists print the distance between them.
 			// Other wise print "No Path Found."
+			String[] line1 = sc.nextLine().split(" ");
+			Dijkstras dijk = new Dijkstras(
+                edwgh, Integer.parseInt(line1[0]));
+            double num1 = dijk.distTo(Integer.parseInt(line1[2]));
+            if (num1 == -1.0) {
+            	System.out.println("No Path Found.");
+            } else {
+            	System.out.println(num1);
+            }
 			break;
 
 		default:
