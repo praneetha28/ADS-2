@@ -1,7 +1,25 @@
+/**.
+ * { item_description }
+ */
 import java.util.Scanner;
+/**.
+ * Class for solution.
+ */
 public class Solution {
-
-	public static void main(String[] args) {
+ /**.
+     * Constructs the object.
+     */
+    private Solution() {
+        /**.
+         * { item_description }
+         */
+    }
+    /**.
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
 		// Self loops are not allowed...
 		// Parallel Edges are allowed...
 		// Take the Graph input here...
@@ -12,7 +30,8 @@ public class Solution {
 		EdgeWeightedGraph edwgh = new EdgeWeightedGraph(vertices);
 		for (int i = 0; i < edges; i++) {
 			String[] tokens = sc.nextLine().split(" ");
-			edwgh.addEdge(new Edge(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[1]),Double.parseDouble(tokens[2])));
+			edwgh.addEdge(new Edge(Integer.parseInt(tokens[0]),
+			 Integer.parseInt(tokens[1]),Double.parseDouble(tokens[2])));
 		}
 		String caseToGo = sc.nextLine();
 		switch (caseToGo) {
@@ -39,7 +58,8 @@ public class Solution {
 
 		case "ViaPaths":
 			// Handle the case of ViaPaths, where three integers are given.
-			// First is the source and second is the via is the one where path should pass throuh.
+			// First is the source and second is the via is the
+			//  one where path should pass throuh.
 			// third is the destination.
 			// If the path exists print the distance between them.
 			// Other wise print "No Path Found."
@@ -51,7 +71,8 @@ public class Solution {
                 edwgh, Integer.parseInt(line1[1]));
             double num1 = dijk.distTo(Integer.parseInt(line1[1]));
             double num2 = dijk1.distTo(Integer.parseInt(line1[2]));
-            if (!dijk.hasPathTo(Integer.parseInt(line1[1])) || !dijk.hasPathTo(Integer.parseInt(line1[2]))) {
+            if (!dijk.hasPathTo(Integer.parseInt(line1[1])) ||
+            	!dijk.hasPathTo(Integer.parseInt(line1[2]))) {
             	System.out.println("No Path Found.");
             } else {
             	System.out.println(num1 + num2);
