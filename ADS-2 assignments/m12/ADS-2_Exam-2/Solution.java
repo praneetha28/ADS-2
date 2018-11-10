@@ -44,6 +44,7 @@ public class Solution {
 			// If the path exists print the distance between them.
 			// Other wise print "No Path Found."
 			String[] line1 = sc.nextLine().split(" ");
+			String str = line1[0] + " ";
 			Dijkstras dijk = new Dijkstras(
                 edwgh, Integer.parseInt(line1[0]));
 			Dijkstras dijk1 = new Dijkstras(
@@ -54,7 +55,13 @@ public class Solution {
             	System.out.println("No Path Found.");
             } else {
             	System.out.println(num1 + num2);
-            	System.out.println(dijk.pathTo(Integer.parseInt(line1[2])));
+            	for (Edge e : dijk.pathTo(Integer.parseInt(line1[1]))) {
+            		str += e + " ";
+            	}
+            	for (Edge e : dijk1.pathTo(Integer.parseInt(line1[2]))) {
+            		str += e + " ";
+            	}
+            	System.out.println(str);
             }
 			break;
 

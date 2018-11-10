@@ -94,8 +94,10 @@ class Dijkstras {
             return null;
         }
         Stack<Edge> path = new Stack<Edge>();
-        for (Edge e = edgeTo[v]; e != null; e = edgeTo[e.either()]) {
+        int x = v;
+        for (Edge e = edgeTo[v]; e != null; e = edgeTo[x]) {
             path.push(e);
+            x = e.other(x);
         }
         return path;
     }
