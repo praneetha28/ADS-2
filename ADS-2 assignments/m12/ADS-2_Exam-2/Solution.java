@@ -55,14 +55,21 @@ public class Solution {
             	System.out.println("No Path Found.");
             } else {
             	System.out.println(num1 + num2);
-            	for (Edge e : dijk.pathTo(Integer.parseInt(line1[1]))) {
-            		str += e.display() + " ";
-            	}
-            	for (Edge e : dijk1.pathTo(Integer.parseInt(line1[2]))) {
-            		str += e.display() + " ";
-            	}
-            	System.out.println(str);
-            }
+		        for (Edge e : dijk.pathTo(Integer.parseInt(line1[1]))) {
+		            str += e.either() + " ";
+		        }
+		        int viaver = Integer.parseInt(line1[1]);
+		        for (Edge e : dijk1.pathTo(Integer.parseInt(line1[2]))) {
+		            int temp = e.either();
+		            if (viaver == temp) {
+		            	str += e.other(temp) + " ";
+		            } else {
+		            	str += temp + " ";
+		            }
+		            viaver = temp;
+		        }
+		        System.out.println(str);
+		    }
 			break;
 
 		default:
