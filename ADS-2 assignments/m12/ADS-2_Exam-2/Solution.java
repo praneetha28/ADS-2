@@ -18,7 +18,7 @@ public class Solution {
 		switch (caseToGo) {
 		case "Graph":
 			//Print the Graph Object.
-		System.out.println(edwgh);
+			System.out.println(edwgh);
 			break;
 
 		case "DirectedPaths":
@@ -26,6 +26,11 @@ public class Solution {
 			// First is the source and second is the destination.
 			// If the path exists print the distance between them.
 			// Other wise print "No Path Found."
+			String[] line = sc.nextLine().split(" ");
+			Dijkstras dij = new Dijkstras(
+                edwgh, Integer.parseInt(line[0]));
+            double num = dij.distTo(Integer.parseInt(line[1]));
+            System.out.println(num);
 			break;
 
 		case "ViaPaths":
