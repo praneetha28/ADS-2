@@ -47,7 +47,7 @@ public class Solution {
 			Dijkstras dijk = new Dijkstras(
                 edwgh, Integer.parseInt(line1[0]));
             double num1 = dijk.distTo(Integer.parseInt(line1[2]));
-            if (num1 == -1.0) {
+            if (!dijk.hasPathTo(Integer.parseInt(line1[2]))) {
             	System.out.println("No Path Found.");
             } else {
             	System.out.println(num1);
