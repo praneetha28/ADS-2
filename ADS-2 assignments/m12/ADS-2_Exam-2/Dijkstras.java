@@ -70,11 +70,7 @@ class Dijkstras {
      * @return     { description_of_the_return_value }
      */
     public double distTo(final int v) {
-        if (distTo[v] == Double.POSITIVE_INFINITY) {
-            return -1.0;
-        } else {
-            return distTo[v];
-        }
+        return distTo[v];
     }
     /**.
      * Determines if it has path to.

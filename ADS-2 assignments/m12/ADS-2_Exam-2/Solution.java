@@ -30,7 +30,7 @@ public class Solution {
 			Dijkstras dij = new Dijkstras(
                 edwgh, Integer.parseInt(line[0]));
             double num = dij.distTo(Integer.parseInt(line[1]));
-            if (num == -1.0) {
+            if (!dij.hasPathTo(Integer.parseInt(line[0]))) {
             	System.out.println("No Path Found.");
             } else {
             	System.out.println(num);
