@@ -56,10 +56,10 @@ public class Solution {
             } else {
             	System.out.println(num1 + num2);
             	for (Edge e : dijk.pathTo(Integer.parseInt(line1[1]))) {
-            		str += e + " ";
+            		str += e.display() + " ";
             	}
             	for (Edge e : dijk1.pathTo(Integer.parseInt(line1[2]))) {
-            		str += e + " ";
+            		str += e.display() + " ";
             	}
             	System.out.println(str);
             }
