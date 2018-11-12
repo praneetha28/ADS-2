@@ -14,7 +14,7 @@ public class Quick3string {
     }
     /**
      * Rearranges the array of strings in ascending order.
-     *
+     * Time complexity in avgerage case is 1.
      * @param a the array to be sorted
      */
     public static void sort(final String[] a) {
@@ -24,7 +24,7 @@ public class Quick3string {
     }
     /**.
      * { function_description }
-     *
+     * Time complexity in avgerage case is 1.
      * @param      s     { parameter_description }
      * @param      d     { parameter_description }
      *
@@ -39,7 +39,7 @@ public class Quick3string {
     }
     /**.
      * { function_description }
-     *
+     * Time complexity is 2N log N.
      * @param      a     { parameter_description }
      * @param      lo    The lower
      * @param      hi    The higher
@@ -74,7 +74,7 @@ public class Quick3string {
     }
     /**.
      * { function_description }
-     *
+     * Time complexity is O(N^2).
      * @param      a     { parameter_description }
      * @param      lo    The lower
      * @param      hi    The higher
@@ -90,7 +90,7 @@ public class Quick3string {
     }
     /**.
      * { function_description }
-     *
+     * Time complexity in avgerage case is 1.
      * @param      a     { parameter_description }
      * @param      i     { parameter_description }
      * @param      j     { parameter_description }
@@ -111,7 +111,7 @@ public class Quick3string {
     // is v less than w, starting at character d
     /**.
      * { function_description }
-     *
+     * Time complexity is O(N).
      * @param      v     { parameter_description }
      * @param      w     { parameter_description }
      * @param      d     { parameter_description }
@@ -131,7 +131,7 @@ public class Quick3string {
     }
     /**.
      * Determines if sorted.
-     *
+     * Time complexity is O(N).
      * @param      a     { parameter_description }
      *
      * @return     True if sorted, False otherwise.
@@ -146,7 +146,7 @@ public class Quick3string {
     }
     /**.
      * { function_description }
-     *
+     * Time complexity is O(N).
      * @param      a     { parameter_description }
      *
      * @return     { description_of_the_return_value }

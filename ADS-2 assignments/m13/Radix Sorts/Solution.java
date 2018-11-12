@@ -6,9 +6,9 @@ import java.util.Scanner;
  * Class for solution.
  */
 public final class Solution {
- /**.
-     * Constructs the object.
-     */
+    /**.
+        * Constructs the object.
+        */
     private Solution() {
         /**.
          * { item_description }
@@ -16,7 +16,7 @@ public final class Solution {
     }
     /**.
      * { function_description }
-     * the time complexity is E as it iterates through no of edges.
+     * the time complexity is N as it iterates through N times.
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
