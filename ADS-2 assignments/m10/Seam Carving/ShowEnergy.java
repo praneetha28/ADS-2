@@ -3,25 +3,30 @@
  *  Execution:    java ShowEnergy input.png
  *  Dependencies: SeamCarver.java SCUtility.java
  *
+ *
  *  Read image from file specified as command line argument. Show original
  *  image (only useful if image is large enough).
  *
  ******************************************************************************/
-
 import edu.princeton.cs.algs4.Picture;
+/**.
+ * { item_description }
+ */
 import edu.princeton.cs.algs4.StdOut;
-/**
+/**.
  * Class for show energy.
  */
 public final class ShowEnergy {
-    /**
+    /**.
      * Constructs the object.
      */
     private ShowEnergy() {
-
+        /**.
+         * { item_description }
+         */
     }
-    /**
-     * Main function.
+    /**.
+     * { function_description }
      *
      * @param      args  The arguments
      */
@@ -31,8 +36,8 @@ public final class ShowEnergy {
             picture.width(), picture.height());
         picture.show();
         SeamCarver sc = new SeamCarver(picture);
-        StdOut.printf("Displaying energy calculated for each pixel.\n");
+        StdOut.printf(
+            "Displaying energy calculated for each pixel.\n");
         SCUtility.showEnergy(sc);
     }
 }
-

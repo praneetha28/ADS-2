@@ -1,64 +1,125 @@
+/**.
+ * { item_description }
+ */
 import java.awt.Color;
+/**.
+ * Class for seam carver.
+ */
 public class SeamCarver {
-	// create a seam carver object based on the given picture
-	private Picture pic;
-	private int height;
-	private int width;
-	public SeamCarver(Picture picture) {
-		pic = picture;
-		if (pic == null) {
-			System.out.println("picture is null");
-			return;
-		}
-		height = pic.height();
-		width = pic.width();
-	}
-	// current picture
-	public Picture picture() {
-		return pic;
-	}
-	// width of current picture
-	public int width() {
-		return width;
-	}
+    /**.
+     * { var_description }
+     */
+    private Picture picture;
+    /**.
+     * { var_description }
+     */
+    private static final int THOUSAND = 1000;
+    // create a seam carver object based on the given picture
+    /**.
+     * Constructs the object.
+     *
+     * @param      pic   The picture
+     */
+    public SeamCarver(final Picture pic) {
+        this.picture = pic;
+        if (picture == null) {
+            System.out.println("picture is null");
+        }
+    }
+    // current picture
+    /**.
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public Picture picture() {
+        return picture;
+    }
+    // width of current picture
+    /**.
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int width() {
+        return picture.width();
+    }
 
-	// height of current picture
-	public int height() {
-		return height;
-	}
+    // height of current picture
+    /**.
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int height() {
+        return picture.height();
+    }
+    // energy of pixel at column x and row y
+    /**.
+     * { function_description }
+     *
+     * @param      x     { parameter_description }
+     * @param      y     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public double energy(final int x, final int y) {
+        if (x == 0 || x == width() - 1 || y == 0 || y == height() - 1) {
+            return THOUSAND;
+        }
+        return Math.sqrt(calculatesquare(picture.get(x - 1, y),
+            picture.get(x + 1, y)) + calculatesquare(
+            picture.get(x, y - 1), picture.get(x, y + 1)));
+    }
+    /**.
+     * { function_description }
+     *
+     * @param      c1    The c 1
+     * @param      c2    The c 2
+     *
+     * @return     { description_of_the_return_value }
+     */
+    private double calculatesquare(final Color c1, final Color c2) {
+        double red = c1.getRed() - c2.getRed();
+        double green = c1.getGreen() - c2.getGreen();
+        double blue = c1.getBlue() - c2.getBlue();
+        return red * red + green * green + blue * blue;
+    }
+    // sequence of indices for horizontal seam
+    /**.
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int[] findHorizontalSeam() {
+        return new int[0];
+    }
 
-	// energy of pixel at column x and row y
-	public double energy(int x, int y) {
-		if (x == 0 || x == pic.width() - 1 || y == 0 || y == pic.height() - 1) {
-			return 1000;
-		}
-		double energy = calculateEnergy(pic.get(x - 1, y), pic.get(x + 1, y)) + calculateEnergy(pic.get(x, y - 1), pic.get(x, y + 1));
-		return Math.sqrt(energy);
-	}
-	public double calculateEnergy(Color c1, Color c2) {
-		double red = c1.getRed() - c2.getRed();
-		double blue = c1.getBlue() - c2.getBlue();
-		double green = c1.getGreen() - c2.getGreen();
-		return red * red + blue * blue + green * green;
-	}
-
-	// sequence of indices for horizontal seam
-	public int[] findHorizontalSeam() {
-		return new int[0];
-	}
-
-	// sequence of indices for vertical seam
-	public int[] findVerticalSeam() {
-		return new int[0];
-	}
-
-	// remove horizontal seam from current picture
-	public void removeHorizontalSeam(int[] seam) {
-
-	}
-
-	// remove vertical seam from current picture
-	public void removeVerticalSeam(int[] seam) {
-
-	}
+    // sequence of indices for vertical seam
+    /**.
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int[] findVerticalSeam() {
+        return new int[0];
+    }
+    // remove horizontal seam from current pictureture
+    /**.
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public void removeHorizontalSeam(final int[] seam) {
+        return;
+    }
+    // remove vertical seam from current picture
+    /**.
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public void removeVerticalSeam(final int[] seam) {
+        return;
+    }
 }
