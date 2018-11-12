@@ -286,8 +286,8 @@ public final class Picture implements ActionListener {
 	private void validateRowIndex(final int row) {
 		if (row < 0 || row >= height()) {
 			throw new IllegalArgumentException(
-			    "row index must be between 0 and " +
-			    (height() - 1) + ": " + row);
+			    "row index must be between 0 and "
+			    + (height() - 1) + ": " + row);
 		}
 	}
 	/**.
@@ -298,8 +298,8 @@ public final class Picture implements ActionListener {
 	private void validateColumnIndex(final int col) {
 		if (col < 0 || col >= width()) {
 			throw new IllegalArgumentException(
-			    "column index must be between 0 and " +
-			     (width() - 1) + ": " + col);
+			    "column index must be between 0 and "
+			     + (width() - 1) + ": " + col);
 		}
 	}
 	/**.
@@ -482,7 +482,8 @@ public final class Picture implements ActionListener {
 		       "Use a .png or .jpg extension", FileDialog.SAVE);
 		chooser.setVisible(true);
 		if (chooser.getFile() != null) {
-			save(chooser.getDirectory() + File.separator + chooser.getFile());
+			save(chooser.getDirectory() + File.separator
+				+ chooser.getFile());
 		}
 	}
 }
