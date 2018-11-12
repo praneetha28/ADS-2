@@ -27,55 +27,9 @@ Audit done.
 Starting audit...
 Audit done.
 Starting audit...
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\ResizeDemo.java:38: Line is longer than 80 characters (found 113). [LineLength]
 Audit done.
-Checkstyle ends with 1 errors.
 Starting audit...
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:15: Missing a Javadoc comment. [JavadocType]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:15:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:19:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:19:41: Parameter width should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:19:52: Parameter height should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:23:43: '255' is a magic number. [MagicNumber]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:24:43: '255' is a magic number. [MagicNumber]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:25:43: '255' is a magic number. [MagicNumber]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:34:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:34:45: Parameter sc should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:36: 'for' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:37: 'for' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:39: Line has trailing spaces. [RegexpSingleline]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:40: Line has trailing spaces. [RegexpSingleline]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:44:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:44:35: Parameter sc should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:48:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:48:43: Parameter sc should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:54: Line is longer than 80 characters (found 84). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:55:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:55:43: Parameter grayValues should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:66:38: '-' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:66:39: '-' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:67:43: '-' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:67:44: '-' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:68: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:72: Line has trailing spaces. [RegexpSingleline]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:73: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:78: Line is longer than 80 characters (found 90). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:79: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:80: Line is longer than 80 characters (found 112). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:91: Line is longer than 80 characters (found 95). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:91:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:91:39: Parameter picture should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:91:56: Parameter horizontal should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:91:76: Parameter seamIndices should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:96: 'for' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:97: 'for' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:99: Line has trailing spaces. [RegexpSingleline]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:103: 'for' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:105:9: '}' at column 9 should be on the same line as the next part of a multi-block statement (one that directly contains multiple blocks: if/else-if/else, do/while or try/catch/finally). [RightCurly]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SCUtility.java:109: 'for' construct must use '{}'s. [NeedBraces]
 Audit done.
-Checkstyle ends with 43 errors.
 Starting audit...
 [ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SeamCarver.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\SeamCarver.java:111: Unused Javadoc tag. [JavadocMethod]
@@ -87,28 +41,8 @@ Checkstyle ends with 5 errors.
 Starting audit...
 Audit done.
 Starting audit...
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\ShowSeams.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\ShowSeams.java:6: Line has trailing spaces. [RegexpSingleline]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\ShowSeams.java:15: Missing a Javadoc comment. [JavadocType]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\ShowSeams.java:15:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\ShowSeams.java:17:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\ShowSeams.java:17:44: Parameter sc should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\ShowSeams.java:25:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\ShowSeams.java:25:42: Parameter sc should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\ShowSeams.java:32:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\ShowSeams.java:32:29: Parameter args should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\ShowSeams.java:34: Line is longer than 80 characters (found 93). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\ShowSeams.java:35: Line has trailing spaces. [RegexpSingleline]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\ShowSeams.java:37: Line has trailing spaces. [RegexpSingleline]
 Audit done.
-Checkstyle ends with 13 errors.
 Starting audit...
 Audit done.
 Starting audit...
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\StdOut.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\StdOut.java:24: Line is longer than 80 characters (found 84). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\StdOut.java:30: Line is longer than 80 characters (found 84). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\StdOut.java:32: Line is longer than 80 characters (found 88). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\StdOut.java:90:9: '}' at column 9 should be on the same line as the next part of a multi-block statement (one that directly contains multiple blocks: if/else-if/else, do/while or try/catch/finally). [RightCurly]
 Audit done.
-Checkstyle ends with 5 errors.
