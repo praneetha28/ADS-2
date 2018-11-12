@@ -77,7 +77,10 @@ public final class Picture implements ActionListener {
     /**.
      * { var_description }
      */
-    private final static int S_T_R = 0xFFFFFF;
+    private final int S_T_R = 0xFFFFFF;
+    /**.
+     * { var_description }
+     */
     private BufferedImage image;
     /**.
      * { var_description }
@@ -418,8 +421,8 @@ public final class Picture implements ActionListener {
                 } else {
                     rgb = image.getRGB(col, height - row - 1);
                 }
-                sb.append(String.format
-                    ("#%06X ", rgb & S_T_R));
+                sb.append(String.format(
+                    "#%06X ", rgb & S_T_R));
             }
             sb.append("\n");
         }
@@ -471,8 +474,8 @@ public final class Picture implements ActionListener {
                 e.printStackTrace();
             }
         } else {
-            System.out.println
-            ("Error: filename must end in .jpg or .png");
+            System.out.println(
+            "Error: filename must end in .jpg or .png");
         }
     }
     /**.
