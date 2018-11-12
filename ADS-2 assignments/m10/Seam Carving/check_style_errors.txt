@@ -1,22 +1,15 @@
 Starting audit...
 [ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:72:8: Unused import - javax.swing.JPanel. [UnusedImports]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:82: Line is longer than 80 characters (found 83). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:86: Line is longer than 80 characters (found 83). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:89: Line is longer than 80 characters (found 81). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:110:26: Extra HTML tag found: </em> picture uses ~ 4 <em>W H</em> bytes of memory, [JavadocStyle]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:144: Line is longer than 80 characters (found 84). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:152:30: 'width' hides a field. [HiddenField]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:152:47: 'height' hides a field. [HiddenField]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:165: Line is longer than 80 characters (found 84). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:199:33: 'filename' hides a field. [HiddenField]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:223:9: '}' at column 9 should be on the same line as the next part of a multi-block statement (one that directly contains multiple blocks: if/else-if/else, do/while or try/catch/finally). [RightCurly]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:257: Line is longer than 80 characters (found 91). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:263: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:452:26: '+' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:462:57: '0xFFFFFF' is a magic number. [MagicNumber]
+[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:107:30: 'width' hides a field. [HiddenField]
+[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:107:47: 'height' hides a field. [HiddenField]
+[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:153:33: 'filename' hides a field. [HiddenField]
+[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:177:9: '}' at column 9 should be on the same line as the next part of a multi-block statement (one that directly contains multiple blocks: if/else-if/else, do/while or try/catch/finally). [RightCurly]
+[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:211: Line is longer than 80 characters (found 91). [LineLength]
+[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:217: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:406:26: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:416:57: '0xFFFFFF' is a magic number. [MagicNumber]
 Audit done.
-Checkstyle ends with 16 errors.
+Checkstyle ends with 9 errors.
 Starting audit...
 Audit done.
 Starting audit...
