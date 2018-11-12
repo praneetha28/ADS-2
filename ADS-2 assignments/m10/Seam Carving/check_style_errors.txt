@@ -1,8 +1,7 @@
 Starting audit...
 [ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:80:23: Name 'S_T_R' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MemberName]
 Audit done.
-Checkstyle ends with 2 errors.
+Checkstyle ends with 1 errors.
 Starting audit...
 Audit done.
 Starting audit...

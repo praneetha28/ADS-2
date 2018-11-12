@@ -77,7 +77,7 @@ public final class Picture implements ActionListener {
     /**.
      * { var_description }
      */
-    private final int S_T_R = 0xFFFFFF;
+    private static final int S_T_R = 0xFFFFFF;
     /**.
      * { var_description }
      */
