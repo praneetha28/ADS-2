@@ -180,7 +180,7 @@ public final class Picture implements ActionListener {
 		}
 	}
 	/**.
-	  * Creates a picture by reading the image from a PNG, GIF, or JPEG file.
+	  * Creates a picture by reading the image from a PNG, GIF
 	  *
 	  * @param file the file
 	  * @throws IllegalArgumentException if cannot read image
@@ -244,7 +244,8 @@ public final class Picture implements ActionListener {
 			    " Save...   ");
 			menuItem1.addActionListener(this);
 			menuItem1.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S,
-			                         Toolkit.getDefaultToolkit().getMenuShortcutKeyMask()));
+			                         Toolkit.getDefaultToolkit().
+			                         getMenuShortcutKeyMask()));
 			menu.add(menuItem1);
 			frame.setJMenuBar(menuBar);
 			frame.setContentPane(getJLabel());
@@ -285,7 +286,8 @@ public final class Picture implements ActionListener {
 	private void validateRowIndex(final int row) {
 		if (row < 0 || row >= height()) {
 			throw new IllegalArgumentException(
-			    "row index must be between 0 and " + (height() - 1) + ": " + row);
+			    "row index must be between 0 and " +
+			    (height() - 1) + ": " + row);
 		}
 	}
 	/**.
@@ -296,7 +298,8 @@ public final class Picture implements ActionListener {
 	private void validateColumnIndex(final int col) {
 		if (col < 0 || col >= width()) {
 			throw new IllegalArgumentException(
-			    "column index must be between 0 and " + (width() - 1) + ": " + col);
+			    "column index must be between 0 and " +
+			     (width() - 1) + ": " + col);
 		}
 	}
 	/**.
@@ -476,7 +479,7 @@ public final class Picture implements ActionListener {
 	 */
 	public void actionPerformed(final ActionEvent e) {
 		FileDialog chooser = new FileDialog(frame,
-		                                    "Use a .png or .jpg extension", FileDialog.SAVE);
+		       "Use a .png or .jpg extension", FileDialog.SAVE);
 		chooser.setVisible(true);
 		if (chooser.getFile() != null) {
 			save(chooser.getDirectory() + File.separator + chooser.getFile());
