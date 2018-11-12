@@ -115,6 +115,7 @@ public class Quick3string {
      * @param      v     { parameter_description }
      * @param      w     { parameter_description }
      * @param      d     { parameter_description }
+     * @return     True if sorted, False otherwise.
      */
     private static boolean less(final String v, final String w, final int d) {
         assert v.substring(0, d).equals(w.substring(0, d));
