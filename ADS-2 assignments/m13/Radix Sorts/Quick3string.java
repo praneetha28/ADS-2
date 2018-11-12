@@ -98,7 +98,7 @@ public class Quick3string {
         for (int i = 0; i < a.length - 1; i++) {
             str += a[i] + ", ";
         }
-        str += a[a.length] + "]";
+        str += a[a.length - 1] + "]";
         return str;
     }
 }
