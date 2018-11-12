@@ -19,7 +19,7 @@ public class Quick3string {
      */
     public static void sort(final String[] a) {
         // Collections.shuffle(a);
-        sort(a, 0, a.length-1, 0);
+        sort(a, 0, a.length - 1, 0);
         assert isSorted(a);
     }
     /**.
@@ -66,11 +66,11 @@ public class Quick3string {
                 i++;
             }
         }
-        sort(a, lo, lt-1, d);
+        sort(a, lo, lt - 1, d);
         if (v >= 0) {
-            sort(a, lt, gt, d+1);
+            sort(a, lt, gt, d + 1);
         }
-        sort(a, gt+1, hi, d);
+        sort(a, gt + 1, hi, d);
     }
     /**.
      * { function_description }
@@ -83,8 +83,8 @@ public class Quick3string {
     private static void insertion(final String[] a, final int lo,
      final int hi, final int d) {
         for (int i = lo; i <= hi; i++) {
-            for (int j = i; j > lo && less(a[j], a[j-1], d); j--) {
-                exch(a, j, j-1);
+            for (int j = i; j > lo && less(a[j], a[j - 1], d); j--) {
+                exch(a, j, j - 1);
             }
         }
     }
@@ -109,6 +109,13 @@ public class Quick3string {
     // }
 
     // is v less than w, starting at character d
+    /**.
+     * { function_description }
+     *
+     * @param      v     { parameter_description }
+     * @param      w     { parameter_description }
+     * @param      d     { parameter_description }
+     */
     private static boolean less(final String v, final String w, final int d) {
         assert v.substring(0, d).equals(w.substring(0, d));
         for (int i = d; i < Math.min(v.length(), w.length()); i++) {
@@ -129,8 +136,11 @@ public class Quick3string {
      * @return     True if sorted, False otherwise.
      */
     private static boolean isSorted(final String[] a) {
-        for (int i = 1; i < a.length; i++)
-            if (a[i].compareTo(a[i-1]) < 0) return false;
+        for (int i = 1; i < a.length; i++) {
+            if (a[i].compareTo(a[i - 1]) < 0) {
+                return false;
+            }
+        }
         return true;
     }
     /**.

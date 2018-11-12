@@ -1,24 +1,8 @@
 Starting audit...
 [ERROR] F:\ADS-2\ADS-2 assignments\m13\Radix Sorts\Quick3string.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] F:\ADS-2\ADS-2 assignments\m13\Radix Sorts\Quick3string.java:22:28: '-' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m13\Radix Sorts\Quick3string.java:22:29: '-' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m13\Radix Sorts\Quick3string.java:69:23: '-' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m13\Radix Sorts\Quick3string.java:69:24: '-' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m13\Radix Sorts\Quick3string.java:71:30: '+' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m13\Radix Sorts\Quick3string.java:71:31: '+' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m13\Radix Sorts\Quick3string.java:73:19: '+' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m13\Radix Sorts\Quick3string.java:73:20: '+' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m13\Radix Sorts\Quick3string.java:86:53: '-' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m13\Radix Sorts\Quick3string.java:86:54: '-' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m13\Radix Sorts\Quick3string.java:87:29: '-' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m13\Radix Sorts\Quick3string.java:87:30: '-' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m13\Radix Sorts\Quick3string.java:112:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS-2\ADS-2 assignments\m13\Radix Sorts\Quick3string.java:132: 'for' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m13\Radix Sorts\Quick3string.java:133: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m13\Radix Sorts\Quick3string.java:133:35: '-' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m13\Radix Sorts\Quick3string.java:133:36: '-' is not followed by whitespace. [WhitespaceAround]
+[ERROR] F:\ADS-2\ADS-2 assignments\m13\Radix Sorts\Quick3string.java:119: Expected @return tag. [JavadocMethod]
 Audit done.
-Checkstyle ends with 18 errors.
+Checkstyle ends with 2 errors.
 Starting audit...
 [ERROR] F:\ADS-2\ADS-2 assignments\m13\Radix Sorts\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 Audit done.
