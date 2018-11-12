@@ -21,10 +21,10 @@ public class SeamCarver {
      * @param      pic   The picture
      */
     public SeamCarver(final Picture pic) {
-    	if (pic == null) {
-    		System.out.println("picture is null");
-    		return;
-    	}
+        if (pic == null) {
+            System.out.println("picture is null");
+            return;
+        }
         this.picture = pic;
         width = picture.width();
         height = picture.height();
@@ -280,4 +280,5 @@ public class SeamCarver {
         width--;
     }
 }
+
 
