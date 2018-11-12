@@ -1,15 +1,20 @@
 Starting audit...
 [ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:107:30: 'width' hides a field. [HiddenField]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:107:47: 'height' hides a field. [HiddenField]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:153:33: 'filename' hides a field. [HiddenField]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:177:9: '}' at column 9 should be on the same line as the next part of a multi-block statement (one that directly contains multiple blocks: if/else-if/else, do/while or try/catch/finally). [RightCurly]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:211: Line is longer than 80 characters (found 91). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:217: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:406:26: '+' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:416:57: '0xFFFFFF' is a magic number. [MagicNumber]
+[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:77:1: File contains tab characters (this is the first instance). [FileTabCharacter]
+[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:183: Line is longer than 80 characters (found 81). [LineLength]
+[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:246: Line is longer than 80 characters (found 86). [LineLength]
+[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:247: Line is longer than 80 characters (found 104). [LineLength]
+[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:288: Line is longer than 80 characters (found 94). [LineLength]
+[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:299: Line is longer than 80 characters (found 96). [LineLength]
+[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:393: Line is longer than 80 characters (found 85). [LineLength]
+[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:415: Line is longer than 80 characters (found 82). [LineLength]
+[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:417: Line is longer than 80 characters (found 83). [LineLength]
+[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:417:73: '0xFFFFFF' is a magic number. [MagicNumber]
+[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:469: Line is longer than 80 characters (found 87). [LineLength]
+[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:479: Line is longer than 80 characters (found 101). [LineLength]
+[ERROR] F:\ADS-2\ADS-2 assignments\m10\Seam Carving\Picture.java:482: Line is longer than 80 characters (found 90). [LineLength]
 Audit done.
-Checkstyle ends with 9 errors.
+Checkstyle ends with 14 errors.
 Starting audit...
 Audit done.
 Starting audit...
