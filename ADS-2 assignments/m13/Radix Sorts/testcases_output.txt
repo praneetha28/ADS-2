@@ -4,7 +4,8 @@ Expected Output:
 
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 9
-	at Solution.main(Solution.java:28)
+	at Quick3string.display(Quick3string.java:101)
+	at Solution.main(Solution.java:33)
 ----------------------------------------
 
 ########## Testcase 1: Failed ##########
@@ -13,7 +14,8 @@ Expected Output:
 
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 49
-	at Solution.main(Solution.java:28)
+	at Quick3string.display(Quick3string.java:101)
+	at Solution.main(Solution.java:33)
 ----------------------------------------
 
 ########## Testcase 2: Failed ##########
@@ -22,7 +24,8 @@ Expected Output:
 
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 59
-	at Solution.main(Solution.java:28)
+	at Quick3string.display(Quick3string.java:101)
+	at Solution.main(Solution.java:33)
 ----------------------------------------
 
 ########## Testcase 3: Failed ##########
@@ -31,7 +34,8 @@ Expected Output:
 
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 69
-	at Solution.main(Solution.java:28)
+	at Quick3string.display(Quick3string.java:101)
+	at Solution.main(Solution.java:33)
 ----------------------------------------
 
 ########## Testcase 4: Failed ##########
@@ -40,7 +44,8 @@ Expected Output:
 
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 89
-	at Solution.main(Solution.java:28)
+	at Quick3string.display(Quick3string.java:101)
+	at Solution.main(Solution.java:33)
 ----------------------------------------
 
 ########## Testcase 5: Failed ##########
@@ -49,7 +54,8 @@ Expected Output:
 
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 99
-	at Solution.main(Solution.java:28)
+	at Quick3string.display(Quick3string.java:101)
+	at Solution.main(Solution.java:33)
 ----------------------------------------
 
 ########## Testcase 6: Failed ##########
@@ -58,7 +64,8 @@ Expected Output:
 
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 499
-	at Solution.main(Solution.java:28)
+	at Quick3string.display(Quick3string.java:101)
+	at Solution.main(Solution.java:33)
 ----------------------------------------
 
 ########## Testcase 7: Failed ##########
@@ -67,6 +74,7 @@ Expected Output:
 
 Your Output: 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 9
-	at Solution.main(Solution.java:28)
+	at Quick3string.display(Quick3string.java:101)
+	at Solution.main(Solution.java:33)
 ----------------------------------------
 

@@ -95,7 +95,7 @@ public class Quick3string {
      */
     public String display(final String[] a) {
         String str = "[";
-        for (int i = 0; i < a.length; i++) {
+        for (int i = 0; i < a.length - 1; i++) {
             str += a[i] + ", ";
         }
         str += a[a.length] + "]";
