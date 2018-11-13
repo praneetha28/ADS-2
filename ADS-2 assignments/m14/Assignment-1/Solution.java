@@ -16,7 +16,7 @@ public final class Solution {
     }
     /**.
      * { function_description }
-     * the time complexity is N as it iterates through N times.
+     * the time complexity is no of words.
      * @param      args  The arguments
      */
     public static void main(final String[] args) {

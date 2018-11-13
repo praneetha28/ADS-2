@@ -12,6 +12,7 @@ public class SuffixArray {
     private Suffix[] suffixes;
     /**
      * Initializes a suffix array for the given {@code text} string.
+     * Time complexity is O(N).
      * @param text the input string
      * @param tst the tst object
      */
@@ -50,7 +51,7 @@ public class SuffixArray {
         }
         /**.
          * { function_description }
-         *
+         * Time complexity in avg case is 1.
          * @return     { description_of_the_return_value }
          */
         private int length() {
@@ -58,7 +59,7 @@ public class SuffixArray {
         }
         /**.
          * { function_description }
-         *
+         * Time complexity in avg case is 1.
          * @param      i     { parameter_description }
          *
          * @return     { description_of_the_return_value }
@@ -68,7 +69,7 @@ public class SuffixArray {
         }
         /**.
          * { function_description }
-         *
+         * Time complexity is O(N)
          * @param      that  The that
          *
          * @return     { description_of_the_return_value }
@@ -90,7 +91,7 @@ public class SuffixArray {
         }
         /**.
          * Returns a string representation of the object.
-         *
+         * Time complexity is 1.
          * @return     String representation of the object.
          */
         public String toString() {
@@ -100,6 +101,7 @@ public class SuffixArray {
 
     /**
      * Returns the length of the input string.
+     * Time complexity is 1.
      * @return the length of the input string
      */
     public int length() {
@@ -110,6 +112,7 @@ public class SuffixArray {
     /**
      * Returns the index into the original string of the smallest suffix.
      * That is, {@code text.substring(sa.index(i))} is thesmallest suffix.
+     * Time complexity is 1.
      * @param i an integer between 0 and <em>n</em>-1
      * @return the index into the original string of the smallest suffix
      * @throws java.lang.IllegalArgumentException unless {@code 0 <= i < n}
@@ -124,6 +127,7 @@ public class SuffixArray {
     /**
      * Returns the length of the longest common prefix of the <em>i</em>th
      * smallest suffix and the <em>i</em>-1st smallest suffix.
+     * Time complexity is 1
      * @param i an integer between 1 and <em>n</em>-1
      * @return the length of the longest common prefix of the <em>i</em>th
      * smallest suffix and the <em>i</em>-1st smallest suffix.
@@ -138,7 +142,7 @@ public class SuffixArray {
 
     /**.
      * { function_description }
-     *
+     * Time complexity is O(N)
      * @param      s     { parameter_description }
      * @param      t     { parameter_description }
      *
@@ -156,6 +160,7 @@ public class SuffixArray {
 
     /**
      * Returns the <em>i</em>th smallest suffix as a string.
+     * Time complexity is 1
      * @param i the index
      * @return the <em>i</em> smallest suffix as a string
      * @throws java.lang.IllegalArgumentException unless {@code 0 <= i < n}
@@ -169,6 +174,7 @@ public class SuffixArray {
 
     /**
      * Returns the number of suffixes strictly less than the string.
+     * Time complexity is O(N)
      * @param query the query string
      * @return the number of suffixes strictly less than {@code query}
      */

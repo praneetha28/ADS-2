@@ -40,6 +40,7 @@ public class TST<Value> {
 
     /**
      * Returns the number of key-value pairs in this symbol table.
+     * Time complexity is 1.
      * @return the number of key-value pairs in this symbol table
      */
     public int size() {
@@ -48,6 +49,7 @@ public class TST<Value> {
 
     /**
      * Does this symbol table contain the given key?
+     * Time complexity is 1
      * @param key the key
      * @return {@code true} if this symbol table contains {@code key} and
      *     {@code false} otherwise
@@ -63,6 +65,7 @@ public class TST<Value> {
 
     /**
      * Returns the value associated with the given key.
+     * Time complexity is 1
      * @param key the key
      * @return the value associated with the given key
      *     and {@code null} if the key is not in the symbol table
@@ -85,7 +88,7 @@ public class TST<Value> {
     }
     /**.
      * { function_description }
-     *
+     * Time complexity is O(length of string)
      * @param      x     { parameter_description }
      * @param      key   The key
      * @param      d     { parameter_description }
@@ -115,6 +118,7 @@ public class TST<Value> {
     /**
      * Inserts the key-value pair into the symbol table
      * with the new value if the key is already in the symbol table.
+     * Time complexity is O(length of string)
      * @param key the key
      * @param val the value
      * @throws IllegalArgumentException if {@code key} is {@code null}
@@ -130,7 +134,7 @@ public class TST<Value> {
     }
     /**.
      * { function_description }
-     *
+     * Time complexity is O(length of string)
      * @param      y     { parameter_description }
      * @param      key   The key
      * @param      val   The value
@@ -162,6 +166,7 @@ public class TST<Value> {
     /**
      * Returns the string in the symbol table that is the longest prefix
      * or {@code null}, if no such string.
+     * Time complexity is O(length of string)
      * @param query the query string
      * @return the string in the symbol table that is the longest prefix
      *     or {@code null} if no such string
@@ -199,6 +204,8 @@ public class TST<Value> {
      * Returns all keys in the symbol table as an {@code Iterable}.
      * To iterate over all of the keys in the symbol table named
      * use the foreach notation: {@code for (Key key : st.keys())}.
+     *
+     * Time complexity is O(N)
      * @return all keys in the symbol table as an {@code Iterable}
      */
     public Iterable<String> keys() {
@@ -209,6 +216,7 @@ public class TST<Value> {
 
     /**
      * Returns all of the keys in the set that start with {@code prefix}.
+     * Time complexity is O(N)
      * @param prefix the prefix
      * @return all of the keys in the set that start with {@code prefix},
      *     as an iterable
@@ -234,7 +242,7 @@ public class TST<Value> {
 
     /**.
      * { function_description }
-     *
+     * Time complexity is O(N)
      * @param      x       { parameter_description }
      * @param      prefix  The prefix
      * @param      queue   The queue
@@ -257,6 +265,7 @@ public class TST<Value> {
     /**
      * Returns all of the keys in the symbol table that match
      * where . symbol is treated as a wildcard character.
+     * Time complexity is O(N)
      * @param pattern the pattern
      * @return all of the keys in the symbol table that match
      *     as an iterable, where . is treated as a wildcard character.
@@ -268,7 +277,7 @@ public class TST<Value> {
     }
     /**.
      * { function_description }
-     *
+     * Time complexity is O(N)
      * @param      x        { parameter_description }
      * @param      prefix   The prefix
      * @param      i        { parameter_description }

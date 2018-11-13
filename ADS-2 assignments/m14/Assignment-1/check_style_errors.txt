@@ -1,15 +1,11 @@
 Starting audit...
 Audit done.
 Starting audit...
-[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+Audit done.
+Starting audit...
+[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:33: Class Suffix should be declared as final. [FinalClass]
 Audit done.
 Checkstyle ends with 1 errors.
 Starting audit...
-[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:32: Class Suffix should be declared as final. [FinalClass]
 Audit done.
-Checkstyle ends with 1 errors.
-Starting audit...
-[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\TST.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-Audit done.
-Checkstyle ends with 1 errors.
 Files to process must be specified, found 0.
