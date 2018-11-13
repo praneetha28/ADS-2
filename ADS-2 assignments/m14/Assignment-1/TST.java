@@ -94,7 +94,9 @@ public class TST<Value> {
      */
     private Node<Value> get(final Node<Value> x,
      final String key, final int d) {
-        if (x == null) return null;
+        if (x == null) {
+            return null;
+        }
         if (key.length() == 0) {
             throw new IllegalArgumentException("key must have length >= 1");
         }
@@ -126,7 +128,16 @@ public class TST<Value> {
         }
         root = put(root, key, val, 0);
     }
-
+    /**.
+     * { function_description }
+     *
+     * @param      n     { parameter_description }
+     * @param      key   The key
+     * @param      val   The value
+     * @param      d     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     private Node<Value> put(final Node<Value> n, final String key,
      final Value val, final int d) {
         Node x = n;
@@ -220,7 +231,13 @@ public class TST<Value> {
         return queue;
     }
 
-    // all keys in subtrie rooted at x with given prefix
+    /**.
+     * { function_description }
+     *
+     * @param      x       { parameter_description }
+     * @param      prefix  The prefix
+     * @param      queue   The queue
+     */
     private void collect(final Node<Value> x, final StringBuilder prefix,
      final Queue<String> queue) {
         if (x == null) {
@@ -248,7 +265,15 @@ public class TST<Value> {
         collect(root, new StringBuilder(), 0, pattern, queue);
         return queue;
     }
-
+    /**.
+     * { function_description }
+     *
+     * @param      x        { parameter_description }
+     * @param      prefix   The prefix
+     * @param      i        { parameter_description }
+     * @param      pattern  The pattern
+     * @param      queue    The queue
+     */
     private void collect(final Node<Value> x, final StringBuilder prefix,
      final int i, final String pattern, final Queue<String> queue) {
         if (x == null) {
