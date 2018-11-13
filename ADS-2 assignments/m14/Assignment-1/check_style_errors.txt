@@ -152,44 +152,17 @@ Starting audit...
 Audit done.
 Checkstyle ends with 4 errors.
 Starting audit...
-[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:17:53: Expected @param tag for 'tst'. [JavadocMethod]
-[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:20: 'for' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:30: Class Suffix should be declared as final. [FinalClass]
-[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:75: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:78: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:79: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:103: Line is longer than 80 characters (found 86). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:104: Line is longer than 80 characters (found 88). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:106: Line is longer than 80 characters (found 85). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:109:22: Parameter i should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:110: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:123:20: Parameter i should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:124: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:125:49: '-' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:125:50: '-' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:129:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:129:34: Parameter s should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:129:44: Parameter t should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:132: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:143:26: Parameter i should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:144: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:149: Line is longer than 80 characters (found 82). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:155:21: Parameter query should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:160: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:161: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:162: 'else' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:168:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:168:32: Parameter query should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:168:46: Parameter suffix should be final. [FinalParameters]
-[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:171: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:172: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:193: Line is longer than 80 characters (found 95). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:197: Line is longer than 80 characters (found 83). [LineLength]
-[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:201: Line is longer than 80 characters (found 83). [LineLength]
+[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:32: Class Suffix should be declared as final. [FinalClass]
+[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:136:49: '-' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:136:50: '-' is not followed by whitespace. [WhitespaceAround]
+[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:227: Line is longer than 80 characters (found 95). [LineLength]
+[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:231: Line is longer than 80 characters (found 83). [LineLength]
+[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:235: Line is longer than 80 characters (found 83). [LineLength]
 Audit done.
-Checkstyle ends with 34 errors.
+Checkstyle ends with 6 errors.
 Starting audit...
 [ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\TST.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\TST.java:141:47: 'n' hides a field. [HiddenField]
+[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\TST.java:134:8: Unused @param tag for 'n'. [JavadocMethod]
+[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\TST.java:141:47: Expected @param tag for 'y'. [JavadocMethod]
 Audit done.
-Checkstyle ends with 2 errors.
+Checkstyle ends with 3 errors.
