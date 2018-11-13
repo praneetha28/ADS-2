@@ -19,7 +19,7 @@ public final class Solution {
      * the time complexity is N as it iterates through N times.
      * @param      args  The arguments
      */
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 		String[] words = loadWords();
 		Scanner sc = new Scanner(System.in);
 		TST<Integer> tst = new TST<Integer>();
