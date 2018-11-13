@@ -3,9 +3,7 @@ Audit done.
 Starting audit...
 Audit done.
 Starting audit...
-[ERROR] F:\ADS-2\ADS-2 assignments\m14\Assignment-1\SuffixArray.java:33: Class Suffix should be declared as final. [FinalClass]
 Audit done.
-Checkstyle ends with 1 errors.
 Starting audit...
 Audit done.
 Files to process must be specified, found 0.
