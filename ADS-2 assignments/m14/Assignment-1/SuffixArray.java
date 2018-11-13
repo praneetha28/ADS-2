@@ -1,12 +1,20 @@
+/**.
+ * { item_description }
+ */
 import java.util.Arrays;
+/**.
+ * Class for suffix array.
+ */
 public class SuffixArray {
+    /**.
+     * { var_description }
+     */
     private Suffix[] suffixes;
-
     /**
      * Initializes a suffix array for the given {@code text} string.
      * @param text the input string
      */
-    public SuffixArray(String text, TST tst) {
+    public SuffixArray(final String text, final TST tst) {
         int n = text.length();
         this.suffixes = new Suffix[n];
         for (int i = 0; i < n; i++)
@@ -16,23 +24,54 @@ public class SuffixArray {
             tst.put(select(i), i);
         }
     }
-
+    /**.
+     * Class for suffix.
+     */
     private static class Suffix implements Comparable<Suffix> {
+        /**.
+         * { var_description }
+         */
         private final String text;
+        /**.
+         * { var_description }
+         */
         private final int index;
-
-        private Suffix(String text, int index) {
-            this.text = text;
-            this.index = index;
+        /**.
+         * Constructs the object.
+         *
+         * @param      txt   The text
+         * @param      idex  The index
+         */
+        private Suffix(final String txt, final int idex) {
+            this.text = txt;
+            this.index = idex;
         }
+        /**.
+         * { function_description }
+         *
+         * @return     { description_of_the_return_value }
+         */
         private int length() {
             return text.length() - index;
         }
-        private char charAt(int i) {
+        /**.
+         * { function_description }
+         *
+         * @param      i     { parameter_description }
+         *
+         * @return     { description_of_the_return_value }
+         */
+        private char charAt(final int i) {
             return text.charAt(index + i);
         }
-
-        public int compareTo(Suffix that) {
+        /**.
+         * { function_description }
+         *
+         * @param      that  The that
+         *
+         * @return     { description_of_the_return_value }
+         */
+        public int compareTo(final Suffix that) {
             if (this == that) return 0;  // optimization
             int n = Math.min(this.length(), that.length());
             for (int i = 0; i < n; i++) {
@@ -41,7 +80,11 @@ public class SuffixArray {
             }
             return this.length() - that.length();
         }
-
+        /**.
+         * Returns a string representation of the object.
+         *
+         * @return     String representation of the object.
+         */
         public String toString() {
             return text.substring(index);
         }
