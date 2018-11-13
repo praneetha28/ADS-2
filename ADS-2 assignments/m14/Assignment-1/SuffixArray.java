@@ -1,12 +1,7 @@
-/**.
- * { item_description }
- */
 import java.util.Arrays;
-/**.
- * Class for suffix array.
- */
 public class SuffixArray {
     private Suffix[] suffixes;
+
     /**
      * Initializes a suffix array for the given {@code text} string.
      * @param text the input string
@@ -14,23 +9,21 @@ public class SuffixArray {
     public SuffixArray(String text, TST tst) {
         int n = text.length();
         this.suffixes = new Suffix[n];
-        for (int i = 0; i < n; i++) {
-            suffixes[i] = new Suffix(text, i, tst);
-        }
+        for (int i = 0; i < n; i++)
+            suffixes[i] = new Suffix(text, i);
         Arrays.sort(suffixes);
-        // for (int i = 0; i < suffixes.length; i++) {
-        //
-        // }
+        for (int i = 0; i < suffixes.length; i++) {
+            tst.put(select(i), i);
+        }
     }
 
     private static class Suffix implements Comparable<Suffix> {
         private final String text;
         private final int index;
 
-        private Suffix(String text, int index, TST tst) {
+        private Suffix(String text, int index) {
             this.text = text;
             this.index = index;
-            tst.put(text, index);
         }
         private int length() {
             return text.length() - index;
@@ -121,11 +114,8 @@ public class SuffixArray {
         while (lo <= hi) {
             int mid = lo + (hi - lo) / 2;
             int cmp = compare(query, suffixes[mid]);
-            if (cmp < 0) {
-                hi = mid - 1;
-            } else if (cmp > 0) {
-                lo = mid + 1;
-            }
+            if (cmp < 0) hi = mid - 1;
+            else if (cmp > 0) lo = mid + 1;
             else return mid;
         }
         return lo;
@@ -135,13 +125,39 @@ public class SuffixArray {
     private static int compare(String query, Suffix suffix) {
         int n = Math.min(query.length(), suffix.length());
         for (int i = 0; i < n; i++) {
-            if (query.charAt(i) < suffix.charAt(i)) {
-                return -1;
-            }
-            if (query.charAt(i) > suffix.charAt(i)) {
-                return 1;
-            }
+            if (query.charAt(i) < suffix.charAt(i)) return -1;
+            if (query.charAt(i) > suffix.charAt(i)) return +1;
         }
         return query.length() - suffix.length();
     }
+
+    // /**
+    //  * Unit tests the {@code SuffixArray} data type.
+    //  *
+    //  * @param args the command-line arguments
+    //  */
+    // public static void main(String[] args) {
+    //     String s = StdIn.readAll().replaceAll("\\s+", " ").trim();
+    //     SuffixArray suffix = new SuffixArray(s);
+
+    //     // StdOut.println("rank(" + args[0] + ") = " + suffix.rank(args[0]));
+
+    //     StdOut.println("  i ind lcp rnk select");
+    //     StdOut.println("---------------------------");
+
+    //     for (int i = 0; i < s.length(); i++) {
+    //         int index = suffix.index(i);
+    //         String ith = "\"" + s.substring(index, Math.min(index + 50, s.length())) + "\"";
+    //         assert s.substring(index).equals(suffix.select(i));
+    //         int rank = suffix.rank(s.substring(index));
+    //         if (i == 0) {
+    //             StdOut.printf("%3d %3d %3s %3d %s\n", i, index, "-", rank, ith);
+    //         }
+    //         else {
+    //             int lcp = suffix.lcp(i);
+    //             StdOut.printf("%3d %3d %3d %3d %s\n", i, index, lcp, rank, ith);
+    //         }
+    //     }
+    // }
+
 }

@@ -24,7 +24,7 @@ public final class Solution {
 		Scanner sc = new Scanner(System.in);
 		TST<Integer> tst = new TST<Integer>();
 		for (int i = 0; i < words.length; i++) {
-			SuffixArray sfa = new SuffixArray(words[i], tst);
+			SuffixArray sfax = new SuffixArray(words[i], tst);
 		}
 		String line = sc.nextLine();
 		for (String str : tst.keysWithPrefix(line)) {
