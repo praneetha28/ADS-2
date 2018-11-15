@@ -1,105 +1,80 @@
-import java.util.ArrayList;
+import java.util.*;
 public class BoggleSolver {
 	// Initializes the data structure using the given array of strings as the dictionary.
 	// (You can assume each word in the dictionary contains only the uppercase letters A through Z.)
-	TrieST<Integer> trst;
-	ArrayList<String> words;
-	private int rows;
-	private int cols;
+	TrieST trst;
 	public BoggleSolver(String[] dictionary) {
-		trst = new TrieST<Integer>();
-		int[] scores = {0, 0, 0, 1, 1, 2, 3, 5, 11};
-		words = new ArrayList<String>();
+		trst = new TrieST();
 		for (int i = 0; i < dictionary.length; i++) {
-			if (dictionary[i].length() > 8) {
-				trst.put(dictionary[i], 11);
-			} else {
-				trst.put(dictionary[i], scores[dictionary[i].length()]);
-			}
+				trst.add(dictionary[i]);
 		}
 	}
-	public String convert(char ch) {
-		String str = " ";
-		if (ch == 'Q') {
-			str += ch + 'U';
-			return str;
-		}
-		return ch + "";
-	}
-	// Returns the set of all valid words in the given Boggle board, as an Iterable.
-	public ArrayList<String> getAllValidWords(BoggleBoard board) {
-		rows = board.rows();
-		cols = board.cols();
+// Returns the set of all valid words in the given Boggle board, as an Iterable.
+	public HashSet<String> getAllValidWords(BoggleBoard board) {
+		HashSet<String> words = new HashSet<String>();
+
 		for (int i = 0; i < board.rows(); i++) {
 			for (int j = 0; j < board.cols(); j++) {
 				boolean[][] visited = new boolean[board.rows()][board.cols()];
-				searchWord(board, i, j, convert(board.getLetter(i, j)), visited);
+				searchWord(board, i, j, "", visited, words);
 			}
 
 		}
 		return words;
 	}
-	public boolean isValid(String word) {
-		if (!trst.hasPrefix(word)) {
-			return false;
-		}
-		return true;
-	}
-	public boolean index(int i , int j) {
-		if (i < 0 || i >= rows || j < 0 || j >= cols) {
-			return false;
-		}
-		return true;
-	}
-	private void searchWord(BoggleBoard board, int i, int j, String str, boolean[][] visited) {
-		if (i < 0 || j < 0 || i >= rows || j >= cols) {
+	private void searchWord(BoggleBoard board, int i, int j, String str, boolean[][] visited, HashSet words) {
+		if (visited[i][j]) {
 			return;
 		}
+		char ch = board.getLetter(i, j);
+		String word = str;
+		if (ch =='Q') {
+			word += "QU";
+		} else {
+			word += ch;
+		}
+		if (!trst.hasPrefix(word)) {
+			return;
+		}
+		if (word.length() > 2 && trst.contains(word)) {
+			words.add(word);
+		}
 		visited[i][j] = true;
-		if (trst.contains(str) && !words.contains(str)) {
-			words.add(str);
-		}
-		if (index(i + 1, j + 1) && !visited[i + 1][j + 1] && isValid(str)) {
-			searchWord(board, i + 1, j + 1, str + convert(board.getLetter(i + 1, j + 1)), visited);
-			visited[i + 1][j + 1] = false;
-		}
-		if (index(i - 1, j - 1) && !visited[i - 1][j - 1] && isValid(str)) {
-			searchWord(board, i - 1, j - 1, str + convert(board.getLetter(i - 1, j - 1)), visited);
-			visited[i - 1][j - 1] = false;
-		}
-		if ( index(i - 1, j + 1) && !visited[i - 1][j + 1] && isValid(str)) {
-			searchWord(board, i - 1, j + 1, str + convert(board.getLetter(i - 1, j + 1)), visited);
-			visited[i - 1][j + 1] = false;
-		}
-		if ( index(i + 1, j - 1) && !visited[i + 1][j - 1] && isValid(str)) {
-			searchWord(board, i + 1, j - 1, str + convert(board.getLetter(i + 1, j - 1)), visited);
-			visited[i + 1][j - 1] = false;
-
-		}
-		if ( index(i - 1, j) && !visited[i - 1][j] && isValid(str)) {
-			searchWord(board, i - 1, j, str + convert(board.getLetter(i - 1, j)), visited);
-			visited[i - 1][j] = false;
-
-		}
-		if ( index(i + 1, j) && !visited[i + 1][j] && isValid(str)) {
-			searchWord(board, i + 1, j, str + convert(board.getLetter(i + 1, j)), visited);
-			visited[i + 1][j] = false;
-
-		}
-		if ( index(i, j + 1) && !visited[i][j + 1] && isValid(str)) {
-			searchWord(board, i, j + 1, str + convert(board.getLetter(i, j + 1)), visited);
-			visited[i][j + 1] = false;
-
-		}
-		if (index(i, j - 1) && !visited[i][j - 1] && isValid(str)) {
-			searchWord(board, i, j - 1, str + convert(board.getLetter(i, j - 1)), visited);
-			visited[i][j - 1] = false;
-
-		}
+		for (int k = -1; k <= 1; k++) {
+            for (int l = -1; l <= 1; l++) {
+                if (k == 0 && l == 0) {
+                    continue;
+                }
+                if ((i + k >= 0) && (i + k < board.rows()) && (j + l >= 0) && (j + l < board.cols())) {
+                    searchWord(board, i + k, j + l, word, visited, words);
+                }
+            }
+        }
+        visited[i][j] = false;
 	}
 	// Returns the score of the given word if it is in the dictionary, zero otherwise.
 	// (You can assume the word contains only the uppercase letters A through Z.)
 	public int scoreOf(String word) {
-		return trst.get(word);
+		if (trst.contains(word)) {
+            switch (word.length()) {
+            case 0:
+            case 1:
+            case 2:
+                return 0;
+            case 3:
+            case 4:
+                return 1;
+            case 5:
+                return 2;
+            case 6:
+                return 3;
+            case 7:
+                return 5;
+            default:
+                return 11;
+            }
+        } else {
+            return 0;
+        }
 	}
 }
