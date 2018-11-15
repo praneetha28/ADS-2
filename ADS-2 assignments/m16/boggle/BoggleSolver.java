@@ -8,10 +8,10 @@ public class BoggleSolver {
 	private int cols;
 	public BoggleSolver(String[] dictionary) {
 		trst = new TrieST<Integer>();
-		int[] scores = {0,0,0,1,1,2,3,5,11};
+		int[] scores = {0, 0, 0, 1, 1, 2, 3, 5, 11};
 		words = new ArrayList<String>();
-		for(int i = 0; i < dictionary.length; i++) {
-			if(dictionary[i].length() > 8){
+		for (int i = 0; i < dictionary.length; i++) {
+			if (dictionary[i].length() > 8) {
 				trst.put(dictionary[i], 11);
 			} else {
 				trst.put(dictionary[i], scores[dictionary[i].length()]);
@@ -20,7 +20,7 @@ public class BoggleSolver {
 	}
 	public String convert(char ch) {
 		String str = " ";
-		if(ch == 'Q') {
+		if (ch == 'Q') {
 			str += ch + 'U';
 			return str;
 		}
@@ -30,8 +30,8 @@ public class BoggleSolver {
 	public ArrayList<String> getAllValidWords(BoggleBoard board) {
 		rows = board.rows();
 		cols = board.cols();
-		for(int i = 0; i< board.rows(); i++) {
-			for(int j = 0; j < board.cols(); j++) {
+		for (int i = 0; i < board.rows(); i++) {
+			for (int j = 0; j < board.cols(); j++) {
 				boolean[][] visited = new boolean[board.rows()][board.cols()];
 				searchWord(board, i, j, convert(board.getLetter(i, j)), visited);
 			}
@@ -39,51 +39,62 @@ public class BoggleSolver {
 		}
 		return words;
 	}
+	public boolean isValid(String word) {
+		if (!trst.hasPrefix(word)) {
+			return false;
+		}
+		return true;
+	}
 	public boolean index(int i , int j) {
-		if(i < 0 || i >= rows || j < 0 || j >= cols) {
+		if (i < 0 || i >= rows || j < 0 || j >= cols) {
 			return false;
 		}
 		return true;
 	}
 	private void searchWord(BoggleBoard board, int i, int j, String str, boolean[][] visited) {
-	if (i < 0 || j < 0 || i >= rows || j >= cols){
-		return;
-	}
+		if (i < 0 || j < 0 || i >= rows || j >= cols) {
+			return;
+		}
 		visited[i][j] = true;
-		if(trst.contains(str) && !words.contains(str)) {
+		if (trst.contains(str) && !words.contains(str)) {
 			words.add(str);
 		}
-		if(index(i+1, j + 1) && !visited[i+1][j + 1]) {
-			searchWord(board, i+ 1, j + 1, str + convert(board.getLetter(i+1, j + 1)), visited);
+		if (index(i + 1, j + 1) && !visited[i + 1][j + 1] && isValid(str)) {
+			searchWord(board, i + 1, j + 1, str + convert(board.getLetter(i + 1, j + 1)), visited);
 			visited[i + 1][j + 1] = false;
 		}
-		if(index(i - 1, j - 1) && !visited[i-1][j - 1]) {
-			searchWord(board, i- 1, j - 1, str + convert(board.getLetter(i-1, j - 1)), visited);
+		if (index(i - 1, j - 1) && !visited[i - 1][j - 1] && isValid(str)) {
+			searchWord(board, i - 1, j - 1, str + convert(board.getLetter(i - 1, j - 1)), visited);
 			visited[i - 1][j - 1] = false;
 		}
-		if( index(i - 1, j + 1) && !visited[i-1][j + 1]) {
-			searchWord(board, i - 1, j + 1, str + convert(board.getLetter(i-1, j + 1)), visited);
+		if ( index(i - 1, j + 1) && !visited[i - 1][j + 1] && isValid(str)) {
+			searchWord(board, i - 1, j + 1, str + convert(board.getLetter(i - 1, j + 1)), visited);
 			visited[i - 1][j + 1] = false;
 		}
-		if( index(i+1, j - 1) && !visited[i +1][j - 1]) {
-			searchWord(board, i+ 1, j - 1, str + convert(board.getLetter(i+1, j - 1)), visited);
+		if ( index(i + 1, j - 1) && !visited[i + 1][j - 1] && isValid(str)) {
+			searchWord(board, i + 1, j - 1, str + convert(board.getLetter(i + 1, j - 1)), visited);
 			visited[i + 1][j - 1] = false;
+
 		}
-		if( index(i-1, j) && !visited[i-1][j]) {
-			searchWord(board, i -1, j, str + convert(board.getLetter(i - 1, j)), visited);
+		if ( index(i - 1, j) && !visited[i - 1][j] && isValid(str)) {
+			searchWord(board, i - 1, j, str + convert(board.getLetter(i - 1, j)), visited);
 			visited[i - 1][j] = false;
+
 		}
-		if( index(i+1, j) && !visited[i+1][j]) {
-			searchWord(board, i+ 1, j, str + convert(board.getLetter(i+1, j)), visited);
+		if ( index(i + 1, j) && !visited[i + 1][j] && isValid(str)) {
+			searchWord(board, i + 1, j, str + convert(board.getLetter(i + 1, j)), visited);
 			visited[i + 1][j] = false;
+
 		}
-		if( index(i, j + 1) && !visited[i][j + 1]) {
+		if ( index(i, j + 1) && !visited[i][j + 1] && isValid(str)) {
 			searchWord(board, i, j + 1, str + convert(board.getLetter(i, j + 1)), visited);
 			visited[i][j + 1] = false;
+
 		}
-		if(index(i, j - 1) && !visited[i][j - 1]) {
+		if (index(i, j - 1) && !visited[i][j - 1] && isValid(str)) {
 			searchWord(board, i, j - 1, str + convert(board.getLetter(i, j - 1)), visited);
 			visited[i][j - 1] = false;
+
 		}
 	}
 	// Returns the score of the given word if it is in the dictionary, zero otherwise.
