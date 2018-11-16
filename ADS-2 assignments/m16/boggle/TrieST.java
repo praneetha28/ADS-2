@@ -87,7 +87,8 @@ public class TrieST {
      */
     private Node add(final Node n, final String key, final int d) {
 
-        Node x = n;if (x == null) {
+        Node x = n;
+        if (x == null) {
             x = new Node();
         }
         if (d == key.length()) {
