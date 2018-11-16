@@ -1,5 +1,5 @@
 import java.util.Arrays;
-
+import java.util.Scanner;
 /**
  * Class for solution.
  */
@@ -18,14 +18,15 @@ public class Solution {
 	 * @param      args  The arguments
 	 */
 	public static void main(final String[] args) {
-		String caseType = StdIn.readLine();
+		Scanner sc = new Scanner(System.in);
+		String caseType = sc.nextLine();
 		switch (caseType) {
 		case "Score":
-			String dictionaryName = StdIn.readLine();
+			String dictionaryName = sc.nextLine();
 			In in = new In("/Files/" + dictionaryName);
 			String[] dictionary = in.readAllStrings();
 			BoggleSolver solver = new BoggleSolver(dictionary);
-			String boardName = StdIn.readLine();
+			String boardName = sc.nextLine();
 			BoggleBoard board = new BoggleBoard("/Files/" + boardName);
 			int score = 0;
 			for (String word : solver.getAllValidWords(board)) {
@@ -33,12 +34,12 @@ public class Solution {
 				// System.out.println("word");
 			}
 			// System.out.println("resultss");
-			StdOut.println("Score = " + score);
+			System.out.println("Score = " + score);
 			break;
 
 		default:
 			try {
-				dictionaryName = StdIn.readLine();
+				dictionaryName = sc.nextLine();
 				in = new In("/Files/" + dictionaryName);
 				dictionary = in.readAllStrings();
 				solver = new BoggleSolver(dictionary);
@@ -47,7 +48,7 @@ public class Solution {
 				for (String word : solver.getAllValidWords(board)) {
 					score += solver.scoreOf(word);
 				}
-				StdOut.println("Score = " + score);
+				System.out.println("Score = " + score);
 			} catch (Exception ex) {
 				System.out.println("board is null");
 			}
