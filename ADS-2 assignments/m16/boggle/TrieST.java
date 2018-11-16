@@ -13,7 +13,7 @@ public class TrieST {
     /**.
      * { var_description }
      */
-    public int N_1;
+    private int size;
     /**.
      * Class for node.
      */
@@ -79,7 +79,7 @@ public class TrieST {
     /**.
      * { function_description }
      *
-     * @param      x     { parameter_description }
+     * @param      n     { parameter_description }
      * @param      key   The key
      * @param      d     { parameter_description }
      *
@@ -92,7 +92,7 @@ public class TrieST {
         }
         if (d == key.length()) {
             if (!x.isString) {
-                N_1++;
+                size++;
             }
             x.isString = true;
         } else {
@@ -108,7 +108,7 @@ public class TrieST {
      * Time complexity is O(1)
      */
     public int size() {
-        return N_1;
+        return size;
     }
 
     /**
@@ -273,7 +273,7 @@ public class TrieST {
         }
         if (d == key.length()) {
             if (x.isString) {
-                N_1--;
+                size--;
             }
             x.isString = false;
         } else {
