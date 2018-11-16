@@ -1,7 +1,7 @@
 /**.
  * Class for trie st.
  */
-class TrieST {
+public class TrieST {
     /**.
      * { var_description }
      */
@@ -13,7 +13,7 @@ class TrieST {
     /**.
      * { var_description }
      */
-    private int N;
+    private int N_1;
     /**.
      * Class for node.
      */
@@ -42,7 +42,9 @@ class TrieST {
      */
     public boolean contains(final String key) {
         Node x = get(root, key, 0);
-        if (x == null) return false;
+        if (x == null) {
+            return false;
+        }
         return x.isString;
     }
     /**
@@ -74,16 +76,22 @@ class TrieST {
     public void add(final String key) {
         root = add(root, key, 0);
     }
-    /**
-    * Time complexity is O(1)
-    **/
+    /**.
+     * { function_description }
+     *
+     * @param      x     { parameter_description }
+     * @param      key   The key
+     * @param      d     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     private Node add(Node x, final String key, final int d) {
         if (x == null) {
             x = new Node();
         }
         if (d == key.length()) {
             if (!x.isString) {
-                N++;
+                N_1++;
             }
             x.isString = true;
         } else {
@@ -99,7 +107,7 @@ class TrieST {
      * Time complexity is O(1)
      */
     public int size() {
-        return N;
+        return N_1;
     }
 
     /**
@@ -111,27 +119,20 @@ class TrieST {
     public boolean isEmpty() {
         return size() == 0;
     }
-
-    /**
-     * Returns all of the keys in the set, as an iterator.
-     * To iterate over all of the keys in a set named
-     * <tt>set</tt>, use the
-     * foreach notation: <tt>for (Key key : set)</tt>.
-     * @return an iterator to all of the keys in the set
-     * Time complexity is O(1)
+    /**.
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
      */
     public Iterable<String> keys() {
         return keysWithPrefix("");
     }
-
-    /**
-     * Returns all of the keys in the set that start
-     * with <tt>prefix</tt>.
-     * @param prefix the prefix
-     * @return all of the keys in the set that start
-     * with <tt>prefix</tt>,
-     *     as an iterable
-     *     Time complexity is O(N)
+    /**.
+     * { function_description }
+     *
+     * @param      prefix  The prefix
+     *
+     * @return     { description_of_the_return_value }
      */
     public Iterable<String> keysWithPrefix(final String prefix) {
         Queue<String> results = new Queue<String>();
@@ -139,9 +140,13 @@ class TrieST {
         collect(x, new StringBuilder(prefix), results);
         return results;
     }
-    /**
-    * Time Complexity is O(N)
-    **/
+    /**.
+     * { function_description }
+     *
+     * @param      x        { parameter_description }
+     * @param      prefix   The prefix
+     * @param      results  The results
+     */
     private void collect(final Node x, final StringBuilder prefix,
                          final Queue<String> results) {
         if (x == null) {
@@ -156,14 +161,12 @@ class TrieST {
             prefix.deleteCharAt(prefix.length() - 1);
         }
     }
-
-    /**
-     * Returns all of the keys in the set that match <tt>pattern</tt>,
-     * where . symbol is treated as a wildcard character.
-     * @param pattern the pattern
-     * @return all of the keys in the set that match <tt>pattern</tt>,
-     *     as an iterable, where . is treated as a wildcard character.
-     *     Time complexity is O(N)
+    /**.
+     * { function_description }
+     *
+     * @param      pattern  The pattern
+     *
+     * @return     { description_of_the_return_value }
      */
     public Iterable<String> keysThatMatch(final String pattern) {
         Queue<String> results = new Queue<String>();
@@ -171,9 +174,14 @@ class TrieST {
         collect(root, prefix, pattern, results);
         return results;
     }
-    /**
-    * Time complexity is O(1)
-    **/
+    /**.
+     * { function_description }
+     *
+     * @param      x        { parameter_description }
+     * @param      prefix   The prefix
+     * @param      pattern  The pattern
+     * @param      results  The results
+     */
     private void collect(final Node x, final StringBuilder prefix,
                          final String pattern, final Queue<String> results) {
         if (x == null) {
@@ -200,15 +208,13 @@ class TrieST {
         }
     }
 
-    /**
-     * Returns the string in the set that is the longest prefix of <tt>query</tt>,
-     * or <tt>null</tt>, if no such string.
-     * @param query the query string
-     * @throws NullPointerException if <tt>query</tt> is <tt>null</tt>
-     * @return the string in the set that is the longest prefix of <tt>query</tt>,
-     *     or <tt>null</tt> if no such string
-     *     Time complexity is O(1)
-     */
+   /**.
+    * { function_description }
+    *
+    * @param      query  The query
+    *
+    * @return     { description_of_the_return_value }
+    */
     public String longestPrefixOf(final String query) {
         int length = longestPrefixOf(root, query, 0, -1);
         if (length == -1) {
@@ -216,14 +222,16 @@ class TrieST {
         }
         return query.substring(0, length);
     }
-
-    // returns the length of the longest string key in the subtrie
-    // rooted at x that is a prefix of the query string,
-    // assuming the first d character match and we have already
-    // found a prefix match of length length
-    /**
-     * Time Complexity is O(N)
-    **/
+    /**.
+     * { function_description }
+     *
+     * @param      x      { parameter_description }
+     * @param      query  The query
+     * @param      d      { parameter_description }
+     * @param      len    The length
+     *
+     * @return     { description_of_the_return_value }
+     */
     private int longestPrefixOf(final Node x, final String query,
      final int d, final int len) {
         int length = len;
@@ -240,7 +248,7 @@ class TrieST {
         return longestPrefixOf(x.next[c - 'A'], query, d + 1, length);
     }
 
-    /**
+    /**.
      * Removes the key from the set if the key is present.
      * @param key the key
      * @throws NullPointerException if <tt>key</tt> is <tt>null</tt>
@@ -249,16 +257,22 @@ class TrieST {
     public void delete(final String key) {
         root = delete(root, key, 0);
     }
-    /**
-    * Time complexity is O(N)
-    **/
+    /**.
+     * { function_description }
+     *
+     * @param      x     { parameter_description }
+     * @param      key   The key
+     * @param      d     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     private Node delete(final Node x, final String key, final int d) {
         if (x == null) {
             return null;
         }
         if (d == key.length()) {
             if (x.isString) {
-                N--;
+                N_1--;
             }
             x.isString = false;
         } else {
@@ -275,9 +289,13 @@ class TrieST {
         }
         return null;
     }
-    /**
-     *  Time complexity is O(1)
-    **/
+    /**.
+     * Determines if it has prefix.
+     *
+     * @param      query  The query
+     *
+     * @return     True if has prefix, False otherwise.
+     */
     public boolean hasPrefix(final String query) {
         Node x = get(root, query, 0);
         return x != null;
