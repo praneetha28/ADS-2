@@ -101,7 +101,7 @@ public class BoggleSolver {
                     continue;
                 }
                 if ((i + k >= 0) && (i + k < board.rows())
-                        && (j + l >= 0) && (j + l < board.cols())) {
+                    && (j + l >= 0) && (j + l < board.cols())) {
                     searchWord(board, i + k, j + l, word,
                                visited, words);
                 }
