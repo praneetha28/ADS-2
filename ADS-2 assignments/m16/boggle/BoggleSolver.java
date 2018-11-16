@@ -10,6 +10,30 @@ public class BoggleSolver {
 	 * { var_description }
 	 */
 	private TrieST trst;
+    /**.
+     * { var_description }
+     */
+    public static final int T_H_R_E = 3;
+    /**.
+     * { var_description }
+     */
+    public static final int F_O_U_R = 4;
+    /**.
+     * { var_description }
+     */
+    public static final int F_I_V_E = 5;
+    /**.
+     * { var_description }
+     */
+    public static final int S_I_X = 6;
+    /**.
+     * { var_description }
+     */
+    public static final int S_E_V_E_N = 7;
+    /**.
+     * { var_description }
+     */
+    public static final int E_L_E = 11;
 	/**.
 	 * Constructs the object.
 	 *
@@ -33,7 +57,8 @@ public class BoggleSolver {
 
 		for (int i = 0; i < board.rows(); i++) {
 			for (int j = 0; j < board.cols(); j++) {
-				boolean[][] visited = new boolean[board.rows()][board.cols()];
+				boolean[][] visited = new boolean[
+				board.rows()][board.cols()];
 				searchWord(board, i, j, "", visited, words);
 			}
 
@@ -51,7 +76,7 @@ public class BoggleSolver {
 	 * @param      words    The words
 	 */
 	private void searchWord(final BoggleBoard board, final int i,
-	                        final int j, final String str, final boolean[][] visited,
+	    final int j, final String str, final boolean[][] visited,
 	                        final HashSet words) {
 		if (visited[i][j]) {
 			return;
@@ -98,17 +123,17 @@ public class BoggleSolver {
 			case 1:
 			case 2:
 				return 0;
-			case 3:
-			case 4:
+			case T_H_R_E:
+			case F_O_U_R:
 				return 1;
-			case 5:
+			case F_I_V_E:
 				return 2;
-			case 6:
-				return 3;
-			case 7:
-				return 5;
+			case S_I_X:
+				return T_H_R_E;
+			case S_E_V_E_N:
+				return F_I_V_E;
 			default:
-				return 11;
+				return E_L_E;
 			}
 		} else {
 			return 0;
