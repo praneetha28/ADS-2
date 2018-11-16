@@ -13,7 +13,7 @@ public class TrieST {
     /**.
      * { var_description }
      */
-    private int N_1;
+    public int N_1;
     /**.
      * Class for node.
      */
@@ -85,8 +85,9 @@ public class TrieST {
      *
      * @return     { description_of_the_return_value }
      */
-    private Node add(Node x, final String key, final int d) {
-        if (x == null) {
+    private Node add(final Node n, final String key, final int d) {
+
+        Node x = n;if (x == null) {
             x = new Node();
         }
         if (d == key.length()) {

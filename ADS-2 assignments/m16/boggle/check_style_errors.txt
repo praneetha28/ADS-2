@@ -160,7 +160,11 @@ Audit done.
 Checkstyle ends with 1 errors.
 Starting audit...
 [ERROR] F:\ADS-2\ADS-2 assignments\m16\boggle\TrieST.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] F:\ADS-2\ADS-2 assignments\m16\boggle\TrieST.java:16:17: Name 'N_1' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MemberName]
-[ERROR] F:\ADS-2\ADS-2 assignments\m16\boggle\TrieST.java:88:22: Parameter x should be final. [FinalParameters]
+[ERROR] F:\ADS-2\ADS-2 assignments\m16\boggle\TrieST.java:16:16: Name 'N_1' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MemberName]
+[ERROR] F:\ADS-2\ADS-2 assignments\m16\boggle\TrieST.java:16:16: Variable 'N_1' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] F:\ADS-2\ADS-2 assignments\m16\boggle\TrieST.java:82:8: Unused @param tag for 'x'. [JavadocMethod]
+[ERROR] F:\ADS-2\ADS-2 assignments\m16\boggle\TrieST.java:88:33: Expected @param tag for 'n'. [JavadocMethod]
+[ERROR] F:\ADS-2\ADS-2 assignments\m16\boggle\TrieST.java:90:20: ';' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] F:\ADS-2\ADS-2 assignments\m16\boggle\TrieST.java:90:20: 'if' is not preceded with whitespace. [WhitespaceAround]
 Audit done.
-Checkstyle ends with 3 errors.
+Checkstyle ends with 7 errors.
