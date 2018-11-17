@@ -20,7 +20,9 @@ public final class Solution {
 
     /**
      * Main method.
-     *
+     * Time compexity is O(L + log N) where
+     * L- length of string
+     * N - number of strings
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
@@ -100,7 +102,7 @@ public final class Solution {
     }
     /**.
      * { function_description }
-     *
+     * Time complexity is O(1)
      * @param      file  The file
      *
      * @return     { description_of_the_return_value }
@@ -111,7 +113,7 @@ public final class Solution {
     }
     /**.
      * Loads a dictionary.
-     *
+     * Time complexity is O(N^2)
      * @param      file  The file
      *
      * @return     { description_of_the_return_value }
@@ -163,7 +165,7 @@ class T9 {
     }
     /**.
      * Gets all words.
-     *
+     * Time complexity is O(1)
      * @param      prefix  The prefix
      *
      * @return     All words.
@@ -174,7 +176,7 @@ class T9 {
     }
     /**.
      * { function_description }
-     *
+     * Time complexity is O(N^2)
      * @param      t9Signature  The t 9 signature
      *
      * @return     { description_of_the_return_value }
@@ -210,7 +212,7 @@ class T9 {
     }
     /**.
      * Gets the suggestions.
-     *
+     * Time complexity is O(N^2)
      * @param      words  The words
      * @param      k      { parameter_description }
      *
@@ -235,7 +237,7 @@ class T9 {
     }
     /**.
      * { function_description }
-     *
+     * Time complexity is O(1).
      * @param      t9Signature  The t 9 signature
      * @param      k            { parameter_description }
      *
