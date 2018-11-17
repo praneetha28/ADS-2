@@ -135,6 +135,7 @@ class T9 {
 		for (String word : words) {
 			if (tst.get(word) > max) {
 				max = tst.get(word);
+				System.out.println(word);
 				wordList.add(word);
 			}
 		}
