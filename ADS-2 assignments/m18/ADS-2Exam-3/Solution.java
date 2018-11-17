@@ -180,7 +180,33 @@ class T9 {
      * @return     { description_of_the_return_value }
      */
     public Iterable<String> potentialWords(final String t9Signature) {
-        return tst.keysThatMatch(t9Signature);
+        TreeSet<String> list = new TreeSet<String>();
+        for (String word : tst.keys()) {
+            String pattern = "";
+            for (char ch : word.toCharArray()) {
+                if (ch == 'a' || ch == 'b' || ch == 'c') {
+                    pattern += "2";
+                } else if (ch == 'd' || ch == 'e' || ch == 'f') {
+                    pattern += "3";
+                } else if (ch == 'g' || ch == 'h' || ch == 'i') {
+                    pattern += "4";
+                } else if (ch == 'j' || ch == 'k' || ch == 'l') {
+                    pattern += "5";
+                } else if (ch == 'm' || ch == 'n' || ch == 'o') {
+                    pattern += "6";
+                } else if (ch == 'p' || ch == 'q' || ch == 'r' || ch == 's') {
+                    pattern += "7";
+                } else if (ch == 't' || ch == 'u' || ch == 'v') {
+                    pattern += "8";
+                } else if (ch == 'w' || ch == 'x' || ch == 'y' || ch == 'z') {
+                    pattern += "9";
+                }
+            }
+            if (pattern.equals(t9Signature)) {
+                list.add(word);
+            }
+        }
+        return list;
     }
     /**.
      * Gets the suggestions.
