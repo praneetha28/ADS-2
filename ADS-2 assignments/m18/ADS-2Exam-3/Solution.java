@@ -91,10 +91,10 @@ public class Solution {
 		String[] dictionary = toReadFile(file);
 		for (int i = 0; i < dictionary.length; i++) {
 			for (String word : dictionary[i].split(" ")) {
-				if (st.contains(word)) {
-					st.put(word, st.get(word) + 1);
+				if (st.contains(word.toLowerCase())) {
+					st.put(word.toLowerCase(), st.get(word.toLowerCase()) + 1);
 				} else {
-					st.put(word, 1);
+					st.put(word.toLowerCase(), 1);
 				}
 			}
 		}
