@@ -131,15 +131,13 @@ class T9 {
 	// return all possibilities(words), find top k with highest frequency.
 	public Iterable<String> getSuggestions(Iterable<String> words, int k) {
 		ArrayList<String> wordList = new ArrayList<String>();
-		int max = 0;
+		MaxPQ<Integer> valuemax = new MaxPQ<Integer>();
 		for (String word : words) {
-			if (tst.get(word) > max) {
-				max = tst.get(word);
-				System.out.println(word);
+			int value = valuemax.delMax();
+			if (value == tst.get(word)) {
 				wordList.add(word);
 			}
 		}
-
 		return wordList;
 	}
 
