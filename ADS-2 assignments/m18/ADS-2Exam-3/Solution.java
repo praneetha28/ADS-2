@@ -198,7 +198,7 @@ class T9 {
                     pattern += "7";
                 } else if (ch == 't' || ch == 'u' || ch == 'v') {
                     pattern += "8";
-                } else if (ch == 'w' || ch == 'x' || ch == 'y' || ch == 'z') {
+                } else {
                     pattern += "9";
                 }
             }
