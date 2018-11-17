@@ -90,10 +90,12 @@ public class Solution {
 		// your code goes here
 		String[] dictionary = toReadFile(file);
 		for (int i = 0; i < dictionary.length; i++) {
-			if (st.contains(dictionary[i])) {
-				st.put(dictionary[i], st.get(dictionary[i]) + 1);
-			} else {
-				st.put(dictionary[i], 1);
+			for (String word : dictionary[i].split(" ")) {
+				if (st.contains(word)) {
+					st.put(word, st.get(word) + 1);
+				} else {
+					st.put(word, 1);
+				}
 			}
 		}
 		return st;
@@ -102,19 +104,27 @@ public class Solution {
 }
 
 class T9 {
-
+	private BinarySearchST<String, Integer> bst;
+	private TST<Integer> tst;
 	public T9(BinarySearchST<String, Integer> st) {
 		// your code goes here
+		bst = st;
+		tst = new TST<Integer>();
+		for (String key : bst.keys()) {
+			tst.put(key, bst.get(key));
+		}
 	}
 
 	// get all the prefixes that match with given prefix.
 	public Iterable<String> getAllWords(String prefix) {
 		// your code goes here
-		return null;
+		return tst.keysWithPrefix(prefix);
+		// return null;
 	}
 
 	public Iterable<String> potentialWords(String t9Signature) {
 		// your code goes here
+		// return tst.keysThatMatch(t9Signature);
 		return null;
 	}
 

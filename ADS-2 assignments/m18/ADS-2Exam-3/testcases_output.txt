@@ -57,8 +57,37 @@ messagesome
 going
 
 Your Output: 
-Exception in thread "main" java.lang.NullPointerException
-	at Solution.main(Solution.java:26)
+wont
+working
+what
+whatever
+whats
+vegetables
+too
+tooLets
+tooPray
+took
+tookplace
+tool
+tooo
+toopray
+toot
+toothpaste
+tootsie
+over
+overa
+overdid
+overemphasiseor
+overheating
+overtime
+message
+messageIts
+messaged
+messageit
+messageno
+messagepandy
+messages
+going
 ----------------------------------------
 
 ########## Testcase 2: Failed ##########
