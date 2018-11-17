@@ -161,7 +161,7 @@ Exception in thread "main" java.lang.NullPointerException
 	at Solution.main(Solution.java:38)
 ----------------------------------------
 
-########## Testcase 3: Failed ##########
+########## Testcase 3: Passed ##########
 Expected Output: 
 hello
 is
@@ -169,10 +169,10 @@ right
 words
 
 Your Output: 
-words
+hello
 is
 right
-hello
+words
 ----------------------------------------
 
 ########## Testcase 4: Failed ##########
