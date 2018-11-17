@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-
+import java.util.ArrayList;
 public class Solution {
 
 	// Don't modify this method.
@@ -130,8 +130,16 @@ class T9 {
 
 	// return all possibilities(words), find top k with highest frequency.
 	public Iterable<String> getSuggestions(Iterable<String> words, int k) {
-		// your code goes here
-		return null;
+		ArrayList<String> wordList = new ArrayList<String>();
+		int max = 0;
+		for (String word : words) {
+			if (tst.get(word) > max) {
+				max = tst.get(word);
+				wordList.add(word);
+			}
+		}
+
+		return wordList;
 	}
 
 	// final output
