@@ -169,10 +169,10 @@ right
 words
 
 Your Output: 
-Exception in thread "main" java.util.NoSuchElementException: Priority queue underflow
-	at MaxPQ.delMax(MaxPQ.java:174)
-	at T9.getSuggestions(Solution.java:136)
-	at Solution.main(Solution.java:57)
+is
+right
+hello
+words
 ----------------------------------------
 
 ########## Testcase 4: Failed ##########
@@ -226,7 +226,7 @@ keep
 Your Output: 
 Exception in thread "main" java.lang.NullPointerException
 	at T9.getSuggestions(Solution.java:135)
-	at T9.t9(Solution.java:147)
+	at T9.t9(Solution.java:152)
 	at Solution.main(Solution.java:70)
 ----------------------------------------
 

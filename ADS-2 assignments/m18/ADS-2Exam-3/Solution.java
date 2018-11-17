@@ -133,9 +133,14 @@ class T9 {
 		ArrayList<String> wordList = new ArrayList<String>();
 		MaxPQ<Integer> valuemax = new MaxPQ<Integer>();
 		for (String word : words) {
+			valuemax.insert(tst.get(word));
+		}
+		for (int i = 0; i < k; i++) {
 			int value = valuemax.delMax();
-			if (value == tst.get(word)) {
-				wordList.add(word);
+			for (String word : words) {
+				if (value == tst.get(word)) {
+					wordList.add(word);
+				}
 			}
 		}
 		return wordList;
