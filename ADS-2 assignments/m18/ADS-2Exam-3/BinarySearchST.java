@@ -1,63 +1,6 @@
-/******************************************************************************
- *  Compilation:  javac BinarySearchST.java
- *  Execution:    java BinarySearchST
- *  Dependencies: StdIn.java StdOut.java
- *  Data files:   https://algs4.cs.princeton.edu/31elementary/tinyST.txt
- *
- *  Symbol table implementation with binary search in an ordered array.
- *
- *  % more tinyST.txt
- *  S E A R C H E X A M P L E
- *
- *  % java BinarySearchST < tinyST.txt
- *  A 8
- *  C 4
- *  E 12
- *  H 5
- *  L 11
- *  M 9
- *  P 10
- *  R 3
- *  S 0
- *  X 7
- *
- ******************************************************************************/
 
 import java.util.NoSuchElementException;
 
-/**
- *  The {@code BST} class represents an ordered symbol table of generic
- *  key-value pairs.
- *  It supports the usual <em>put</em>, <em>get</em>, <em>contains</em>,
- *  <em>delete</em>, <em>size</em>, and <em>is-empty</em> methods.
- *  It also provides ordered methods for finding the <em>minimum</em>,
- *  <em>maximum</em>, <em>floor</em>, <em>select</em>, and <em>ceiling</em>.
- *  It also provides a <em>keys</em> method for iterating over all of the keys.
- *  A symbol table implements the <em>associative array</em> abstraction:
- *  when associating a value with a key that is already in the symbol table,
- *  the convention is to replace the old value with the new value.
- *  Unlike {@link java.util.Map}, this class uses the convention that
- *  values cannot be {@code null}—setting the
- *  value associated with a key to {@code null} is equivalent to deleting the key
- *  from the symbol table.
- *  <p>
- *  This implementation uses a sorted array. It requires that
- *  the key type implements the {@code Comparable} interface and calls the
- *  {@code compareTo()} and method to compare two keys. It does not call either
- *  {@code equals()} or {@code hashCode()}.
- *  The <em>put</em> and <em>remove</em> operations each take linear time in
- *  the worst case; the <em>contains</em>, <em>ceiling</em>, <em>floor</em>,
- *  and <em>rank</em> operations take logarithmic time; the <em>size</em>,
- *  <em>is-empty</em>, <em>minimum</em>, <em>maximum</em>, and <em>select</em>
- *  operations take constant time. Construction takes constant time.
- *  <p>
- *  For additional documentation, see <a href="https://algs4.cs.princeton.edu/31elementary">Section 3.1</a> of
- *  <i>Algorithms, 4th Edition</i> by Robert Sedgewick and Kevin Wayne.
- *  For other implementations, see {@link ST}, {@link BST},
- *  {@link SequentialSearchST}, {@link RedBlackBST},
- *  {@link SeparateChainingHashST}, and {@link LinearProbingHashST},
- *  <i>Algorithms, 4th Edition</i> by Robert Sedgewick and Kevin Wayne.
- */
 public class BinarySearchST<Key extends Comparable<Key>, Value> {
 	private static final int INIT_CAPACITY = 2;
 	private Key[] keys;
@@ -95,7 +38,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
 
 	/**
 	 * Returns the number of key-value pairs in this symbol table.
-	 *
+	 * Time complexity is O(1)
 	 * @return the number of key-value pairs in this symbol table
 	 */
 	public int size() {
@@ -104,7 +47,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
 
 	/**
 	 * Returns true if this symbol table is empty.
-	 *
+	 * Time complexity is O(1)
 	 * @return {@code true} if this symbol table is empty;
 	 *         {@code false} otherwise
 	 */
@@ -115,7 +58,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
 
 	/**
 	 * Does this symbol table contain the given key?
-	 *
+	 * Time complexity is O(1)
 	 * @param  key the key
 	 * @return {@code true} if this symbol table contains {@code key} and
 	 *         {@code false} otherwise
@@ -128,7 +71,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
 
 	/**
 	 * Returns the value associated with the given key in this symbol table.
-	 *
+	 * Time complexity is O(N)
 	 * @param  key the key
 	 * @return the value associated with the given key if the key is in the symbol table
 	 *         and {@code null} if the key is not in the symbol table
@@ -144,7 +87,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
 
 	/**
 	 * Returns the number of keys in this symbol table strictly less than {@code key}.
-	 *
+	 * Time complexity in avg case log N
 	 * @param  key the key
 	 * @return the number of keys in the symbol table strictly less than {@code key}
 	 * @throws IllegalArgumentException if {@code key} is {@code null}
@@ -170,7 +113,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
 	 * value with the new value if the symbol table already contains the specified key.
 	 * Deletes the specified key (and its associated value) from this symbol table
 	 * if the specified value is {@code null}.
-	 *
+	 * Time complexity is O(N)
 	 * @param  key the key
 	 * @param  val the value
 	 * @throws IllegalArgumentException if {@code key} is {@code null}
@@ -208,7 +151,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
 	/**
 	 * Removes the specified key and associated value from this symbol table
 	 * (if the key is in the symbol table).
-	 *
+	 * Time complexity is O(N)
 	 * @param  key the key
 	 * @throws IllegalArgumentException if {@code key} is {@code null}
 	 */
@@ -241,7 +184,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
 
 	/**
 	 * Removes the smallest key and associated value from this symbol table.
-	 *
+	 * Time complexity is O(1)
 	 * @throws NoSuchElementException if the symbol table is empty
 	 */
 	public void deleteMin() {
@@ -251,7 +194,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
 
 	/**
 	 * Removes the largest key and associated value from this symbol table.
-	 *
+	 * Time complexity is O(1)
 	 * @throws NoSuchElementException if the symbol table is empty
 	 */
 	public void deleteMax() {
@@ -303,7 +246,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
 
 	/**
 	 * Returns the largest key in this symbol table less than or equal to {@code key}.
-	 *
+	 * Time complexity is O(N)
 	 * @param  key the key
 	 * @return the largest key in this symbol table less than or equal to {@code key}
 	 * @throws NoSuchElementException if there is no such key
@@ -319,7 +262,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
 
 	/**
 	 * Returns the smallest key in this symbol table greater than or equal to {@code key}.
-	 *
+	 * Time complexity is O(N)
 	 * @param  key the key
 	 * @return the smallest key in this symbol table greater than or equal to {@code key}
 	 * @throws NoSuchElementException if there is no such key
@@ -334,7 +277,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
 
 	/**
 	 * Returns the number of keys in this symbol table in the specified range.
-	 *
+	 * Time complexity is O(N)
 	 * @param lo minimum endpoint
 	 * @param hi maximum endpoint
 	 * @return the number of keys in this symbol table between {@code lo}

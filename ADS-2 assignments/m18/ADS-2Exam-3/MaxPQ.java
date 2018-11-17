@@ -75,7 +75,7 @@ public class MaxPQ<Key> implements Iterable<Key> {
 
     /**
      * Returns the number of keys on this priority queue.
-     *
+     * Time complexity is O(1)
      * @return the number of keys on this priority queue
      */
     public int size() {
@@ -84,7 +84,7 @@ public class MaxPQ<Key> implements Iterable<Key> {
 
     /**
      * Returns a largest key on this priority queue.
-     *
+     * Time complexity is O(1)
      * @return a largest key on this priority queue
      * @throws NoSuchElementException if this priority queue is empty
      */
