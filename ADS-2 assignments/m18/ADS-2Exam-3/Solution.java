@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-import java.util.ArrayList;
+import java.util.HashSet;
 public class Solution {
 
 	// Don't modify this method.
@@ -130,7 +130,7 @@ class T9 {
 
 	// return all possibilities(words), find top k with highest frequency.
 	public Iterable<String> getSuggestions(Iterable<String> words, int k) {
-		ArrayList<String> wordList = new ArrayList<String>();
+		HashSet<String> wordList = new HashSet<String>();
 		MaxPQ<Integer> valuemax = new MaxPQ<Integer>();
 		for (String word : words) {
 			valuemax.insert(tst.get(word));

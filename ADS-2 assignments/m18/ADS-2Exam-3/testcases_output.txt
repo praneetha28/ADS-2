@@ -169,10 +169,10 @@ right
 words
 
 Your Output: 
+words
 is
 right
 hello
-words
 ----------------------------------------
 
 ########## Testcase 4: Failed ##########
