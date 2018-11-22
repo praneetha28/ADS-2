@@ -47,7 +47,7 @@ public class BoggleSolver {
     }
     /**.
      * Gets all valid words.
-     *
+     * Time complexity is O(rows * cols)
      * @param      board  The board
      *
      * @return     All valid words.
@@ -67,7 +67,7 @@ public class BoggleSolver {
     }
     /**.
      * { function_description }
-     *
+     * Time complexity is O(9)
      * @param      board    The board
      * @param      i        { parameter_description }
      * @param      j        { parameter_description }
@@ -111,7 +111,7 @@ public class BoggleSolver {
     }
     /**.
      * { function_description }
-     *
+     * Time complexity is O(1).
      * @param      word  The word
      *
      * @return     { description_of_the_return_value }
