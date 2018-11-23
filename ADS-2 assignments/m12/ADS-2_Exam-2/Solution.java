@@ -16,7 +16,7 @@ public final class Solution {
     }
     /**.
      * { function_description }
-     *
+     * the time complexity is E as it iterates through no of edges.
      * @param      args  The arguments
      */
     public static void main(final String[] args) {

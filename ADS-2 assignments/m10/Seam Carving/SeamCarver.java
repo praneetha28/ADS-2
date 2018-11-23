@@ -30,7 +30,7 @@ public class SeamCarver {
         height = pict.height();
     }
     /**
-     *the method will return the picture.
+     *return the picture.
      *object.
      * @return picture object.
      */
@@ -38,7 +38,7 @@ public class SeamCarver {
         return pict;
     }
     /**
-     *this method will return the width.
+     *Returns the width.
      *of image.
      * @return width of pixel
      */
@@ -55,7 +55,7 @@ public class SeamCarver {
     }
     /**
      *energy of pixel at column x and row y.
-     *
+     * Time complexity is O(1)
      * @param      x  x coordinate
      * @param      y   y coordinate
      *
@@ -280,6 +280,5 @@ public class SeamCarver {
         width--;
     }
 }
-
 
 

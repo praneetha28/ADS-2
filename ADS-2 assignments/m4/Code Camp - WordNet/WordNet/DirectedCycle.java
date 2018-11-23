@@ -35,7 +35,7 @@ public class DirectedCycle {
     }
     /**.
      * { function_description }
-     * time complexity is 1 in avg case
+     * time complexity in avg case is no of Vertices + no of Edges.
      * @param      g     { parameter_description }
      * @param      v     { parameter_description }
      */

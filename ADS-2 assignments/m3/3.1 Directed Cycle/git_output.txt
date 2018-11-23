@@ -1,0 +1,8 @@
+warning: LF will be replaced by CRLF in ADS-2 assignments/m3/3.1 Directed Cycle/Bag.java.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in ADS-2 assignments/m3/3.1 Directed Cycle/Stack.java.
+The file will have its original line endings in your working directory.
+[master 4602434] "ads2_m3_a1_1: 8/8 testcases passed. Cannot run hidden testcases as Server is unreachablecheck_style score: 1/1 "
+ 4 files changed, 13 insertions(+), 15 deletions(-)
+ rewrite ADS-2 assignments/m3/3.1 Directed Cycle/check_style_errors.txt (67%)
+ rewrite ADS-2 assignments/m3/3.1 Directed Cycle/result/score.json (81%)

@@ -1,0 +1,10 @@
+warning: LF will be replaced by CRLF in ADS-2 assignments/m16/boggle/BoggleSolver.java.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in ADS-2 assignments/m16/boggle/Solution.java.
+The file will have its original line endings in your working directory.
+[master af56dcb] "ads2_m16_a1_1: 30/30 testcases passed. Cannot run hidden testcases as Server is unreachablecheck_style score: 1/1 "
+ 4 files changed, 3 insertions(+), 5 deletions(-)
+ rewrite ADS-2 assignments/m16/boggle/result/score.json (93%)
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+To https://github.com/praneetha28/ADS-2.git
+   9b79641..af56dcb  master -> master

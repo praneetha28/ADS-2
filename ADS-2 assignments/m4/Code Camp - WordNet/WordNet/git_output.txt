@@ -1,0 +1,10 @@
+warning: LF will be replaced by CRLF in ADS-2 assignments/m4/Code Camp - WordNet/WordNet/Queue.java.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in ADS-2 assignments/m4/Code Camp - WordNet/WordNet/SAP.java.
+The file will have its original line endings in your working directory.
+[master bbce496] "ads2_m4_a1_1: 15/15 testcases passed. Cannot run hidden testcases as Server is unreachablecheck_style score: 1/1 "
+ 4 files changed, 2 insertions(+), 6 deletions(-)
+ rewrite ADS-2 assignments/m4/Code Camp - WordNet/WordNet/result/score.json (88%)
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+To https://github.com/praneetha28/ADS-2.git
+   ff12332..bbce496  master -> master

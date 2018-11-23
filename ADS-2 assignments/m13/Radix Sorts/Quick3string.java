@@ -39,7 +39,7 @@ public class Quick3string {
     }
     /**.
      * { function_description }
-     * Time complexity is 2N log N.
+     * Time complexity is WN log R where W is word length and N is no of words.
      * @param      a     { parameter_description }
      * @param      lo    The lower
      * @param      hi    The higher

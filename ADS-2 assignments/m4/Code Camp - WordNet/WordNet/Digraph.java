@@ -67,7 +67,7 @@ public class Digraph {
     // }
     /**.
      * Determines if it has edge.
-     * time complexity is O(N).
+     * time complexity is O(E).
      * @param      v     { parameter_description }
      * @param      w     { parameter_description }
      *
